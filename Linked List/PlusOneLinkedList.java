@@ -18,9 +18,16 @@
  * input (head == null), where the sentinel alone becomes the result [1]; leading zeroes (0099 -> 0010) since the scan targets the
  * rightmost digit < 9; mutates the input list in place; assumes digits 0-9, so it is not valid for negative or multi-digit values.
  */
-// ============================================================================
-
-
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 public class PlusOneLinkedList {
     public ListNode addOne(ListNode head) {
         ListNode dummy = new ListNode(0);
@@ -49,11 +56,4 @@ public class PlusOneLinkedList {
 
         return head;
     }
-
-    // Helper method to create a linked list from an array
-
-
-    // Helper method to print the linked list
-
-
 }
