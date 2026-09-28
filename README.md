@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-387%20%7C%20383%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-388%20%7C%20384%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Easy-168-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-197-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-198-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-22-EB5C5C?style=for-the-badge"/>
 </p>
 
@@ -52,9 +52,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **387** (383 Java + 4 SQL) |
-| Difficulty | 🟢 168 Easy · 🟡 197 Medium · 🔴 22 Hard |
-| Patterns covered | **18** |
+| **Total solutions** | **388** (384 Java + 4 SQL) |
+| Difficulty | 🟢 168 Easy · 🟡 198 Medium · 🔴 22 Hard |
+| Patterns covered | **24** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
 
@@ -62,27 +62,33 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Pattern | Solved | Easy | Medium | Hard |
 | ------- | ------ | :---: | :----: | :---: |
-| Math | 57 | 38 | 19 | 0 |
-| Array | 46 | 32 | 14 | 0 |
+| Math | 48 | 34 | 14 | 0 |
+| Array | 42 | 29 | 13 | 0 |
 | Dynamic Programming | 32 | 3 | 26 | 3 |
 | Hash Table | 26 | 19 | 6 | 1 |
-| Greedy | 25 | 6 | 16 | 3 |
-| Linked List | 25 | 8 | 16 | 1 |
-| Tree | 24 | 9 | 13 | 2 |
-| Two Pointers | 21 | 11 | 8 | 2 |
-| Backtracking | 19 | 1 | 14 | 4 |
-| Graph | 19 | 2 | 15 | 2 |
+| Linked List | 26 | 8 | 17 | 1 |
+| Greedy | 23 | 6 | 14 | 3 |
+| Tree | 23 | 9 | 13 | 1 |
+| Two Pointers | 20 | 11 | 8 | 1 |
+| Graph | 19 | 3 | 14 | 2 |
+| Backtracking | 18 | 0 | 14 | 4 |
 | Binary Search | 17 | 6 | 10 | 1 |
-| Sliding Window | 16 | 4 | 10 | 2 |
-| String | 15 | 11 | 4 | 0 |
+| Sliding Window | 16 | 3 | 11 | 2 |
+| String | 16 | 13 | 3 | 0 |
 | Matrix | 13 | 4 | 9 | 0 |
-| Prefix Sum | 12 | 7 | 5 | 0 |
-| Stack | 11 | 3 | 7 | 1 |
+| Prefix Sum | 13 | 8 | 5 | 0 |
+| Bit Manipulation | 8 | 5 | 3 | 0 |
+| Stack | 8 | 3 | 4 | 1 |
 | Heap | 4 | 1 | 3 | 0 |
-| Divide and Conquer | 1 | 0 | 1 | 0 |
-| **Total (Java)** | **383** | **165** | **196** | **22** |
+| Intervals | 3 | 0 | 3 | 0 |
+| Monotonic Stack | 3 | 0 | 3 | 0 |
+| Divide and Conquer | 2 | 0 | 1 | 1 |
+| Game Theory | 2 | 0 | 2 | 0 |
+| Segment Tree | 1 | 0 | 0 | 1 |
+| Topological Sort | 1 | 0 | 1 | 0 |
+| **Total (Java)** | **384** | **165** | **197** | **22** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **387** | **168** | **197** | **22** |
+| **Grand total** | **388** | **168** | **198** | **22** |
 
 ## Conventions used throughout
 
@@ -96,25 +102,31 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 ```
 leetcode-solutions/
-├── Array/               ── 46
-├── Backtracking/        ── 19
+├── Array/               ── 42
+├── Backtracking/        ── 18
 ├── Binary Search/       ── 17
+├── Bit Manipulation/    ── 8
 ├── Database/            ── 4 (SQL)
-├── Divide and Conquer/  ── 1
+├── Divide and Conquer/  ── 2
 ├── Dynamic Programming/ ── 32
+├── Game Theory/         ── 2
 ├── Graph/               ── 19
-├── Greedy/              ── 25
+├── Greedy/              ── 23
 ├── Hash Table/          ── 26
 ├── Heap/                ── 4
-├── Linked List/         ── 25
-├── Math/                ── 57
+├── Intervals/           ── 3
+├── Linked List/         ── 26
+├── Math/                ── 48
 ├── Matrix/              ── 13
-├── Prefix Sum/          ── 12
+├── Monotonic Stack/     ── 3
+├── Prefix Sum/          ── 13
+├── Segment Tree/        ── 1
 ├── Sliding Window/      ── 16
-├── Stack/               ── 11
-├── String/              ── 15
-├── Tree/                ── 24
-└── Two Pointers/        ── 21
+├── Stack/               ── 8
+├── String/              ── 16
+├── Topological Sort/    ── 1
+├── Tree/                ── 23
+└── Two Pointers/        ── 20
 ```
 
 ## Tech stack
