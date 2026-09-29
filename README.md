@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Solutions-391%20%7C%20387%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Easy-167-44B77B?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Easy-168-44B77B?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Medium-200-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-23-EB5C5C?style=for-the-badge"/>
 </p>
@@ -53,7 +53,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Metric | Value |
 | ------ | ----- |
 | **Total solutions** | **391** (387 Java + 4 SQL) |
-| Difficulty | 🟢 167 Easy · 🟡 200 Medium · 🔴 23 Hard |
+| Difficulty | 🟢 168 Easy · 🟡 200 Medium · 🔴 23 Hard |
 | Patterns covered | **24** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -66,7 +66,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Array | 42 | 29 | 13 | 0 |
 | Dynamic Programming | 32 | 3 | 26 | 3 |
 | Linked List | 27 | 8 | 18 | 1 |
-| Hash Table | 26 | 18 | 6 | 1 |
+| Hash Table | 26 | 19 | 6 | 1 |
 | Greedy | 23 | 6 | 14 | 3 |
 | Tree | 23 | 9 | 13 | 1 |
 | Two Pointers | 20 | 11 | 8 | 1 |
@@ -86,9 +86,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Game Theory | 2 | 0 | 2 | 0 |
 | Segment Tree | 1 | 0 | 0 | 1 |
 | Topological Sort | 1 | 0 | 1 | 0 |
-| **Total (Java)** | **387** | **164** | **199** | **23** |
+| **Total (Java)** | **387** | **165** | **199** | **23** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **391** | **167** | **200** | **23** |
+| **Grand total** | **391** | **168** | **200** | **23** |
 
 ## Conventions used throughout
 
