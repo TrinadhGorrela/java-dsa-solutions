@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-395%20%7C%20391%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-396%20%7C%20392%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Easy-169-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-203-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-204-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-23-EB5C5C?style=for-the-badge"/>
 </p>
 
@@ -52,9 +52,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **395** (391 Java + 4 SQL) |
-| Difficulty | 🟢 169 Easy · 🟡 203 Medium · 🔴 23 Hard |
-| Patterns covered | **24** |
+| **Total solutions** | **396** (392 Java + 4 SQL) |
+| Difficulty | 🟢 169 Easy · 🟡 204 Medium · 🔴 23 Hard |
+| Patterns covered | **25** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
 
@@ -86,9 +86,10 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Game Theory | 2 | 0 | 2 | 0 |
 | Segment Tree | 1 | 0 | 0 | 1 |
 | Topological Sort | 1 | 0 | 1 | 0 |
-| **Total (Java)** | **391** | **166** | **202** | **23** |
+| Union Find | 1 | 0 | 1 | 0 |
+| **Total (Java)** | **392** | **166** | **203** | **23** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **395** | **169** | **203** | **23** |
+| **Grand total** | **396** | **169** | **204** | **23** |
 
 ## Conventions used throughout
 
@@ -126,7 +127,8 @@ leetcode-solutions/
 ├── String/              ── 16
 ├── Topological Sort/    ── 1
 ├── Tree/                ── 24
-└── Two Pointers/        ── 20
+├── Two Pointers/        ── 20
+└── Union Find/          ── 1
 ```
 
 ## Tech stack
