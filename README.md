@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-394%20%7C%20390%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-395%20%7C%20391%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Easy-169-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-202-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-203-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-23-EB5C5C?style=for-the-badge"/>
 </p>
 
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **394** (390 Java + 4 SQL) |
-| Difficulty | 🟢 169 Easy · 🟡 202 Medium · 🔴 23 Hard |
+| **Total solutions** | **395** (391 Java + 4 SQL) |
+| Difficulty | 🟢 169 Easy · 🟡 203 Medium · 🔴 23 Hard |
 | Patterns covered | **24** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -79,16 +79,16 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Prefix Sum | 13 | 8 | 5 | 0 |
 | Stack | 9 | 3 | 5 | 1 |
 | Bit Manipulation | 8 | 5 | 3 | 0 |
+| Monotonic Stack | 5 | 0 | 5 | 0 |
 | Heap | 4 | 1 | 3 | 0 |
-| Monotonic Stack | 4 | 0 | 4 | 0 |
 | Intervals | 3 | 0 | 3 | 0 |
 | Divide and Conquer | 2 | 0 | 1 | 1 |
 | Game Theory | 2 | 0 | 2 | 0 |
 | Segment Tree | 1 | 0 | 0 | 1 |
 | Topological Sort | 1 | 0 | 1 | 0 |
-| **Total (Java)** | **390** | **166** | **201** | **23** |
+| **Total (Java)** | **391** | **166** | **202** | **23** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **394** | **169** | **202** | **23** |
+| **Grand total** | **395** | **169** | **203** | **23** |
 
 ## Conventions used throughout
 
@@ -118,7 +118,7 @@ leetcode-solutions/
 ├── Linked List/         ── 27
 ├── Math/                ── 48
 ├── Matrix/              ── 14
-├── Monotonic Stack/     ── 4
+├── Monotonic Stack/     ── 5
 ├── Prefix Sum/          ── 13
 ├── Segment Tree/        ── 1
 ├── Sliding Window/      ── 16
