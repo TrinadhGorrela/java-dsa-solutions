@@ -28,7 +28,6 @@ class LongestValidParentheses {
                     stack.push(i);
                 } else {
                     res = Math.max(res, i - stack.peek());
-
                 }
 
             }

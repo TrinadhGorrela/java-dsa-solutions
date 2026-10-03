@@ -3,13 +3,13 @@
  * Difficulty: Medium | Tags: Array, Binary Search
  * https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/
  *
- * Pattern:
- * Key insight:
+ * Pattern: Binary Search on Answer
+ * Key insight: The sum of divisions decreases monotonically as the divisor increases. Therefore, we can use binary search on the range [1, max(nums)] to find the smallest divisor that produces a sum less than or equal to the threshold.
  *
- * Time Complexity: O(?)
- * Space Complexity: O(?)
+ * Time Complexity: O(N log M) - Where N is the length of the array and M is the maximum element in the array (the search space size).
+ * Space Complexity: O(1) - Only a few integer variables are used.
  *
- * Edge Cases Handled: Per LeetCode constraints
+ * Edge Cases Handled: Threshold is exactly equal to the array length, minimal possible divisor is 1.
  */
 class FindTheSmallestDivisorGivenAThreshold {
     public int smallestDivisor(int[] nums, int threshold) {
@@ -45,3 +45,4 @@ class FindTheSmallestDivisorGivenAThreshold {
         return sum;
     }
 }
+
