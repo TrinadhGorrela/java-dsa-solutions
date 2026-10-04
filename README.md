@@ -64,7 +64,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 | ------- | ------ | :---: | :----: | :---: |
 | Math | 48 | 34 | 14 | 0 |
 | Array | 42 | 29 | 13 | 0 |
-| Dynamic Programming | 35 | 3 | 28 | 4 |
+| Dynamic Programming | 33 | 3 | 27 | 3 |
 | Linked List | 27 | 8 | 18 | 1 |
 | Hash Table | 26 | 19 | 6 | 1 |
 | Tree | 24 | 10 | 13 | 1 |
@@ -77,7 +77,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 | String | 16 | 13 | 3 | 0 |
 | Matrix | 14 | 4 | 9 | 1 |
 | Prefix Sum | 14 | 8 | 6 | 0 |
-| Stack | 9 | 3 | 5 | 1 |
+| Stack | 11 | 3 | 6 | 2 |
 | Bit Manipulation | 8 | 5 | 3 | 0 |
 | Monotonic Stack | 5 | 0 | 5 | 0 |
 | Heap | 4 | 1 | 3 | 0 |
@@ -109,7 +109,7 @@ leetcode-solutions/
 ├── Bit Manipulation/    ── 8
 ├── Database/            ── 4 (SQL)
 ├── Divide and Conquer/  ── 2
-├── Dynamic Programming/ ── 35
+├── Dynamic Programming/ ── 33
 ├── Game Theory/         ── 2
 ├── Graph/               ── 19
 ├── Greedy/              ── 23
@@ -123,7 +123,7 @@ leetcode-solutions/
 ├── Prefix Sum/          ── 14
 ├── Segment Tree/        ── 1
 ├── Sliding Window/      ── 16
-├── Stack/               ── 9
+├── Stack/               ── 11
 ├── String/              ── 16
 ├── Topological Sort/    ── 1
 ├── Tree/                ── 24
