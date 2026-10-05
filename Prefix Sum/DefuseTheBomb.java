@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/defuse-the-bomb/
  *
  * Pattern: Circular Array via Prefix Sum on Doubled Array
- * Key insight: Duplicate the code array to length 2N and build a prefix sum over it. Each window sum becomes a single
- * O(1) prefix-difference subtraction: result[i] = prefix[i+k] - prefix[i] for k > 0, and symmetrically for k < 0 using
- * the mirrored region.
  *
- * Time Complexity: O(N) - One pass to build the 2N prefix array, one pass to compute each element of the result
- * Space Complexity: O(N) - Prefix array of length 2N (input-sized, constant factor)
+ * Key insight: Duplicate the code array to length 2N and build a prefix sum
+ * over it. Each window sum becomes a single
+ * O(1) prefix-difference subtraction: result[i] = prefix[i+k] - prefix[i] for k
+ * > 0, and symmetrically for k < 0 using the mirrored region.
  *
- * Edge Cases Handled: k = 0 (returns all zeros immediately), negative k (sums preceding elements via the second half of
- * the prefix), single-element array
+ * Time Complexity: O(N) - One pass to build the 2N prefix array, one pass to
+ * compute each element of the result
+ *
+ * Space Complexity: O(N) - Prefix array of length 2N (input-sized, constant
+ * factor)
+ *
+ * Edge Cases Handled: k = 0 (returns all zeros immediately), negative k (sums
+ * preceding elements via the second half of the prefix), single-element array
  */
 class DefuseTheBomb {
     public int[] decrypt(int[] code, int k) {

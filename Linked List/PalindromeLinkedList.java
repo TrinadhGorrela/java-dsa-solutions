@@ -4,16 +4,22 @@
  * https://leetcode.com/problems/palindrome-linked-list/
  *
  * Pattern: Two Pointers (Slow/Fast) + In-Place Reversal
- * Key insight: Find the midpoint with slow/fast pointers, reverse the second half in-place,
- *   then compare both halves node-by-node — a palindrome reads the same forwards and
- *   backwards, so matching the first half against the reversed second half is sufficient.
  *
- * Time Complexity: O(N) - Three linear passes (find midpoint, reverse, compare) each visit every node at most once
- * Space Complexity: O(1) - Only a constant number of pointers are used; the second half is reversed in-place
+ * Key insight: Find the midpoint with slow/fast pointers, reverse the second
+ * half in-place, then compare both halves node-by-node — a palindrome reads the
+ * same forwards and backwards, so matching the first half against the reversed
+ * second half is sufficient.
  *
- * Edge Cases Handled: Single element list (trivially a palindrome); odd-length list (middle node
- *   excluded from comparison); even-length list (both halves compared fully); all-identical values;
- *   already-palindromic list; only safe for non-null input (null head causes NPE at slow.next = null)
+ * Time Complexity: O(N) - Three linear passes (find midpoint, reverse, compare)
+ * each visit every node at most once
+ *
+ * Space Complexity: O(1) - Only a constant number of pointers are used; the
+ * second half is reversed in-place
+ *
+ * Edge Cases Handled: Single element list (trivially a palindrome); odd-length
+ * list (middle node excluded from comparison); even-length list (both halves
+ * compared fully); all-identical values; already-palindromic list; only safe
+ * for non-null input (null head causes NPE at slow.next = null)
  */
 /**
  * Definition for singly-linked list.

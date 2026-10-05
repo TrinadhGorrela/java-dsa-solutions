@@ -4,12 +4,22 @@
  * https://leetcode.com/problems/edit-distance/
  *
  * Pattern: Dynamic Programming (2D Table / Bottom-Up)
- * Key insight: The edit distance between the prefixes of word1 and word2 only depends on the three adjacent table cells (insert, delete, replace), so each state is computed once from previously solved subproblems. Because the recurrence uses only the previous row/current column, a full 2D table fills correctly in a single bottom-up sweep.
  *
- * Time Complexity: O(M*N) - One pass over every (i, j) cell of the M x N DP table.
+ * Key insight: The edit distance between the prefixes of word1 and word2 only
+ * depends on the three adjacent table cells (insert, delete, replace), so each
+ * state is computed once from previously solved subproblems. Because the
+ * recurrence uses only the previous row/current column, a full 2D table fills
+ * correctly in a single bottom-up sweep.
+ *
+ * Time Complexity: O(M*N) - One pass over every (i, j) cell of the M x N DP
+ * table.
+ *
  * Space Complexity: O(M*N) - Stores the full 2D DP table.
  *
- * Edge Cases Handled: empty word1 or word2 (returns the length of the longer string via the base-case init of dp[i][0] and dp[0][i]); equal characters (takes the diagonal without a cost); first rows/columns seeded with 0..M and 0..N as deletion/insertion bases.
+ * Edge Cases Handled: empty word1 or word2 (returns the length of the longer
+ * string via the base-case init of dp[i][0] and dp[0][i]); equal characters
+ * (takes the diagonal without a cost); first rows/columns seeded with 0..M and
+ * 0..N as deletion/insertion bases.
  */
 class EditDistance {
     public int minDistance(String word1, String word2) {

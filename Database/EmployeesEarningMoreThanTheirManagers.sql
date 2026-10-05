@@ -3,10 +3,13 @@
 -- https://leetcode.com/problems/employees-earning-more-than-their-managers/
 -- 
 -- Pattern: Self Join
--- Key insight: Join the table to itself matching manager IDs with employee IDs and filter where employee salary exceeds
--- manager salary.
 -- 
--- Time Complexity: O(N) - joining on the primary key manager ID takes linear time
+-- Key insight: Join the table to itself matching manager IDs with employee IDs
+-- and filter where employee salary exceeds manager salary.
+-- 
+-- Time Complexity: O(N) - joining on the primary key manager ID takes linear
+-- time
+-- 
 -- Space Complexity: O(N) - intermediate join and output result storage
 -- 
 -- Edge Cases Handled: Per LeetCode constraints

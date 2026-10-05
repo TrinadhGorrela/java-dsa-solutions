@@ -4,14 +4,18 @@
  * https://leetcode.com/problems/replace-all-digits-with-characters/
  *
  * Pattern: Pair-Wise Shift Transformation
- * Key insight: Process the string in letter/digit pairs: for each pair (letter, digit), append the letter as-is then
- * the shifted character (letter + digit value). An odd-length trailing letter is appended without a following digit.
+ *
+ * Key insight: Process the string in letter/digit pairs: for each pair (letter,
+ * digit), append the letter as-is then the shifted character (letter + digit
+ * value). An odd-length trailing letter is appended without a following digit.
  *
  * Time Complexity: O(n) - Each character processed once in the step-2 loop.
+ *
  * Space Complexity: O(n) - StringBuilder holds the full output.
  *
- * Edge Cases Handled: single character input (no digit to shift), odd-length string (final letter appended alone),
- * digit '0' (shifts to the same character)
+ * Edge Cases Handled: single character input (no digit to shift), odd-length
+ * string (final letter appended alone), digit '0' (shifts to the same
+ * character)
  */
 class ReplaceAllDigitsWithCharacters {
     public String replaceDigits(String s) {

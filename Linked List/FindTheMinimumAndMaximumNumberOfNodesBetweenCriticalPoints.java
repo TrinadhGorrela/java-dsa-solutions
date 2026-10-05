@@ -1,18 +1,23 @@
 /**
  * 2058. Find the Minimum and Maximum Number of Nodes Between Critical Points
  * Difficulty: Medium | Tags: Linked List
- * https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/
+ * https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-be
+ * tween-critical-points/
  *
  * Pattern: Single-Pass Linked List Scan
- * Key insight: A critical point is a local extremum (strictly greater or strictly less than both neighbors); track the
- * first critical point's position and update min-distance between consecutive critical points and max-distance from the
- * first to the latest.
+ *
+ * Key insight: A critical point is a local extremum (strictly greater or
+ * strictly less than both neighbors); track the first critical point's position
+ * and update min-distance between consecutive critical points and max-distance
+ * from the first to the latest.
  *
  * Time Complexity: O(n) - Single traversal with prev/curr/next.
+ *
  * Space Complexity: O(1) - Position counters and min/max variables.
  *
- * Edge Cases Handled: fewer than 2 critical points (returns [-1, -1]), first critical point at index 1, adjacent
- * critical points (min = 1), all equal values (no critical points)
+ * Edge Cases Handled: fewer than 2 critical points (returns [-1, -1]), first
+ * critical point at index 1, adjacent critical points (min = 1), all equal
+ * values (no critical points)
  */
 /**
  * Definition for singly-linked list.

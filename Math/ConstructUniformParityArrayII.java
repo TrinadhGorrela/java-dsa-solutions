@@ -4,12 +4,21 @@
  * https://leetcode.com/problems/construct-uniform-parity-array-ii/
  *
  * Pattern: Parity Analysis (Two-Configuration Check)
- * Key insight: If the array is already all-even or all-odd, it is trivially uniform. Otherwise, try two candidate uniform parities: check if every element's difference from the smallest odd element is a valid positive even number (targeting all-even), or a valid positive odd number (targeting all-odd). At least one configuration must succeed if the answer exists.
  *
- * Time Complexity: O(N) - Two linear scans of the array, one to count parities and two more in the helper checks
+ * Key insight: If the array is already all-even or all-odd, it is trivially
+ * uniform. Otherwise, try two candidate uniform parities: check if every
+ * element's difference from the smallest odd element is a valid positive even
+ * number (targeting all-even), or a valid positive odd number (targeting
+ * all-odd). At least one configuration must succeed if the answer exists.
+ *
+ * Time Complexity: O(N) - Two linear scans of the array, one to count parities
+ * and two more in the helper checks
+ *
  * Space Complexity: O(1) - Only scalar counters and a few local variables used
  *
- * * Edge Cases Handled: all elements already same parity (returns true immediately); single element array; array with exactly one odd and rest even (or vice versa); the smallest odd equals another element
+ * Edge Cases Handled: all elements already same parity (returns true
+ * immediately); single element array; array with exactly one odd and rest even
+ * (or vice versa); the smallest odd equals another element
  */
 class ConstructUniformParityArrayII {
     public boolean uniformArray(int[] nums1) {

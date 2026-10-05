@@ -4,14 +4,20 @@
  * https://leetcode.com/problems/rearrange-array-elements-by-sign/
  *
  * Pattern: Two-Pass Partition + Interleave
- * Key insight: Two linear passes (collect, then scatter) preserve relative order within each sign group; positives land
- * at even indices and negatives at odd indices by construction, with no need for additional sorting.
  *
- * Time Complexity: O(N) - First pass fills pos/neg lists, second pass writes result; both O(N)
- * Space Complexity: O(N) - Two ArrayLists plus the result array, all proportional to N
+ * Key insight: Two linear passes (collect, then scatter) preserve relative
+ * order within each sign group; positives land at even indices and negatives at
+ * odd indices by construction, with no need for additional sorting.
  *
- * Edge Cases Handled: Equal counts of positives and negatives (guaranteed by contract), large N (ArrayList dynamic
- * resizing), single-element array, alternating signs already in place
+ * Time Complexity: O(N) - First pass fills pos/neg lists, second pass writes
+ * result; both O(N)
+ *
+ * Space Complexity: O(N) - Two ArrayLists plus the result array, all
+ * proportional to N
+ *
+ * Edge Cases Handled: Equal counts of positives and negatives (guaranteed by
+ * contract), large N (ArrayList dynamic resizing), single-element array,
+ * alternating signs already in place
  */
 class RearrangeArrayElementsBySign {
     public int[] rearrangeArray(int[] nums) {

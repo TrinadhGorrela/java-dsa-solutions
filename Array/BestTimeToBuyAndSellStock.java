@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
  *
  * Pattern: Single-Pass Min Tracking
- * Key insight: The optimal sell price is always evaluated against the cheapest prior buy price; maintaining a running
- * minimum lets each day compute its potential profit in O(1), making the global maximum profit a single-pass scan.
+ *
+ * Key insight: The optimal sell price is always evaluated against the cheapest
+ * prior buy price; maintaining a running minimum lets each day compute its
+ * potential profit in O(1), making the global maximum profit a single-pass
+ * scan.
  *
  * Time Complexity: O(N) - One pass through prices with O(1) work per element
+ *
  * Space Complexity: O(1) - Two variables (minPrice, maxProfit)
  *
- * Edge Cases Handled: single price (profit stays 0), monotonically decreasing prices (minPrice updates but profit never
- * beats 0), first day is also the cheapest (profit = last - first)
+ * Edge Cases Handled: single price (profit stays 0), monotonically decreasing
+ * prices (minPrice updates but profit never beats 0), first day is also the
+ * cheapest (profit = last - first)
  */
 class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {

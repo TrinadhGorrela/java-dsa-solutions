@@ -4,14 +4,18 @@
  * https://leetcode.com/problems/available-captures-for-rook/
  *
  * Pattern: Fixed-Board Directional Scan
- * Key insight: Locate the rook on the 8×8 board, then walk outward in the four cardinal directions; count a capture the
- * first time a pawn ('p') is encountered before any bishop ('B') blocks the path.
+ *
+ * Key insight: Locate the rook on the 8×8 board, then walk outward in the four
+ * cardinal directions; count a capture the first time a pawn ('p') is
+ * encountered before any bishop ('B') blocks the path.
  *
  * Time Complexity: O(1) - Board is fixed 8×8; at most 4 × 7 = 28 cells checked.
+ *
  * Space Complexity: O(1) - Only rook coordinates and a capture counter.
  *
- * Edge Cases Handled: rook at board edge (shortened scan), no pawns on the board, pawn blocked by bishop, multiple
- * pawns in one direction (only the first counts)
+ * Edge Cases Handled: rook at board edge (shortened scan), no pawns on the
+ * board, pawn blocked by bishop, multiple pawns in one direction (only the
+ * first counts)
  */
 class AvailableCapturesForRook {
     public int numRookCaptures(char[][] board) {

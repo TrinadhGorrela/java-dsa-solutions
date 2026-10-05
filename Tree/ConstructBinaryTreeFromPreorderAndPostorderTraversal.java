@@ -1,17 +1,24 @@
 /**
  * 889. Construct Binary Tree from Preorder and Postorder Traversal
- * Difficulty: Medium | Tags: Array, Hash Table, Divide and Conquer, Tree, Binary Tree
- * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/
+ * Difficulty: Medium | Tags: Array, Hash Table, Divide and Conquer, Tree,
+ * Binary Tree
+ * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postord
+ * er-traversal/
  *
  * Pattern: Recursive Divide-and-Conquer with Hash Map Lookup
- * Key insight: Preorder's second element is always the left child; look it up in postorder to find the left-subtree
- * boundary, then split both arrays. The root is always consumed last in each postorder sub-range (end - 1).
  *
- * Time Complexity: O(n) - Each node is constructed once; hash map gives O(1) index lookups.
+ * Key insight: Preorder's second element is always the left child; look it up
+ * in postorder to find the left-subtree boundary, then split both arrays. The
+ * root is always consumed last in each postorder sub-range (end - 1).
+ *
+ * Time Complexity: O(n) - Each node is constructed once; hash map gives O(1)
+ * index lookups.
+ *
  * Space Complexity: O(n) - Hash map stores n entries; recursion depth is O(h).
  *
- * Edge Cases Handled: single node (st == end short-circuit), st > end or preIndex out-of-bounds returns null, left-only
- * or right-only skewed chains, full binary tree
+ * Edge Cases Handled: single node (st == end short-circuit), st > end or
+ * preIndex out-of-bounds returns null, left-only or right-only skewed chains,
+ * full binary tree
  */
 /**
  * Definition for a binary tree node.

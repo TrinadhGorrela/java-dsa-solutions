@@ -4,12 +4,21 @@
  * https://leetcode.com/problems/partition-list/
  *
  * Pattern: Two Pointers (Link Partitioning with Two Dummy Heads)
- * Key insight: Because each node is detached from the input and appended to a "small" or "large" chain by comparing its value with x, relative order inside both partitions is preserved; splicing the small chain onto the large chain rebuilds a stable partition with no swaps.
  *
- * Time Complexity: O(N) - Single pass over the list; every node is processed exactly once
- * Space Complexity: O(1) - Only two constant dummy sentinel nodes are allocated; no data nodes are created
+ * Key insight: Because each node is detached from the input and appended to a
+ * "small" or "large" chain by comparing its value with x, relative order inside
+ * both partitions is preserved; splicing the small chain onto the large chain
+ * rebuilds a stable partition with no swaps.
  *
- * Edge Cases Handled: null/empty list (loop is skipped, a null tail is returned); all nodes < x or all nodes >= x (one chain stays empty and the join still succeeds); single node; duplicate values (stable ordering is kept)
+ * Time Complexity: O(N) - Single pass over the list; every node is processed
+ * exactly once
+ *
+ * Space Complexity: O(1) - Only two constant dummy sentinel nodes are
+ * allocated; no data nodes are created
+ *
+ * Edge Cases Handled: null/empty list (loop is skipped, a null tail is
+ * returned); all nodes < x or all nodes >= x (one chain stays empty and the
+ * join still succeeds); single node; duplicate values (stable ordering is kept)
  */
 /**
  * Definition for singly-linked list.

@@ -4,14 +4,17 @@
  * https://leetcode.com/problems/house-robber-ii/
  *
  * Pattern: Circular array reduction via two linear House Robber sub-problems
- * Key insight: Since first and last houses are adjacent in a circle, no valid solution can rob both; solve two
- * independent linear House Robber instances (nums[0..n-2] and nums[1..n-1]) and return the max.
+ *
+ * Key insight: Since first and last houses are adjacent in a circle, no valid
+ * solution can rob both; solve two independent linear House Robber instances
+ * (nums[0..n-2] and nums[1..n-1]) and return the max.
  *
  * Time Complexity: O(n) - Two linear DP passes, each O(n)
+ *
  * Space Complexity: O(n) - Two auxiliary arrays of length n-1
  *
- * Edge Cases Handled: n=0 returns 0; n=1 returns nums[0]; n=2 returns max of both; circular adjacency resolved by
- * exclusive sub-arrays
+ * Edge Cases Handled: n=0 returns 0; n=1 returns nums[0]; n=2 returns max of
+ * both; circular adjacency resolved by exclusive sub-arrays
  */
 class HouseRobberII {
     public int rob(int[] nums) {

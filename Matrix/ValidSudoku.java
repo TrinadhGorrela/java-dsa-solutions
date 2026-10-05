@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/valid-sudoku/
  *
  * Pattern: In-Place Cell-Blanking Validation
- * Key insight: For each filled cell, temporarily blank it and check whether any other cell in the same row, column, or
- * 3×3 box has the same digit—if not, restore it; this avoids extra hash-set storage.
  *
- * Time Complexity: O(81·3) = O(1) - Board is fixed 9×9; each cell scans at most 20 peers.
- * Space Complexity: O(1) - In-place int[9][9] conversion, no extra data structures.
+ * Key insight: For each filled cell, temporarily blank it and check whether any
+ * other cell in the same row, column, or 3×3 box has the same digit—if not,
+ * restore it; this avoids extra hash-set storage.
  *
- * Edge Cases Handled: empty board (all '.'); duplicate confined to one row, column, or box; single filled cell; all
- * cells filled
+ * Time Complexity: O(81·3) = O(1) - Board is fixed 9×9; each cell scans at most
+ * 20 peers.
+ *
+ * Space Complexity: O(1) - In-place int[9][9] conversion, no extra data
+ * structures.
+ *
+ * Edge Cases Handled: empty board (all '.'); duplicate confined to one row,
+ * column, or box; single filled cell; all cells filled
  */
 class ValidSudoku {
     public boolean isValidSudoku(char[][] board) {

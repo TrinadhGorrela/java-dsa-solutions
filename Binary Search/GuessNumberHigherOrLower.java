@@ -4,14 +4,17 @@
  * https://leetcode.com/problems/guess-number-higher-or-lower/
  *
  * Pattern: Interactive Binary Search
- * Key insight: The guess() API returns -1 (too high), 1 (too low), or 0 (found); use these as the comparison to halve
- * [left, right] each iteration until the exact number is narrowed down.
+ *
+ * Key insight: The guess() API returns -1 (too high), 1 (too low), or 0
+ * (found); use these as the comparison to halve [left, right] each iteration
+ * until the exact number is narrowed down.
  *
  * Time Complexity: O(log n) - Interval halves each guess.
+ *
  * Space Complexity: O(1) - Three integers: left, right, mid.
  *
- * Edge Cases Handled: n = 1 (returned immediately), picked number at boundary (1 or n), picked number is the initial
- * midpoint
+ * Edge Cases Handled: n = 1 (returned immediately), picked number at boundary
+ * (1 or n), picked number is the initial midpoint
  */
 /** 
  * Forward declaration of guess API.

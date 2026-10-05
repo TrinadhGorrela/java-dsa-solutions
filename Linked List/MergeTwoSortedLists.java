@@ -4,15 +4,18 @@
  * https://leetcode.com/problems/merge-two-sorted-lists/
  *
  * Pattern: Iterative Merge with Dummy Head
- * Key insight: A dummy node provides a clean tail pointer; compare the two list heads, attach the smaller node, advance
- * that list, and repeat. When one list exhausts, link the remainder of the other—zero node allocation beyond the
+ *
+ * Key insight: A dummy node provides a clean tail pointer; compare the two list
+ * heads, attach the smaller node, advance that list, and repeat. When one list
+ * exhausts, link the remainder of the other—zero node allocation beyond the
  * output.
  *
  * Time Complexity: O(m + n) - Each node is visited exactly once.
+ *
  * Space Complexity: O(1) - Dummy node + one tail pointer; output is in-place.
  *
- * Edge Cases Handled: one or both lists empty, unequal lengths (remaining tail appended), equal values (list1's node
- * kept first), both single-node lists
+ * Edge Cases Handled: one or both lists empty, unequal lengths (remaining tail
+ * appended), equal values (list1's node kept first), both single-node lists
  */
 /**
  * Definition for singly-linked list.

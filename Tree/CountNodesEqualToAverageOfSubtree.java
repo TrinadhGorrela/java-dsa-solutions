@@ -4,15 +4,21 @@
  * https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/
  *
  * Pattern: Post-Order DFS (Bottom-Up Aggregation)
- * Key insight: Each recursive call returns the (sum, count) of its subtree, so every node can
- *  compute its subtree average in O(1) as it unwinds — no redundant recomputation needed.
  *
- * Time Complexity: O(N) - Every node is visited exactly once in the post-order traversal
- * Space Complexity: O(H) - Recursion stack depth equals the tree height (O(log N) balanced, O(N) worst-case skewed)
+ * Key insight: Each recursive call returns the (sum, count) of its subtree, so
+ * every node can compute its subtree average in O(1) as it unwinds — no
+ * redundant recomputation needed.
  *
- * Edge Cases Handled: null root (returns 0 immediately), single-node tree (leaf check increments count),
- *  integer division truncation (average is floor-divided, so only exact matches count — e.g., a subtree
- *  sum of 5 with 2 nodes gives avg=2, not 2.5), static counter reset between calls via avg=0
+ * Time Complexity: O(N) - Every node is visited exactly once in the post-order
+ * traversal
+ *
+ * Space Complexity: O(H) - Recursion stack depth equals the tree height (O(log
+ * N) balanced, O(N) worst-case skewed)
+ *
+ * Edge Cases Handled: null root (returns 0 immediately), single-node tree (leaf
+ * check increments count), integer division truncation (average is
+ * floor-divided, so only exact matches count — e.g., a subtree sum of 5 with 2
+ * nodes gives avg=2, not 2.5), static counter reset between calls via avg=0
  */
 /**
  * Definition for a binary tree node.

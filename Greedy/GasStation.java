@@ -4,15 +4,21 @@
  * https://leetcode.com/problems/gas-station/
  *
  * Pattern: Two-Pass Greedy Feasibility Check
- * Key insight: A circular tour is possible only when total gas >= total cost; within that guarantee, any prefix deficit
- * proves every station in that prefix is an invalid start, so resetting to the next station after a deficit is
+ *
+ * Key insight: A circular tour is possible only when total gas >= total cost;
+ * within that guarantee, any prefix deficit proves every station in that prefix
+ * is an invalid start, so resetting to the next station after a deficit is
  * sufficient.
  *
- * Time Complexity: O(N) - Two linear passes: one for the total check, one for the start selection
- * Space Complexity: O(1) - Four integer accumulators (totalGas, totalCost, start, curr)
+ * Time Complexity: O(N) - Two linear passes: one for the total check, one for
+ * the start selection
  *
- * Edge Cases Handled: total gas < total cost (returns -1 immediately), all stations deficit-free (returns 0), single
- * station with gas >= cost, deficit resets mid-tour pushing start to the correct answer
+ * Space Complexity: O(1) - Four integer accumulators (totalGas, totalCost,
+ * start, curr)
+ *
+ * Edge Cases Handled: total gas < total cost (returns -1 immediately), all
+ * stations deficit-free (returns 0), single station with gas >= cost, deficit
+ * resets mid-tour pushing start to the correct answer
  */
 class GasStation {
     public int canCompleteCircuit(int[] gas, int[] cost) {

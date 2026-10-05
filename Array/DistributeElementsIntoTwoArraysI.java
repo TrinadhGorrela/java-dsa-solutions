@@ -4,15 +4,19 @@
  * https://leetcode.com/problems/distribute-elements-into-two-arrays-i/
  *
  * Pattern: Two-List Greedy Distribution
- * Key insight: Seed arr1 and arr2 with the first two elements, then append each subsequent element to whichever list
- * has the larger tail. This greedy comparison drives the distribution without any sorting.
  *
- * Time Complexity: O(N) - One pass from index 2 to N-1 for distribution, one pass to flatten both lists back into the
- * result array
+ * Key insight: Seed arr1 and arr2 with the first two elements, then append each
+ * subsequent element to whichever list has the larger tail. This greedy
+ * comparison drives the distribution without any sorting.
+ *
+ * Time Complexity: O(N) - One pass from index 2 to N-1 for distribution, one
+ * pass to flatten both lists back into the result array
+ *
  * Space Complexity: O(N) - Two ArrayLists collectively hold all N elements
  *
- * Edge Cases Handled: exactly two elements (no loop iterations, just the two seeds), equal tail values (tie goes to
- * arr2 via the else branch), all elements the same
+ * Edge Cases Handled: exactly two elements (no loop iterations, just the two
+ * seeds), equal tail values (tie goes to arr2 via the else branch), all
+ * elements the same
  */
 class DistributeElementsIntoTwoArraysI {
     public int[] resultArray(int[] nums) {

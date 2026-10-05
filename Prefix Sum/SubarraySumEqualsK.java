@@ -4,14 +4,20 @@
  * https://leetcode.com/problems/subarray-sum-equals-k/
  *
  * Pattern: Prefix Sum + HashMap Lookup
- * Key insight: If prefixSum[j] == prefixSum[i] - k, then the subarray (j, i] sums to k — seeding the map with {0: 1}
- * handles subarrays starting at index 0, and duplicate prefix sums are counted via frequency.
  *
- * Time Complexity: O(N) - Single pass accumulating prefix sum and querying the map
- * Space Complexity: O(N) - HashMap stores up to N+1 distinct prefix sum frequencies
+ * Key insight: If prefixSum[j] == prefixSum[i] - k, then the subarray (j, i]
+ * sums to k — seeding the map with {0: 1} handles subarrays starting at index
+ * 0, and duplicate prefix sums are counted via frequency.
  *
- * Edge Cases Handled: k = 0 (subarrays summing to 0 via repeated prefix sums), negative numbers (prefix sums can
- * repeat), entire array is the answer, single element equal to k
+ * Time Complexity: O(N) - Single pass accumulating prefix sum and querying the
+ * map
+ *
+ * Space Complexity: O(N) - HashMap stores up to N+1 distinct prefix sum
+ * frequencies
+ *
+ * Edge Cases Handled: k = 0 (subarrays summing to 0 via repeated prefix sums),
+ * negative numbers (prefix sums can repeat), entire array is the answer, single
+ * element equal to k
  */
 class SubarraySumEqualsK {
     public int subarraySum(int[] nums, int k) {

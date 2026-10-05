@@ -1,20 +1,27 @@
 /**
  * 3568. Minimum Moves to Clean the Classroom
- * Difficulty: Medium | Tags: Array, Hash Table, Bit Manipulation, Breadth-First Search, Matrix
+ * Difficulty: Medium | Tags: Array, Hash Table, Bit Manipulation, Breadth-First
+ * Search, Matrix
  * https://leetcode.com/problems/minimum-moves-to-clean-the-classroom/
  *
  * Pattern: BFS + Bitmask State (State-Space Search)
- * Key insight: Model each state as (row, col, energy, mask) where mask's k-th bit marks whether the k-th litter cell
- * has been cleaned. BFS finds the minimum number of moves because all edges cost 1; a visit is the first time a state
- * is reached, so a tracked 4D visited array prevents redundant exploration. Charging stations (R) reset energy back to
- * full.
  *
- * Time Complexity: O(R*C*E*2^L) - Each cell x energy level x litter-mask combination is visited at most once
- * Space Complexity: O(R*C*E*2^L) - 4D visited boolean array plus BFS queue hold every reachable state
+ * Key insight: Model each state as (row, col, energy, mask) where mask's k-th
+ * bit marks whether the k-th litter cell has been cleaned. BFS finds the
+ * minimum number of moves because all edges cost 1; a visit is the first time a
+ * state is reached, so a tracked 4D visited array prevents redundant
+ * exploration. Charging stations (R) reset energy back to full.
  *
- * Edge Cases Handled: no litter (mask already complete at start returns 0), no reachable charging station (runs out of
- * energy and returns -1), walls blocking all paths (returns -1), unreachable litter cells (never collect all bits,
- * returns -1)
+ * Time Complexity: O(R*C*E*2^L) - Each cell x energy level x litter-mask
+ * combination is visited at most once
+ *
+ * Space Complexity: O(R*C*E*2^L) - 4D visited boolean array plus BFS queue hold
+ * every reachable state
+ *
+ * Edge Cases Handled: no litter (mask already complete at start returns 0), no
+ * reachable charging station (runs out of energy and returns -1), walls
+ * blocking all paths (returns -1), unreachable litter cells (never collect all
+ * bits, returns -1)
  */
 class MinimumMovesToCleanTheClassroom {
     public int minMoves(String[] classroom, int energy) {

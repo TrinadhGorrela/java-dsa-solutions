@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/container-with-most-water/
  *
  * Pattern: Greedy Two-Pointer Shrink
- * Key insight: The area is bounded by the shorter wall and the width; moving the taller wall inward can only decrease
- * width without improving height, so always advancing the shorter pointer is provably optimal.
+ *
+ * Key insight: The area is bounded by the shorter wall and the width; moving
+ * the taller wall inward can only decrease width without improving height, so
+ * always advancing the shorter pointer is provably optimal.
  *
  * Time Complexity: O(N) - Each pointer moves at most N steps; single pass
- * Space Complexity: O(1) - Two pointers, one max tracker, one temp area variable
  *
- * Edge Cases Handled: Minimum two-element array, equal heights (either pointer can move), all walls same height,
- * tallest walls at the ends, progressively decreasing heights
+ * Space Complexity: O(1) - Two pointers, one max tracker, one temp area
+ * variable
+ *
+ * Edge Cases Handled: Minimum two-element array, equal heights (either pointer
+ * can move), all walls same height, tallest walls at the ends, progressively
+ * decreasing heights
  */
 class ContainerWithMostWater {
     public int maxArea(int[] height) {

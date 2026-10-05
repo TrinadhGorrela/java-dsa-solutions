@@ -1,19 +1,27 @@
 /**
  * 133. Clone Graph
- * Difficulty: Medium | Tags: Hash Table, Depth-First Search, Breadth-First Search, Graph Theory
+ * Difficulty: Medium | Tags: Hash Table, Depth-First Search, Breadth-First
+ * Search, Graph Theory
  * https://leetcode.com/problems/clone-graph/
  *
  * Pattern: DFS with Memoization Map
- * Key insight: Clone each node on first visit and store it in a value-keyed map. When DFS encounters a neighbor already
- * in the map, it reuses the existing clone instead of creating a duplicate, which both breaks cycles and avoids
- * redundant work. The map serves as both a visited set and a clone registry.
  *
- * Time Complexity: O(V + E) - Each node cloned once; each edge traversed once to link neighbors
- * Space Complexity: O(V) - HashMap stores V cloned nodes; recursion stack up to V deep
+ * Key insight: Clone each node on first visit and store it in a value-keyed
+ * map. When DFS encounters a neighbor already in the map, it reuses the
+ * existing clone instead of creating a duplicate, which both breaks cycles and
+ * avoids redundant work. The map serves as both a visited set and a clone
+ * registry.
  *
- * Edge Cases Handled: null input node (returns null immediately), self-loop (map lookup returns the node's own clone),
- * cycle in graph (map prevents infinite recursion), single isolated node with no neighbors (cloned with empty neighbor
- * list)
+ * Time Complexity: O(V + E) - Each node cloned once; each edge traversed once
+ * to link neighbors
+ *
+ * Space Complexity: O(V) - HashMap stores V cloned nodes; recursion stack up to
+ * V deep
+ *
+ * Edge Cases Handled: null input node (returns null immediately), self-loop
+ * (map lookup returns the node's own clone), cycle in graph (map prevents
+ * infinite recursion), single isolated node with no neighbors (cloned with
+ * empty neighbor list)
  */
 /*
 // Definition for a Node.

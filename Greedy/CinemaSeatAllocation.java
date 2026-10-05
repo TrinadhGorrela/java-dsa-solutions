@@ -4,16 +4,20 @@
  * https://leetcode.com/problems/cinema-seat-allocation/
  *
  * Pattern: Hash Map Row-Sparse Greedy
- * Key insight: Rows without reservations always accommodate 2 families; for reserved rows, the three candidate blocks
- * (seats 2-5, 4-7, 6-9) are checked with booleans — left and right are independent, but middle is only viable when both
- * left and right are blocked.
  *
- * Time Complexity: O(N) - One pass over reservedSeats to build the map, one pass over reserved rows; unreserved rows
- * contribute a single multiply
- * Space Complexity: O(R) - HashMap stores one boolean[11] per reserved row (R = number of distinct reserved rows)
+ * Key insight: Rows without reservations always accommodate 2 families; for
+ * reserved rows, the three candidate blocks (seats 2-5, 4-7, 6-9) are checked
+ * with booleans — left and right are independent, but middle is only viable
+ * when both left and right are blocked.
  *
- * Edge Cases Handled: no reservations at all (returns 2n), single seat reserved in a row, middle block overlapping both
- * left and right reservations, n = 1
+ * Time Complexity: O(N) - One pass over reservedSeats to build the map, one
+ * pass over reserved rows; unreserved rows contribute a single multiply
+ *
+ * Space Complexity: O(R) - HashMap stores one boolean[11] per reserved row (R =
+ * number of distinct reserved rows)
+ *
+ * Edge Cases Handled: no reservations at all (returns 2n), single seat reserved
+ * in a row, middle block overlapping both left and right reservations, n = 1
  */
 class CinemaSeatAllocation {
     public int maxNumberOfFamilies(int n, int[][] reservedSeats) {

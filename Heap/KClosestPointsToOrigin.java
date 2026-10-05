@@ -1,19 +1,26 @@
 /**
  * 973. K Closest Points to Origin
- * Difficulty: Medium | Tags: Array, Math, Divide and Conquer, Geometry, Sorting, Heap (Priority Queue), Quickselect,
- * K-D Tree
+ * Difficulty: Medium | Tags: Array, Math, Divide and Conquer, Geometry,
+ * Sorting, Heap (Priority Queue), Quickselect, K-D Tree
  * https://leetcode.com/problems/k-closest-points-to-origin/
  *
  * Pattern: Max-Heap (Priority Queue) of Size K
- * Key insight: Maintain a max-heap of size K storing distance-pairs; inserting each point and ejecting the farthest when
- * size exceeds K leaves exactly the K closest. Using a max-heap (descending comparator) ensures the largest distance
- * is at the heap root and is ejected first, which is correct because we want to keep only the K smallest distances.
  *
- * Time Complexity: O(N log K) - Each of N points is inserted/possibly ejected in O(log K) heap operations.
- * Space Complexity: O(K) - The heap holds at most K entries, and the result array is also O(K).
+ * Key insight: Maintain a max-heap of size K storing distance-pairs; inserting
+ * each point and ejecting the farthest when size exceeds K leaves exactly the K
+ * closest. Using a max-heap (descending comparator) ensures the largest
+ * distance is at the heap root and is ejected first, which is correct because
+ * we want to keep only the K smallest distances.
  *
- * Edge Cases Handled: k equals total number of points (all returned); k == 1 (single closest point); points at origin
- * (distance zero, never ejected); negative coordinates (sqrt of sum-of-squares is always non-negative).
+ * Time Complexity: O(N log K) - Each of N points is inserted/possibly ejected
+ * in O(log K) heap operations.
+ *
+ * Space Complexity: O(K) - The heap holds at most K entries, and the result
+ * array is also O(K).
+ *
+ * Edge Cases Handled: k equals total number of points (all returned); k == 1
+ * (single closest point); points at origin (distance zero, never ejected);
+ * negative coordinates (sqrt of sum-of-squares is always non-negative).
  */
 class KClosestPointsToOrigin {
     public int[][] kClosest(int[][] points, int k) {

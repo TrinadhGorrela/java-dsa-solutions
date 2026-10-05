@@ -1,20 +1,25 @@
 /**
  * 886. Possible Bipartition
- * Difficulty: Medium | Tags: Depth-First Search, Breadth-First Search, Union-Find, Graph Theory, Graph Coloring,
- * Bipartite Graph
+ * Difficulty: Medium | Tags: Depth-First Search, Breadth-First Search,
+ * Union-Find, Graph Theory, Graph Coloring, Bipartite Graph
  * https://leetcode.com/problems/possible-bipartition/
  *
  * Pattern: DFS Graph 2-Coloring (Bipartite Check)
- * Key insight: Build an undirected dislike graph and attempt to 2-color it via DFS. If any neighbor has the same color
- * as the current node, an odd cycle exists and partitioning is impossible. Iterating over adjacency list keys naturally
- * skips isolated nodes (no dislikes).
  *
- * Time Complexity: O(V + E) - DFS visits each person and dislike edge once; V = number of people with dislikes, E =
- * number of dislike pairs
- * Space Complexity: O(V + E) - Adjacency list plus group color array of size n+1
+ * Key insight: Build an undirected dislike graph and attempt to 2-color it via
+ * DFS. If any neighbor has the same color as the current node, an odd cycle
+ * exists and partitioning is impossible. Iterating over adjacency list keys
+ * naturally skips isolated nodes (no dislikes).
  *
- * Edge Cases Handled: empty dislikes array (trivially bipartite), n = 1 with no dislikes (true), disconnected
- * components (each independently colored from unvisited keys), odd-cycle conflict detected via same-color neighbor
+ * Time Complexity: O(V + E) - DFS visits each person and dislike edge once; V =
+ * number of people with dislikes, E = number of dislike pairs
+ *
+ * Space Complexity: O(V + E) - Adjacency list plus group color array of size
+ * n+1
+ *
+ * Edge Cases Handled: empty dislikes array (trivially bipartite), n = 1 with no
+ * dislikes (true), disconnected components (each independently colored from
+ * unvisited keys), odd-cycle conflict detected via same-color neighbor
  */
 class PossibleBipartition {
     public boolean possibleBipartition(int n, int[][] dislikes) {

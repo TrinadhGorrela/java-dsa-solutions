@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/set-mismatch/
  *
  * Pattern: HashSet Lookup + Sum Formula
- * Key insight: The HashSet catches the duplicate on the second visit; the missing value is recovered algebraically via
- * expectedSum(1..n) - actualSum + duplicate, avoiding a second data structure.
  *
- * Time Complexity: O(N) - Single pass to populate the set and accumulate actualSum, then O(1) arithmetic
- * Space Complexity: O(N) - HashSet stores up to N distinct values for O(1) membership checks
+ * Key insight: The HashSet catches the duplicate on the second visit; the
+ * missing value is recovered algebraically via expectedSum(1..n) - actualSum +
+ * duplicate, avoiding a second data structure.
  *
- * Edge Cases Handled: n=1 (array is [1,1], duplicate=1, missing=1), duplicate at first or last position, missing number
- * is n (the largest value)
+ * Time Complexity: O(N) - Single pass to populate the set and accumulate
+ * actualSum, then O(1) arithmetic
+ *
+ * Space Complexity: O(N) - HashSet stores up to N distinct values for O(1)
+ * membership checks
+ *
+ * Edge Cases Handled: n=1 (array is [1,1], duplicate=1, missing=1), duplicate
+ * at first or last position, missing number is n (the largest value)
  */
 class SetMismatch {
     public int[] findErrorNums(int[] nums) {

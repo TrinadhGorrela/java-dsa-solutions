@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/merge-intervals/
  *
  * Pattern: Sort-by-Start Linear Merge
- * Key insight: Sorting by start time guarantees that any overlap with the running merged interval is detected by
- * comparing `lastEnd >= currentStart`; the merged interval's end simply extends to `max(lastEnd, currentEnd)`,
+ *
+ * Key insight: Sorting by start time guarantees that any overlap with the
+ * running merged interval is detected by comparing `lastEnd >= currentStart`;
+ * the merged interval's end simply extends to `max(lastEnd, currentEnd)`,
  * otherwise the interval is disjoint and gets appended.
  *
  * Time Complexity: O(N log N) - Sorting dominates; the merge scan is O(N)
- * Space Complexity: O(N) - Output list may hold up to N intervals (no overlaps case); auxiliary sort space not counted
  *
- * Edge Cases Handled: fully contained intervals (end extends via max), adjacent intervals touching at boundary
- * (merged), single interval (output equals input), all overlapping (single merged interval in output)
+ * Space Complexity: O(N) - Output list may hold up to N intervals (no overlaps
+ * case); auxiliary sort space not counted
+ *
+ * Edge Cases Handled: fully contained intervals (end extends via max), adjacent
+ * intervals touching at boundary (merged), single interval (output equals
+ * input), all overlapping (single merged interval in output)
  */
 class MergeIntervals {
     public int[][] merge(int[][] intervals) {

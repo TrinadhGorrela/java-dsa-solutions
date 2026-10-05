@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/
  *
  * Pattern: Fixed-Size Chunking with Padding
- * Key insight: Step through the string in k-sized strides; full chunks are taken as-is, while the final possibly-short
- * chunk is padded to length k with the fill character. The result array size is ceil(n/k).
  *
- * Time Complexity: O(n) - Each character visited once; padding adds at most k−1 extra characters.
+ * Key insight: Step through the string in k-sized strides; full chunks are
+ * taken as-is, while the final possibly-short chunk is padded to length k with
+ * the fill character. The result array size is ceil(n/k).
+ *
+ * Time Complexity: O(n) - Each character visited once; padding adds at most k−1
+ * extra characters.
+ *
  * Space Complexity: O(n) - Output array holds the full re-chunked string.
  *
- * Edge Cases Handled: n evenly divisible by k (no padding), final chunk shorter than k (padded with fill), k > n
- * (single padded chunk), k = 1 (each character is its own group)
+ * Edge Cases Handled: n evenly divisible by k (no padding), final chunk shorter
+ * than k (padded with fill), k > n (single padded chunk), k = 1 (each character
+ * is its own group)
  */
 class DivideAStringIntoGroupsOfSizeK {
     public String[] divideString(String s, int k, char fill) {

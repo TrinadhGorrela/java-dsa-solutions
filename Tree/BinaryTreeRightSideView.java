@@ -1,17 +1,22 @@
 /**
  * 199. Binary Tree Right Side View
- * Difficulty: Medium | Tags: Tree, Depth-First Search, Breadth-First Search, Binary Tree
+ * Difficulty: Medium | Tags: Tree, Depth-First Search, Breadth-First Search,
+ * Binary Tree
  * https://leetcode.com/problems/binary-tree-right-side-view/
  *
  * Pattern: BFS Level-Order with Last-Node Capture
- * Key insight: Snapshot the queue size for each level; the node dequeued when size reaches 1 (the final node of that
- * level) is the rightmost visible node — children are enqueued first so left/right order is preserved.
+ *
+ * Key insight: Snapshot the queue size for each level; the node dequeued when
+ * size reaches 1 (the final node of that level) is the rightmost visible node —
+ * children are enqueued first so left/right order is preserved.
  *
  * Time Complexity: O(n) - Each node is enqueued and dequeued exactly once.
+ *
  * Space Complexity: O(w) - Queue holds at most one level's width of nodes.
  *
- * Edge Cases Handled: null root returns empty list, single node, missing right child (falls back to leftmost as
- * visible), skewed tree, complete binary tree, single-level root only
+ * Edge Cases Handled: null root returns empty list, single node, missing right
+ * child (falls back to leftmost as visible), skewed tree, complete binary tree,
+ * single-level root only
  */
 /**
  * Definition for a binary tree node.

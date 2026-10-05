@@ -4,15 +4,18 @@
  * https://leetcode.com/problems/paint-house/
  *
  * Pattern: 2D bottom-up DP with adjacency constraint
- * Key insight: dp[i][j] = min cost to paint house i with color j, where house i cannot share the color of
- * house i-1; each cell picks the minimum of the two non-conflicting previous colors, yielding the optimal
- * non-adjacent color assignment.
+ *
+ * Key insight: dp[i][j] = min cost to paint house i with color j, where house i
+ * cannot share the color of house i-1; each cell picks the minimum of the two
+ * non-conflicting previous colors, yielding the optimal non-adjacent color
+ * assignment.
  *
  * Time Complexity: O(n) - Two nested loops: n houses x 3 colors
+ *
  * Space Complexity: O(n) - DP array of size (n+1) x 3
  *
- * Edge Cases Handled: empty costs array returns 0; single house returns min of its three costs; negative
- * costs are supported by the recurrence structure
+ * Edge Cases Handled: empty costs array returns 0; single house returns min of
+ * its three costs; negative costs are supported by the recurrence structure
  */
 class PaintHouse {
     public int minCost(int[][] costs) {

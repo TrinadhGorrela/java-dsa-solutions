@@ -1,18 +1,25 @@
 /**
  * 767. Reorganize String
- * Difficulty: Medium | Tags: Hash Table, String, Greedy, Sorting, Heap (Priority Queue), Counting
+ * Difficulty: Medium | Tags: Hash Table, String, Greedy, Sorting, Heap
+ * (Priority Queue), Counting
  * https://leetcode.com/problems/reorganize-string/
  *
  * Pattern: Even-Index Staggering Greedy
- * Key insight: Place the most frequent character on all even indices (0, 2, 4…) first; this is always possible if its
- * count ≤ ⌈n/2⌉. Remaining characters fill odd indices then overflow to remaining evens — no two adjacent characters
- * match.
  *
- * Time Complexity: O(N) - Counting pass O(N) + two filling passes over the result array
+ * Key insight: Place the most frequent character on all even indices (0, 2, 4…)
+ * first; this is always possible if its count ≤ ⌈n/2⌉. Remaining characters
+ * fill odd indices then overflow to remaining evens — no two adjacent
+ * characters match.
+ *
+ * Time Complexity: O(N) - Counting pass O(N) + two filling passes over the
+ * result array
+ *
  * Space Complexity: O(N) - Result char array of length N
  *
- * Edge Cases Handled: most frequent character count > ⌈n/2⌉ (returns "", impossible to separate), single character
- * (returns as-is), all unique characters (alternating placement), even vs odd length (fill indices wrap correctly)
+ * Edge Cases Handled: most frequent character count > ⌈n/2⌉ (returns "",
+ * impossible to separate), single character (returns as-is), all unique
+ * characters (alternating placement), even vs odd length (fill indices wrap
+ * correctly)
  */
 class ReorganizeString {
     public String reorganizeString(String s) {

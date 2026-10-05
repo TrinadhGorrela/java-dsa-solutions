@@ -1,21 +1,27 @@
 /**
  * 126. Word Ladder II
- * Difficulty: Hard | Tags: Hash Table, String, Backtracking, Breadth-First Search, Bidirectional Search
+ * Difficulty: Hard | Tags: Hash Table, String, Backtracking, Breadth-First
+ * Search, Bidirectional Search
  * https://leetcode.com/problems/word-ladder-ii/
  *
  * Pattern: BFS Parent-Map + DFS Backtracking
- * Key insight: BFS explores the word graph level-by-level, building a reverse parent map (child -> list of parents) at
- * each level; once endWord is reached, DFS backtracks from endWord to beginWord through the parent map to reconstruct
- * all shortest paths without revisiting shorter-path candidates, since nodes are only added to the map on first
- * encounter per level.
  *
- * Time Complexity: O(N * M * 26) - BFS generates up to 26 single-letter variants for each of M positions across N words
- * per level; DFS reconstructs paths through the parent map
- * Space Complexity: O(N * M) - Parent map stores up to N words each of length M; recursion stack for path
- * reconstruction
+ * Key insight: BFS explores the word graph level-by-level, building a reverse
+ * parent map (child -> list of parents) at each level; once endWord is reached,
+ * DFS backtracks from endWord to beginWord through the parent map to
+ * reconstruct all shortest paths without revisiting shorter-path candidates,
+ * since nodes are only added to the map on first encounter per level.
  *
- * Edge Cases Handled: endWord not in wordList (empty result), beginWord equals endWord (handled by BFS termination), no
- * valid transformation path exists (BFS exhausts queue without finding endWord)
+ * Time Complexity: O(N * M * 26) - BFS generates up to 26 single-letter
+ * variants for each of M positions across N words per level; DFS reconstructs
+ * paths through the parent map
+ *
+ * Space Complexity: O(N * M) - Parent map stores up to N words each of length
+ * M; recursion stack for path reconstruction
+ *
+ * Edge Cases Handled: endWord not in wordList (empty result), beginWord equals
+ * endWord (handled by BFS termination), no valid transformation path exists
+ * (BFS exhausts queue without finding endWord)
  */
 class WordLadderII {
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {

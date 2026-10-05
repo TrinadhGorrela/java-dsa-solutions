@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/encode-and-decode-strings/
  *
  * Pattern: Length Prefix + Delimiter
- * Key insight: Prefix each string with its length followed by a delimiter (e.g., '#'). 
- * During decoding, read the length, skip the delimiter, and extract the string.
  *
- * Time Complexity: O(n) - n is total characters across all strings; both encode and decode scan each character once.
+ * Key insight: Prefix each string with its length followed by a delimiter
+ * (e.g., '#'). During decoding, read the length, skip the delimiter, and
+ * extract the string.
+ *
+ * Time Complexity: O(n) - n is total characters across all strings; both encode
+ * and decode scan each character once.
+ *
  * Space Complexity: O(n) - Output string or list holds all original characters.
  *
- * Edge Cases Handled: empty list of strings, empty string in the list, strings containing '#', single string input,
- * strings with special characters and unicode
+ * Edge Cases Handled: empty list of strings, empty string in the list, strings
+ * containing '#', single string input, strings with special characters and
+ * unicode
  */
 class EncodeAndDecodeStrings {
 

@@ -4,14 +4,20 @@
  * https://leetcode.com/problems/rotate-function/
  *
  * Pattern: Math (Recurrence Relation)
- * Key insight: Each rotation shifts one element from the weighted sum's tail to subtract n*value, yielding F(k+1) =
- * F(k) + totalSum - n*A[n-k] — avoiding recomputation of every rotation from scratch.
  *
- * Time Complexity: O(N) - First pass computes F(0) and totalSum; second pass applies the recurrence for N-1 rotations
- * Space Complexity: O(1) - Only long accumulators (max, sum, prev) beyond the input array
+ * Key insight: Each rotation shifts one element from the weighted sum's tail to
+ * subtract n*value, yielding F(k+1) = F(k) + totalSum - n*A[n-k] — avoiding
+ * recomputation of every rotation from scratch.
  *
- * Edge Cases Handled: single element (F(0) is the only rotation), negative values in the array, integer overflow via
- * long arithmetic, all equal values (all rotations yield the same product)
+ * Time Complexity: O(N) - First pass computes F(0) and totalSum; second pass
+ * applies the recurrence for N-1 rotations
+ *
+ * Space Complexity: O(1) - Only long accumulators (max, sum, prev) beyond the
+ * input array
+ *
+ * Edge Cases Handled: single element (F(0) is the only rotation), negative
+ * values in the array, integer overflow via long arithmetic, all equal values
+ * (all rotations yield the same product)
  */
 class RotateFunction {
     public int maxRotateFunction(int[] nums) {

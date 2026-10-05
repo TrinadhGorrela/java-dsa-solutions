@@ -1,17 +1,21 @@
 /**
  * 322. Coin Change
- * Difficulty: Medium | Tags: Array, Dynamic Programming, Breadth-First Search, Knapsack Problem, Complete Knapsack
+ * Difficulty: Medium | Tags: Array, Dynamic Programming, Breadth-First Search,
+ * Knapsack Problem, Complete Knapsack
  * https://leetcode.com/problems/coin-change/
  *
  * Pattern: Bottom-up 1D DP, Complete Knapsack variant
- * Key insight: Initialize dp[0]=0 and everything else to infinity; for each amount, greedily try every coin as a last
- * coin used, keeping the minimum across all choices.
+ *
+ * Key insight: Initialize dp[0]=0 and everything else to infinity; for each
+ * amount, greedily try every coin as a last coin used, keeping the minimum
+ * across all choices.
  *
  * Time Complexity: O(amount * coins) - For each amount, iterate all coins
+ *
  * Space Complexity: O(amount) - Single 1D array of size amount+1
  *
- * Edge Cases Handled: amount=0 returns 0; unreachable amounts stay at MAX_VALUE and return -1; coins larger than
- * current amount are skipped
+ * Edge Cases Handled: amount=0 returns 0; unreachable amounts stay at MAX_VALUE
+ * and return -1; coins larger than current amount are skipped
  */
 class CoinChange {
     public int coinChange(int[] coins, int amount) {

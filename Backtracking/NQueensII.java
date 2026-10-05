@@ -4,16 +4,21 @@
  * https://leetcode.com/problems/n-queens-ii/
  *
  * Pattern: Row-by-Row Backtracking with Three-Way Conflict Detection
- * Key insight: Place one queen per row; for each candidate column, verify no existing queen shares the same column,
- * main diagonal (row - col constant), or anti-diagonal (row + col constant) -- these three O(1) checks per cell prune
+ *
+ * Key insight: Place one queen per row; for each candidate column, verify no
+ * existing queen shares the same column, main diagonal (row - col constant), or
+ * anti-diagonal (row + col constant) -- these three O(1) checks per cell prune
  * the entire search tree without auxiliary data structures.
  *
- * Time Complexity: O(n!) - place first queen in n columns, second in at most n-1, etc.; conflict checks reduce this
- * further in practice
+ * Time Complexity: O(n!) - place first queen in n columns, second in at most
+ * n-1, etc.; conflict checks reduce this further in practice
+ *
  * Space Complexity: O(n^2) for the board representation + O(n) recursion depth
  *
- * Edge Cases Handled: n = 1 (one solution), n = 2 or n = 3 (zero solutions), boundary cells on first/last column where
- * diagonal indices go out of bounds (guarded by bounds check), full backtracking when no safe column exists in a row
+ * Edge Cases Handled: n = 1 (one solution), n = 2 or n = 3 (zero solutions),
+ * boundary cells on first/last column where diagonal indices go out of bounds
+ * (guarded by bounds check), full backtracking when no safe column exists in a
+ * row
  */
 class NQueensII {
     public int totalNQueens(int n) {

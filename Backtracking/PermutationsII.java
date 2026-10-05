@@ -4,16 +4,20 @@
  * https://leetcode.com/problems/permutations-ii/
  *
  * Pattern: Backtracking with Sort-Then-Skip Duplicate Suppression
- * Key insight: After sorting, identical values are adjacent; at each recursion level, skip nums[i] when nums[i] ==
- * nums[i-1] and nums[i-1] was NOT used in the current branch -- this ensures the second copy is only placed after the
+ *
+ * Key insight: After sorting, identical values are adjacent; at each recursion
+ * level, skip nums[i] when nums[i] == nums[i-1] and nums[i-1] was NOT used in
+ * the current branch -- this ensures the second copy is only placed after the
  * first, preventing structurally duplicate permutations.
  *
- * Time Complexity: O(n * n!) worst case - n! permutations with O(n) each; duplicate skipping reduces this for
- * non-distinct inputs
+ * Time Complexity: O(n * n!) worst case - n! permutations with O(n) each;
+ * duplicate skipping reduces this for non-distinct inputs
+ *
  * Space Complexity: O(n) recursion depth + O(n * n!) for output storage
  *
- * Edge Cases Handled: all elements identical (returns exactly one permutation), no duplicates (behaves identically to
- * Permutations I), single element, mixed duplicates and distinct values
+ * Edge Cases Handled: all elements identical (returns exactly one permutation),
+ * no duplicates (behaves identically to Permutations I), single element, mixed
+ * duplicates and distinct values
  */
 class PermutationsII {
     public List<List<Integer>> permuteUnique(int[] nums) {

@@ -4,12 +4,21 @@
  * https://leetcode.com/problems/image-overlap/
  *
  * Pattern: Brute-Force Translation Enumeration
- * Key insight: There are exactly (2n-1)^2 possible translations of img1 relative to img2. For each translation, count pixel-wise overlaps in O(n^2), and the maximum across all shifts is the answer. This is fast enough because n <= 30, making the total work ~30^4 ≈ 810K.
  *
- * Time Complexity: O(n^4) - Two nested loops over O(n^2) shifts, each invoking an O(n^2) overlap count
- * Space Complexity: O(1) - Only a fixed number of integer variables; no auxiliary data structures
+ * Key insight: There are exactly (2n-1)^2 possible translations of img1
+ * relative to img2. For each translation, count pixel-wise overlaps in O(n^2),
+ * and the maximum across all shifts is the answer. This is fast enough because
+ * n <= 30, making the total work ~30^4 ≈ 810K.
  *
- * Edge Cases Handled: single-pixel images (n=1); images with no overlapping 1s (returns 0); images already perfectly aligned; all-zero or all-one images; shifts that move img1 entirely off img2 (boundary clamping in helper)
+ * Time Complexity: O(n^4) - Two nested loops over O(n^2) shifts, each invoking
+ * an O(n^2) overlap count
+ *
+ * Space Complexity: O(1) - Only a fixed number of integer variables; no
+ * auxiliary data structures
+ *
+ * Edge Cases Handled: single-pixel images (n=1); images with no overlapping 1s
+ * (returns 0); images already perfectly aligned; all-zero or all-one images;
+ * shifts that move img1 entirely off img2 (boundary clamping in helper)
  */
 class ImageOverlap {
     public int largestOverlap(int[][] img1, int[][] img2) {

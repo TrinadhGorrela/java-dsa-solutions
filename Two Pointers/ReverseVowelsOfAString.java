@@ -4,14 +4,20 @@
  * https://leetcode.com/problems/reverse-vowels-of-a-string/
  *
  * Pattern: Converging Two-Pointer Vowel Swap
- * Key insight: A HashSet of vowels gives O(1) membership checks; left and right pointers skip non-vowels independently,
- * so only the vowel subsequence is reversed while all consonants stay fixed.
  *
- * Time Complexity: O(N) - Each character visited at most once by either pointer; HashSet ops are O(1)
- * Space Complexity: O(N) - char[] for in-place swaps plus O(1) vowel set (5 entries)
+ * Key insight: A HashSet of vowels gives O(1) membership checks; left and right
+ * pointers skip non-vowels independently, so only the vowel subsequence is
+ * reversed while all consonants stay fixed.
  *
- * Edge Cases Handled: No vowels in string (returned unchanged), all vowels (full reverse), mixed case vowels (both
- * 'aeiou' and 'AEIOU' in set), string of length 0 or 1
+ * Time Complexity: O(N) - Each character visited at most once by either
+ * pointer; HashSet ops are O(1)
+ *
+ * Space Complexity: O(N) - char[] for in-place swaps plus O(1) vowel set (5
+ * entries)
+ *
+ * Edge Cases Handled: No vowels in string (returned unchanged), all vowels
+ * (full reverse), mixed case vowels (both 'aeiou' and 'AEIOU' in set), string
+ * of length 0 or 1
  */
 class ReverseVowelsOfAString {
     public String reverseVowels(String s) {

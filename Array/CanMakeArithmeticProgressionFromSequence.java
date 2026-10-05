@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
  *
  * Pattern: Sort + Adjacent Difference Check
- * Key insight: After sorting, an arithmetic progression requires a constant difference between every consecutive pair.
- * Compute diff = arr[1] - arr[0] once, then verify all subsequent gaps match it.
  *
- * Time Complexity: O(N log N) - Sorting dominates; the subsequent linear scan is O(N)
- * Space Complexity: O(1) - Sorting is in-place; only a diff variable and loop index are used
+ * Key insight: After sorting, an arithmetic progression requires a constant
+ * difference between every consecutive pair. Compute diff = arr[1] - arr[0]
+ * once, then verify all subsequent gaps match it.
  *
- * Edge Cases Handled: exactly two elements (always forms a progression), non-uniform gaps after sorting, negative
- * differences between sorted elements
+ * Time Complexity: O(N log N) - Sorting dominates; the subsequent linear scan
+ * is O(N)
+ *
+ * Space Complexity: O(1) - Sorting is in-place; only a diff variable and loop
+ * index are used
+ *
+ * Edge Cases Handled: exactly two elements (always forms a progression),
+ * non-uniform gaps after sorting, negative differences between sorted elements
  */
 class CanMakeArithmeticProgressionFromSequence {
     public boolean canMakeArithmeticProgression(int[] arr) {

@@ -1,19 +1,27 @@
 /**
  * 2904. Shortest and Lexicographically Smallest Beautiful String
  * Difficulty: Medium | Tags: String, Sliding Window
- * https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautiful-string/
+ * https://leetcode.com/problems/shortest-and-lexicographically-smallest-beautif
+ * ul-string/
  *
  * Pattern: Variable Sliding Window with Lexicographic Tie-Breaking
- * Key insight: Expand right to accumulate exactly k ones; once reached, record the candidate and shrink left to find
- * shorter windows. When two windows tie in length, use String.compareTo to keep the lexicographically smaller one.
- * Shrinking always produces shorter or equal candidates, so the first tie is sufficient.
  *
- * Time Complexity: O(N) - Each index is visited by right once and left at most once; string comparisons are bounded by
- * the current window size which is at most N
- * Space Complexity: O(1) - Only indices, a count, and a result string reference (output string excluded)
+ * Key insight: Expand right to accumulate exactly k ones; once reached, record
+ * the candidate and shrink left to find shorter windows. When two windows tie
+ * in length, use String.compareTo to keep the lexicographically smaller one.
+ * Shrinking always produces shorter or equal candidates, so the first tie is
+ * sufficient.
  *
- * Edge Cases Handled: no valid substring exists (returns ""), k exceeds total number of ones, k = 1 with single '1' at
- * various positions, equal-length substrings resolved by lexicographic order
+ * Time Complexity: O(N) - Each index is visited by right once and left at most
+ * once; string comparisons are bounded by the current window size which is at
+ * most N
+ *
+ * Space Complexity: O(1) - Only indices, a count, and a result string reference
+ * (output string excluded)
+ *
+ * Edge Cases Handled: no valid substring exists (returns ""), k exceeds total
+ * number of ones, k = 1 with single '1' at various positions, equal-length
+ * substrings resolved by lexicographic order
  */
 class ShortestAndLexicographicallySmallestBeautifulString {
     public String shortestBeautifulSubstring(String s, int k) {

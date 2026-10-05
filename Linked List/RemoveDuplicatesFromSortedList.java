@@ -4,14 +4,17 @@
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
  *
  * Pattern: Two-Pointer Deduplication
- * Key insight: Because the list is sorted, duplicates appear in consecutive runs; walk prev and curr—when curr.val ==
- * prev.val, skip it (prev.next = curr.next), otherwise advance both pointers.
+ *
+ * Key insight: Because the list is sorted, duplicates appear in consecutive
+ * runs; walk prev and curr—when curr.val == prev.val, skip it (prev.next =
+ * curr.next), otherwise advance both pointers.
  *
  * Time Complexity: O(n) - Single traversal, each node visited once.
+ *
  * Space Complexity: O(1) - Two pointers: prev, curr.
  *
- * Edge Cases Handled: null list, all nodes identical (reduces to single node), no duplicates (list unchanged),
- * duplicates at the tail
+ * Edge Cases Handled: null list, all nodes identical (reduces to single node),
+ * no duplicates (list unchanged), duplicates at the tail
  */
 /**
  * Definition for singly-linked list.

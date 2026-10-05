@@ -4,14 +4,18 @@
  * https://leetcode.com/problems/find-the-highest-altitude/
  *
  * Pattern: Prefix Sum with Max Tracking
- * Key insight: The biker starts at altitude 0; building a prefix sum array of gains yields all altitudes, and the
- * maximum of this array (including index 0) is the answer.
  *
- * Time Complexity: O(N) - First pass fills the N+1 prefix sum array; second pass finds the max
+ * Key insight: The biker starts at altitude 0; building a prefix sum array of
+ * gains yields all altitudes, and the maximum of this array (including index 0)
+ * is the answer.
+ *
+ * Time Complexity: O(N) - First pass fills the N+1 prefix sum array; second
+ * pass finds the max
+ *
  * Space Complexity: O(N) - N+1 element presum array stores cumulative altitudes
  *
- * Edge Cases Handled: all negative gains (max altitude is 0 at start), single gain element, maximum altitude at the
- * starting point (index 0)
+ * Edge Cases Handled: all negative gains (max altitude is 0 at start), single
+ * gain element, maximum altitude at the starting point (index 0)
  */
 class FindTheHighestAltitude {
     public int largestAltitude(int[] gain) {

@@ -1,17 +1,24 @@
 /**
  * 841. Keys and Rooms
- * Difficulty: Medium | Tags: Depth-First Search, Breadth-First Search, Graph Theory
+ * Difficulty: Medium | Tags: Depth-First Search, Breadth-First Search, Graph
+ * Theory
  * https://leetcode.com/problems/keys-and-rooms/
  *
  * Pattern: BFS Reachability from Source Node
- * Key insight: Model rooms as nodes and keys as directed edges; BFS from room 0 explores the reachable subgraph. If the
- * visited set covers all n rooms, every room is reachable. Keys in already-visited rooms are redundant and skipped.
  *
- * Time Complexity: O(N + E) - N rooms visited at most once; E is total number of keys across all rooms
- * Space Complexity: O(N) - Visited boolean array and BFS queue each hold at most N entries
+ * Key insight: Model rooms as nodes and keys as directed edges; BFS from room 0
+ * explores the reachable subgraph. If the visited set covers all n rooms, every
+ * room is reachable. Keys in already-visited rooms are redundant and skipped.
  *
- * Edge Cases Handled: single room (room 0 opens itself, returns true), room with no keys (dead end, no neighbors
- * enqueued), unreachable room in a disconnected component (returns false)
+ * Time Complexity: O(N + E) - N rooms visited at most once; E is total number
+ * of keys across all rooms
+ *
+ * Space Complexity: O(N) - Visited boolean array and BFS queue each hold at
+ * most N entries
+ *
+ * Edge Cases Handled: single room (room 0 opens itself, returns true), room
+ * with no keys (dead end, no neighbors enqueued), unreachable room in a
+ * disconnected component (returns false)
  */
 class KeysAndRooms {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {

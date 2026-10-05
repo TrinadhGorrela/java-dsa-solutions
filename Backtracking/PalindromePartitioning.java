@@ -4,12 +4,24 @@
  * https://leetcode.com/problems/palindrome-partitioning/
  *
  * Pattern: Backtracking (DFS) + Palindrome Check
- * Key insight: At each position we greedily try every substring that ends at the current start as a palindrome; only palindromic prefixes advance the recursion, so every path in the recursion tree is a valid partition. Because recursion walks start-to-end and only splits on verified palindromes, it never explores non-palindromic splits.
  *
- * Time Complexity: O(N * 2^N) - In the worst case every substring is a palindrome, producing an exponential number of partitions, each with an O(N) palindrome check.
- * Space Complexity: O(N) - Depth of the recursion stack plus the running temp partition list, excluding the output.
+ * Key insight: At each position we greedily try every substring that ends at
+ * the current start as a palindrome; only palindromic prefixes advance the
+ * recursion, so every path in the recursion tree is a valid partition. Because
+ * recursion walks start-to-end and only splits on verified palindromes, it
+ * never explores non-palindromic splits.
  *
- * Edge Cases Handled: empty string (returns an empty result list without recursing); single character (a palindrome, yields one partition); strings with no valid palindromic partitions; all-identical characters (maximizes the number of partitions).
+ * Time Complexity: O(N * 2^N) - In the worst case every substring is a
+ * palindrome, producing an exponential number of partitions, each with an O(N)
+ * palindrome check.
+ *
+ * Space Complexity: O(N) - Depth of the recursion stack plus the running temp
+ * partition list, excluding the output.
+ *
+ * Edge Cases Handled: empty string (returns an empty result list without
+ * recursing); single character (a palindrome, yields one partition); strings
+ * with no valid palindromic partitions; all-identical characters (maximizes the
+ * number of partitions).
  */
 class PalindromePartitioning {
     public List<List<String>> partition(String s) {

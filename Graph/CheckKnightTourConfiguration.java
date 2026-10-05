@@ -1,18 +1,23 @@
 /**
  * 2596. Check Knight Tour Configuration
- * Difficulty: Medium | Tags: Array, Depth-First Search, Breadth-First Search, Matrix, Simulation
+ * Difficulty: Medium | Tags: Array, Depth-First Search, Breadth-First Search,
+ * Matrix, Simulation
  * https://leetcode.com/problems/check-knight-tour-configuration/
  *
  * Pattern: DFS Path Validation (All 8 Knight Moves)
- * Key insight: Starting from cell 0 at (0,0), recursively explore all 8 possible knight moves; at each step verify the
- * target cell is in-bounds and holds the expected consecutive value (expval + 1). The tour is valid only if every cell
- * from 0 to n²−1 is visited in order.
  *
- * Time Complexity: O(n²) - Each cell visited at most once; 8 branches pruned by value check.
+ * Key insight: Starting from cell 0 at (0,0), recursively explore all 8
+ * possible knight moves; at each step verify the target cell is in-bounds and
+ * holds the expected consecutive value (expval + 1). The tour is valid only if
+ * every cell from 0 to n²−1 is visited in order.
+ *
+ * Time Complexity: O(n²) - Each cell visited at most once; 8 branches pruned by
+ * value check.
+ *
  * Space Complexity: O(n²) - Recursion depth equals total cells in the path.
  *
- * Edge Cases Handled: grid[0][0] ≠ 0 (immediate false), 1×1 grid (trivially true), dead-end branches pruned early by
- * value mismatch
+ * Edge Cases Handled: grid[0][0] ≠ 0 (immediate false), 1×1 grid (trivially
+ * true), dead-end branches pruned early by value mismatch
  */
 class CheckKnightTourConfiguration {
     public boolean checkValidGrid(int[][] grid) {

@@ -4,16 +4,23 @@
  * https://leetcode.com/problems/letter-tile-possibilities/
  *
  * Pattern: Full Permutation Enumeration with Set-Based Deduplication
- * Key insight: The input may contain duplicate letters (e.g., "AAB"), so permuting the indices still produces identical
- * strings; a HashSet<List<String>> on the prefix snapshots eliminates these duplicates at the cost of some overhead,
- * yielding the count of distinct non-empty arrangements of all lengths.
  *
- * Time Complexity: O(n! * n) worst case - generates all permutations of n indices, with O(n) per set insertion;
- * duplicate-heavy inputs reduce this significantly
- * Space Complexity: O(n! * n) for the HashSet storing up to n! distinct permutation snapshots
+ * Key insight: The input may contain duplicate letters (e.g., "AAB"), so
+ * permuting the indices still produces identical strings; a
+ * HashSet<List<String>> on the prefix snapshots eliminates these duplicates at
+ * the cost of some overhead, yielding the count of distinct non-empty
+ * arrangements of all lengths.
  *
- * Edge Cases Handled: all tiles identical (only n distinct non-empty prefixes), single tile (count = 1), no duplicate
- * tiles (set is redundant but correct), empty-length prefix excluded by the size != 0 guard
+ * Time Complexity: O(n! * n) worst case - generates all permutations of n
+ * indices, with O(n) per set insertion; duplicate-heavy inputs reduce this
+ * significantly
+ *
+ * Space Complexity: O(n! * n) for the HashSet storing up to n! distinct
+ * permutation snapshots
+ *
+ * Edge Cases Handled: all tiles identical (only n distinct non-empty prefixes),
+ * single tile (count = 1), no duplicate tiles (set is redundant but correct),
+ * empty-length prefix excluded by the size != 0 guard
  */
 class LetterTilePossibilities {
     public int numTilePossibilities(String tiles) {

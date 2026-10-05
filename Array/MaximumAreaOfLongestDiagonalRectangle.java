@@ -4,14 +4,18 @@
  * https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/
  *
  * Pattern: Single-Pass Tracking with Tie-Breaking
- * Key insight: Comparing squared diagonals (l²+w²) avoids floating-point sqrt entirely while preserving ordering; when
- * diagonals tie, the larger area wins — both comparisons are done in integer arithmetic.
+ *
+ * Key insight: Comparing squared diagonals (l²+w²) avoids floating-point sqrt
+ * entirely while preserving ordering; when diagonals tie, the larger area wins
+ * — both comparisons are done in integer arithmetic.
  *
  * Time Complexity: O(N) - Single pass over all rectangles
+ *
  * Space Complexity: O(1) - Two tracking variables (maxDiag, maxArea)
  *
- * Edge Cases Handled: single rectangle (returned directly), equal diagonal lengths (tie-break on area), large dimension
- * values (squared sums stay within int range for typical inputs)
+ * Edge Cases Handled: single rectangle (returned directly), equal diagonal
+ * lengths (tie-break on area), large dimension values (squared sums stay within
+ * int range for typical inputs)
  */
 class MaximumAreaOfLongestDiagonalRectangle {
     public int areaOfMaxDiagonal(int[][] dimensions) {

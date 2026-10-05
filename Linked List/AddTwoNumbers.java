@@ -4,15 +4,18 @@
  * https://leetcode.com/problems/add-two-numbers/
  *
  * Pattern: Linked List Addition with Carry
- * Key insight: Walk both lists in parallel, summing corresponding digits plus a running carry; build the result list
- * node-by-node. When one list ends, continue draining the other. A final carry of 1 after both lists exhaust appends
- * one extra node.
+ *
+ * Key insight: Walk both lists in parallel, summing corresponding digits plus a
+ * running carry; build the result list node-by-node. When one list ends,
+ * continue draining the other. A final carry of 1 after both lists exhaust
+ * appends one extra node.
  *
  * Time Complexity: O(max(m, n)) - Traverses the longer list once.
+ *
  * Space Complexity: O(max(m, n)) - Output list is at most max(m,n) + 1 nodes.
  *
- * Edge Cases Handled: unequal list lengths, digit sum ≥ 10 (carry propagates), final carry producing an extra leading
- * node, one or both lists empty
+ * Edge Cases Handled: unequal list lengths, digit sum ≥ 10 (carry propagates),
+ * final carry producing an extra leading node, one or both lists empty
  */
 /**
  * Definition for singly-linked list.

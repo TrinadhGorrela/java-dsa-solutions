@@ -4,14 +4,20 @@
  * https://leetcode.com/problems/delete-node-in-a-linked-list/
  *
  * Pattern: Value Overwrite (Copy-and-Skip Deletion)
- * Key insight: Since we only have the target node (no predecessor), we copy the next node's value
- * into it and bypass the next node. The problem guarantees the target is never the tail, so next always exists.
  *
- * Time Complexity: O(1) - Constant-time: two assignments plus one pointer redirect.
+ * Key insight: Since we only have the target node (no predecessor), we copy the
+ * next node's value into it and bypass the next node. The problem guarantees
+ * the target is never the tail, so next always exists.
+ *
+ * Time Complexity: O(1) - Constant-time: two assignments plus one pointer
+ * redirect.
+ *
  * Space Complexity: O(1) - In-place mutation, no auxiliary structures.
  *
- * Edge Cases Handled: node.next is guaranteed non-null by LeetCode (node is never the tail).
- * Note: would throw NullPointerException if called on the last node, which the constraints forbid.
+ * Edge Cases Handled: node.next is guaranteed non-null by LeetCode (node is
+ * never the tail).
+ * Note: would throw NullPointerException if called on the last node, which the
+ * constraints forbid.
  */
 /**
  * Definition for singly-linked list.

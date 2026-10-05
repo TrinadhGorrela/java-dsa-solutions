@@ -4,10 +4,14 @@
  * https://leetcode.com/problems/pascals-triangle/
  *
  * Pattern: Row-by-row iterative DP building Pascal's Triangle
- * Key insight: Row i is derived from row i-1 by summing each adjacent pair; both edges of every row are 1. Each new row
- * is appended to the result list as it's computed.
  *
- * Time Complexity: O(numRows^2) - Row i has i elements, total elements = numRows*(numRows+1)/2
+ * Key insight: Row i is derived from row i-1 by summing each adjacent pair;
+ * both edges of every row are 1. Each new row is appended to the result list as
+ * it's computed.
+ *
+ * Time Complexity: O(numRows^2) - Row i has i elements, total elements =
+ * numRows*(numRows+1)/2
+ *
  * Space Complexity: O(numRows^2) - Full triangle stored in the output
  *
  * Edge Cases Handled: numRows=0 returns empty list; numRows=1 returns [[1]]

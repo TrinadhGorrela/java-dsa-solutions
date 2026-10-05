@@ -4,14 +4,21 @@
  * https://leetcode.com/problems/minimum-increment-to-make-array-unique/
  *
  * Pattern: Sort-Then-Bump Greedy
- * Key insight: After sorting, the optimal strategy is to make each element exactly one greater than its predecessor
- * when a duplicate/collision occurs — any larger increment wastes moves. The cost is simply `max(0, prev - curr + 1)`.
  *
- * Time Complexity: O(N log N) - Sorting dominates; the linear scan is O(N) and modifies nums in place
- * Space Complexity: O(1) - In-place sort plus scalar accumulator (excluding sort's internal stack)
+ * Key insight: After sorting, the optimal strategy is to make each element
+ * exactly one greater than its predecessor when a duplicate/collision occurs —
+ * any larger increment wastes moves. The cost is simply `max(0, prev - curr +
+ * 1)`.
  *
- * Edge Cases Handled: all elements identical (cascading bumps), already strictly increasing (zero cost), long duplicate
- * chains (each bump pushes only the minimum needed), single element (no work)
+ * Time Complexity: O(N log N) - Sorting dominates; the linear scan is O(N) and
+ * modifies nums in place
+ *
+ * Space Complexity: O(1) - In-place sort plus scalar accumulator (excluding
+ * sort's internal stack)
+ *
+ * Edge Cases Handled: all elements identical (cascading bumps), already
+ * strictly increasing (zero cost), long duplicate chains (each bump pushes only
+ * the minimum needed), single element (no work)
  */
 class MinimumIncrementToMakeArrayUnique {
     public int minIncrementForUnique(int[] nums) {

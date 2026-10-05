@@ -4,12 +4,23 @@
  * https://leetcode.com/problems/count-good-cyclic-rotations/
  *
  * Pattern: Prefix Sum Array (Doubled Array + Sliding Range Query)
- * Key insight: Duplicating the array and building a prefix sum over length 2N lets each cyclic rotation be queried as two contiguous window ranges; any rotation starting at i splits into the range [i, i+n/2) and [i+n/2, i+n) without special-casing the wrap-around. Because prefix sums answer each window in O(1), comparing the two halves is constant work per rotation.
  *
- * Time Complexity: O(N) - One pass builds the 2N-length prefix array, then a single O(N) loop checks all rotations.
+ * Key insight: Duplicating the array and building a prefix sum over length 2N
+ * lets each cyclic rotation be queried as two contiguous window ranges; any
+ * rotation starting at i splits into the range [i, i+n/2) and [i+n/2, i+n)
+ * without special-casing the wrap-around. Because prefix sums answer each
+ * window in O(1), comparing the two halves is constant work per rotation.
+ *
+ * Time Complexity: O(N) - One pass builds the 2N-length prefix array, then a
+ * single O(N) loop checks all rotations.
+ *
  * Space Complexity: O(N) - Stores a prefix array of length 2N + 1.
  *
- * Edge Cases Handled: single element (n=1, both halves are equal-length singletons and are compared via prefix sums); rotations whose halves wrap past the end of the array (handled by the doubled prefix array); all-equal elements (both halves equal, never counted as good); partitions where firstHalf <= lastHalf (not counted).
+ * Edge Cases Handled: single element (n=1, both halves are equal-length
+ * singletons and are compared via prefix sums); rotations whose halves wrap
+ * past the end of the array (handled by the doubled prefix array); all-equal
+ * elements (both halves equal, never counted as good); partitions where
+ * firstHalf <= lastHalf (not counted).
  */
 class CountGoodCyclicRotations {
     public int countGoodRotations(int[] nums) {

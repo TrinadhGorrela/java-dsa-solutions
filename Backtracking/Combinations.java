@@ -4,15 +4,21 @@
  * https://leetcode.com/problems/combinations/
  *
  * Pattern: Forward-Index Combination Enumeration
- * Key insight: Only iterate from the current index forward, guaranteeing strictly increasing selection order so every
- * (n choose k) combination is generated exactly once without duplicates; the pruning window narrows as i + (k -
- * path.size()) - 1 exceeds n.
  *
- * Time Complexity: O(C(n,k) * k) - Generates C(n,k) combinations, each copied in O(k) time
- * Space Complexity: O(k) auxiliary for recursion depth + O(C(n,k) * k) for output
+ * Key insight: Only iterate from the current index forward, guaranteeing
+ * strictly increasing selection order so every (n choose k) combination is
+ * generated exactly once without duplicates; the pruning window narrows as i +
+ * (k - path.size()) - 1 exceeds n.
  *
- * Edge Cases Handled: k = 0 (returns single empty list), k = n (single combination containing all elements), n = 1 with
- * k = 1, k > n (returns empty list)
+ * Time Complexity: O(C(n,k) * k) - Generates C(n,k) combinations, each copied
+ * in O(k) time
+ *
+ * Space Complexity: O(k) auxiliary for recursion depth + O(C(n,k) * k) for
+ * output
+ *
+ * Edge Cases Handled: k = 0 (returns single empty list), k = n (single
+ * combination containing all elements), n = 1 with k = 1, k > n (returns empty
+ * list)
  */
 class Combinations {
     public List<List<Integer>> combine(int n, int k) {

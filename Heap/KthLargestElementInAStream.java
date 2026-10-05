@@ -1,19 +1,27 @@
 /**
  * 703. Kth Largest Element in a Stream
- * Difficulty: Easy | Tags: Tree, Design, Binary Search Tree, Heap (Priority Queue), Binary Tree, Data Stream
+ * Difficulty: Easy | Tags: Tree, Design, Binary Search Tree, Heap (Priority
+ * Queue), Binary Tree, Data Stream
  * https://leetcode.com/problems/kth-largest-element-in-a-stream/
  *
  * Pattern: Min-Heap of Size K (Top-K, Persistent)
- * Key insight: Maintain a min-heap of exactly K elements at all times. On each add(), the new value is inserted and the
- * smallest element is ejected if size exceeds K, so the heap root always equals the Kth largest seen so far. This is
- * exact because ejecting a value smaller than K existing values cannot affect the Kth rank.
  *
- * Time Complexity: O(M log K) total across constructor and M add() calls - Each of M insertions costs O(log K); the
- * constructor processes the initial N elements in O(N log K) time.
- * Space Complexity: O(N + K) - The heap holds up to K elements; the initial array is also processed but not retained.
+ * Key insight: Maintain a min-heap of exactly K elements at all times. On each
+ * add(), the new value is inserted and the smallest element is ejected if size
+ * exceeds K, so the heap root always equals the Kth largest seen so far. This
+ * is exact because ejecting a value smaller than K existing values cannot
+ * affect the Kth rank.
  *
- * Edge Cases Handled: k equals 1 (heap root is the overall largest); initial array smaller than k (all elements kept,
- * the smallest is the Kth largest); all identical values; add() called with very large or very small values.
+ * Time Complexity: O(M log K) total across constructor and M add() calls - Each
+ * of M insertions costs O(log K); the constructor processes the initial N
+ * elements in O(N log K) time.
+ *
+ * Space Complexity: O(N + K) - The heap holds up to K elements; the initial
+ * array is also processed but not retained.
+ *
+ * Edge Cases Handled: k equals 1 (heap root is the overall largest); initial
+ * array smaller than k (all elements kept, the smallest is the Kth largest);
+ * all identical values; add() called with very large or very small values.
  */
 class KthLargest {
     PriorityQueue<Integer> queue = new PriorityQueue<>();

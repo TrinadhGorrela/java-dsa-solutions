@@ -4,15 +4,19 @@
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  *
  * Pattern: Two-Pointer Offset (Dummy Head)
- * Key insight: Place both slow and fast on a dummy node, advance fast n steps, then move both together until fast
- * reaches the last node—slow now sits exactly before the n-th-from-end node, enabling a clean unlink via slow.next =
- * slow.next.next.
+ *
+ * Key insight: Place both slow and fast on a dummy node, advance fast n steps,
+ * then move both together until fast reaches the last node—slow now sits
+ * exactly before the n-th-from-end node, enabling a clean unlink via slow.next
+ * = slow.next.next.
  *
  * Time Complexity: O(n) - Single pass with two pointers.
+ *
  * Space Complexity: O(1) - Dummy node + two pointers.
  *
- * Edge Cases Handled: removing the head (n == length; dummy bypasses it), removing the tail (n = 1), single-node list,
- * list of two nodes removing the head
+ * Edge Cases Handled: removing the head (n == length; dummy bypasses it),
+ * removing the tail (n = 1), single-node list, list of two nodes removing the
+ * head
  */
 /**
  * Definition for singly-linked list.

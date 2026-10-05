@@ -4,10 +4,21 @@
  * https://leetcode.com/problems/smallest-stable-index-ii/
  *
  * Pattern: Prefix-Suffix Running Extremum (Two-Pass Scan)
- * Key insight: Precompute the running maximum from the left and running minimum from the right; an index i is stable when large[i] - small[i] <= k, because large[i] dominates everything left of i and small[i] is the smallest reachable value from i onward.
- * Time Complexity: O(N) - Two linear passes to build prefix/suffix arrays plus one linear scan to find the answer.
- * Space Complexity: O(N) - Two auxiliary arrays of length N store the running max and running min.
- * Edge Cases Handled: single-element array, all identical elements (difference always 0), strictly increasing/decreasing arrays, k = 0 requiring exact stability, no valid index found (returns -1).
+ *
+ * Key insight: Precompute the running maximum from the left and running minimum
+ * from the right; an index i is stable when large[i] - small[i] <= k, because
+ * large[i] dominates everything left of i and small[i] is the smallest
+ * reachable value from i onward.
+ *
+ * Time Complexity: O(N) - Two linear passes to build prefix/suffix arrays plus
+ * one linear scan to find the answer.
+ *
+ * Space Complexity: O(N) - Two auxiliary arrays of length N store the running
+ * max and running min.
+ *
+ * Edge Cases Handled: single-element array, all identical elements (difference
+ * always 0), strictly increasing/decreasing arrays, k = 0 requiring exact
+ * stability, no valid index found (returns -1).
  */
 class SmallestStableIndexII {
     public int firstStableIndex(int[] nums, int k) {

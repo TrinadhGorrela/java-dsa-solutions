@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/number-of-laser-beams-in-a-bank/
  *
  * Pattern: Adjacent Non-Empty Row Pairing
- * Key insight: Empty rows between device rows do not generate beams themselves but act as multipliers — only
- * consecutive rows that both have devices contribute `prev × curr` beams, and empty rows are simply skipped without
+ *
+ * Key insight: Empty rows between device rows do not generate beams themselves
+ * but act as multipliers — only consecutive rows that both have devices
+ * contribute `prev × curr` beams, and empty rows are simply skipped without
  * breaking the chain.
  *
- * Time Complexity: O(M × N) - M rows, N columns per row; every character is visited once
+ * Time Complexity: O(M × N) - M rows, N columns per row; every character is
+ * visited once
+ *
  * Space Complexity: O(1) - Two running counters (prev, curr) and an accumulator
  *
- * Edge Cases Handled: all rows empty (returns 0), only one non-empty row (returns 0), consecutive non-empty rows (beams
- * = product), interleaved empty rows between device rows (beams skip empties correctly)
+ * Edge Cases Handled: all rows empty (returns 0), only one non-empty row
+ * (returns 0), consecutive non-empty rows (beams = product), interleaved empty
+ * rows between device rows (beams skip empties correctly)
  */
 class NumberOfLaserBeamsInABank {
     public int numberOfBeams(String[] bank) {

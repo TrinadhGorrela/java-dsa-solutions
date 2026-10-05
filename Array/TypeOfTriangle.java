@@ -4,14 +4,18 @@
  * https://leetcode.com/problems/type-of-triangle/
  *
  * Pattern: Conditional Triangle Classification
- * Key insight: First reject degenerate triangles via the triangle inequality (any side >= sum of the other two →
- * "none"), then classify by equality: all three equal → equilateral, exactly two → isosceles, zero → scalene.
+ *
+ * Key insight: First reject degenerate triangles via the triangle inequality
+ * (any side >= sum of the other two → "none"), then classify by equality: all
+ * three equal → equilateral, exactly two → isosceles, zero → scalene.
  *
  * Time Complexity: O(1) - Three comparisons plus branch logic, no loops
+ *
  * Space Complexity: O(1) - Three integer variables for the sides
  *
- * Edge Cases Handled: degenerate case where one side equals the sum of the other two (returns "none"), equilateral (all
- * equal), isosceles with two equal, all sides distinct
+ * Edge Cases Handled: degenerate case where one side equals the sum of the
+ * other two (returns "none"), equilateral (all equal), isosceles with two
+ * equal, all sides distinct
  */
 class TypeOfTriangle {
     public String triangleType(int[] nums) {

@@ -4,16 +4,21 @@
  * https://leetcode.com/problems/letter-combinations-of-a-phone-number/
  *
  * Pattern: Iterative BFS Layer Expansion (No Recursion)
- * Key insight: Maintain a running list of partial strings; for each new digit, replace the list with all current
- * strings concatenated with each letter mapped to that digit, achieving the same result as recursive backtracking in a
- * flat loop.
  *
- * Time Complexity: O(4^N) where N = digits.length - each digit contributes at most 4 letters, and total combinations =
- * product of per-digit letter counts
- * Space Complexity: O(4^N * N) - stores all complete combinations, each of length N
+ * Key insight: Maintain a running list of partial strings; for each new digit,
+ * replace the list with all current strings concatenated with each letter
+ * mapped to that digit, achieving the same result as recursive backtracking in
+ * a flat loop.
  *
- * Edge Cases Handled: empty digits string (returns empty list immediately), single digit (4 or 3 results), digits 7 or
- * 9 mapped to 4-letter keys, repeated identical digits (e.g., "22" produces
+ * Time Complexity: O(4^N) where N = digits.length - each digit contributes at
+ * most 4 letters, and total combinations = product of per-digit letter counts
+ *
+ * Space Complexity: O(4^N * N) - stores all complete combinations, each of
+ * length N
+ *
+ * Edge Cases Handled: empty digits string (returns empty list immediately),
+ * single digit (4 or 3 results), digits 7 or 9 mapped to 4-letter keys,
+ * repeated identical digits (e.g., "22" produces
  * ["aa","ab","ac","ba","bb","bc","ca","cb","cc"])
  */
 class LetterCombinationsOfAPhoneNumber {

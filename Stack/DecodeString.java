@@ -4,10 +4,22 @@
  * https://leetcode.com/problems/decode-string/
  *
  * Pattern: Stack-Based Nested Decoding
- * Key insight: When ']' is found, pop back to the matching '[', read the repetition count, expand the segment, and push it back — this ensures innermost encodings resolve first, naturally handling arbitrary nesting depth.
- * Time Complexity: O(N) - N is the final decoded string length; each character is pushed and popped from the stack at most a constant number of times across all expansions.
- * Space Complexity: O(N) - The stack and result builder both grow proportional to the decoded string length.
- * Edge Cases Handled: single-character input, no encoding present, multi-digit repetition counts, adjacent encoded segments (e.g. "3[a]2[b]"), deeply nested encodings (e.g. "2[2[2[a]]]").
+ *
+ * Key insight: When ']' is found, pop back to the matching '[', read the
+ * repetition count, expand the segment, and push it back — this ensures
+ * innermost encodings resolve first, naturally handling arbitrary nesting
+ * depth.
+ *
+ * Time Complexity: O(N) - N is the final decoded string length; each character
+ * is pushed and popped from the stack at most a constant number of times across
+ * all expansions.
+ *
+ * Space Complexity: O(N) - The stack and result builder both grow proportional
+ * to the decoded string length.
+ *
+ * Edge Cases Handled: single-character input, no encoding present, multi-digit
+ * repetition counts, adjacent encoded segments (e.g. "3[a]2[b]"), deeply nested
+ * encodings (e.g. "2[2[2[a]]]").
  */
 class DecodeString {
     public String decodeString(String s) {

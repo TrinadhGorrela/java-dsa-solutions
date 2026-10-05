@@ -1,17 +1,23 @@
 /**
  * 637. Average of Levels in Binary Tree
- * Difficulty: Easy | Tags: Tree, Depth-First Search, Breadth-First Search, Binary Tree
+ * Difficulty: Easy | Tags: Tree, Depth-First Search, Breadth-First Search,
+ * Binary Tree
  * https://leetcode.com/problems/average-of-levels-in-binary-tree/
  *
  * Pattern: BFS Level-Order Aggregation
- * Key insight: Snapshot the level size, accumulate values into a long sum to prevent integer overflow, then cast to
- * double for precise division. The long accumulator handles up to 10^5 nodes at max val.
  *
- * Time Complexity: O(n) - Each node enqueued and dequeued once; per-level sum is O(w).
+ * Key insight: Snapshot the level size, accumulate values into a long sum to
+ * prevent integer overflow, then cast to double for precise division. The long
+ * accumulator handles up to 10^5 nodes at max val.
+ *
+ * Time Complexity: O(n) - Each node enqueued and dequeued once; per-level sum
+ * is O(w).
+ *
  * Space Complexity: O(w) - Queue holds at most one level's width of nodes.
  *
- * Edge Cases Handled: null root returns empty list, single node, skewed tree, all-negative values, large node counts
- * per level (long sum prevents overflow), division by level count cast to double
+ * Edge Cases Handled: null root returns empty list, single node, skewed tree,
+ * all-negative values, large node counts per level (long sum prevents
+ * overflow), division by level count cast to double
  */
 /**
  * Definition for a binary tree node.

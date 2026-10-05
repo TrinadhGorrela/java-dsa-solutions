@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/maximum-units-on-a-truck/
  *
  * Pattern: Fractional Knapsack (Greedy by Value Density)
- * Key insight: Since partial boxes are allowed, the optimal strategy is purely greedy: always fill from the
- * highest-unit-per-box type first. The only decision point is the last (possibly partial) batch when capacity runs out.
  *
- * Time Complexity: O(N log N) - Sort by unit count descending; single scan is O(N)
+ * Key insight: Since partial boxes are allowed, the optimal strategy is purely
+ * greedy: always fill from the highest-unit-per-box type first. The only
+ * decision point is the last (possibly partial) batch when capacity runs out.
+ *
+ * Time Complexity: O(N log N) - Sort by unit count descending; single scan is
+ * O(N)
+ *
  * Space Complexity: O(1) - Accumulator plus loop variables (sort in place)
  *
- * Edge Cases Handled: truckSize = 0 (returns 0), fewer total boxes than capacity (all loaded), exact capacity match
- * with no partial box, single box type filling the entire truck
+ * Edge Cases Handled: truckSize = 0 (returns 0), fewer total boxes than
+ * capacity (all loaded), exact capacity match with no partial box, single box
+ * type filling the entire truck
  */
 class MaximumUnitsOnATruck {
     public int maximumUnits(int[][] boxTypes, int truckSize) {

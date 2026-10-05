@@ -4,15 +4,21 @@
  * https://leetcode.com/problems/integer-to-roman/
  *
  * Pattern: Descending Greedy Value Decomposition
- * Key insight: Encode subtractive forms (CM, CD, XC, XL, IX, IV) as explicit entries in a descending lookup table; the
- * greedy while-loop repeatedly extracts the largest fitting value, producing a canonical Roman numeral with no
- * backtracking.
  *
- * Time Complexity: O(1) - At most 15 iterations across the 13-entry table (max value 3999 = 3×M + 1×C + 1×D…)
- * Space Complexity: O(1) - 13-entry LinkedHashMap; output string bounded by ~15 characters
+ * Key insight: Encode subtractive forms (CM, CD, XC, XL, IX, IV) as explicit
+ * entries in a descending lookup table; the greedy while-loop repeatedly
+ * extracts the largest fitting value, producing a canonical Roman numeral with
+ * no backtracking.
  *
- * Edge Cases Handled: all subtractive forms (4=IV, 9=IX, 40=XL, 90=XC, 400=CD, 900=CM), repeated symbols (3=MMM,
- * 388=CCCLXXXVIII), boundary values (1=I, 3999=MMMCMXCIX)
+ * Time Complexity: O(1) - At most 15 iterations across the 13-entry table (max
+ * value 3999 = 3×M + 1×C + 1×D…)
+ *
+ * Space Complexity: O(1) - 13-entry LinkedHashMap; output string bounded by ~15
+ * characters
+ *
+ * Edge Cases Handled: all subtractive forms (4=IV, 9=IX, 40=XL, 90=XC, 400=CD,
+ * 900=CM), repeated symbols (3=MMM, 388=CCCLXXXVIII), boundary values (1=I,
+ * 3999=MMMCMXCIX)
  */
 class IntegerToRoman {
     public String intToRoman(int num) {

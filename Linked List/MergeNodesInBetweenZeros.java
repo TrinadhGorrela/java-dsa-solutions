@@ -4,12 +4,23 @@
  * https://leetcode.com/problems/merge-nodes-in-between-zeros/
  *
  * Pattern: Single Pass Linked List Traversal (Running Sum Simulation)
- * Key insight: Each 0, except the skipped head, closes a running-sum window, so a single pass that adds values and resets the sum to 0 on every 0 produces every merged node in order. This holds because each segment is bracketed by zeros and accumulated independently.
  *
- * Time Complexity: O(N) - One traversal of the list, visiting each node exactly once.
- * Space Complexity: O(1) - Only a dummy node and an integer accumulator; the result list is required output, not auxiliary storage.
+ * Key insight: Each 0, except the skipped head, closes a running-sum window, so
+ * a single pass that adds values and resets the sum to 0 on every 0 produces
+ * every merged node in order. This holds because each segment is bracketed by
+ * zeros and accumulated independently.
  *
- * Edge Cases Handled: List of two zeros (yields a single 0 node), consecutive zeros (produce a 0-valued node), a single segment between the leading and trailing zero, and the trailing zero (finalizes the last segment). Relies on the constraint that the list begins with a zero, since head is skipped without checking its value.
+ * Time Complexity: O(N) - One traversal of the list, visiting each node exactly
+ * once.
+ *
+ * Space Complexity: O(1) - Only a dummy node and an integer accumulator; the
+ * result list is required output, not auxiliary storage.
+ *
+ * Edge Cases Handled: List of two zeros (yields a single 0 node), consecutive
+ * zeros (produce a 0-valued node), a single segment between the leading and
+ * trailing zero, and the trailing zero (finalizes the last segment). Relies on
+ * the constraint that the list begins with a zero, since head is skipped
+ * without checking its value.
  */
 /**
  * Definition for singly-linked list.

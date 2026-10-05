@@ -4,13 +4,17 @@
  * https://leetcode.com/problems/unique-paths/
  *
  * Pattern: 2D grid DP, path counting from top-left
- * Key insight: dp[i][j] = dp[i-1][j] + dp[i][j-1] because every path to (i,j) must arrive from directly above or
- * directly left; first row and first column are all 1s since there's only one way along an edge.
+ *
+ * Key insight: dp[i][j] = dp[i-1][j] + dp[i][j-1] because every path to (i,j)
+ * must arrive from directly above or directly left; first row and first column
+ * are all 1s since there's only one way along an edge.
  *
  * Time Complexity: O(m*n) - Fill every cell of the m x n grid
+ *
  * Space Complexity: O(m*n) - Full 2D DP table
  *
- * Edge Cases Handled: 1x1 grid returns 1; single row or column returns 1 (only one straight-line path)
+ * Edge Cases Handled: 1x1 grid returns 1; single row or column returns 1 (only
+ * one straight-line path)
  */
 class UniquePaths {
     public int uniquePaths(int m, int n) {

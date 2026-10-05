@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/letter-case-permutation/
  *
  * Pattern: Binary Branching on Letter Positions with Pass-Through on Digits
- * Key insight: Each alphabetic position doubles the result count (upper or lower case), while digits are appended
- * unchanged without branching; the total output is 2^L strings where L is the letter count, computed by a single DFS
+ *
+ * Key insight: Each alphabetic position doubles the result count (upper or
+ * lower case), while digits are appended unchanged without branching; the total
+ * output is 2^L strings where L is the letter count, computed by a single DFS
  * pass.
  *
- * Time Complexity: O(2^L * N) where L = number of letters, N = string length - 2^L leaf strings each of length N
+ * Time Complexity: O(2^L * N) where L = number of letters, N = string length -
+ * 2^L leaf strings each of length N
+ *
  * Space Complexity: O(N) recursion depth + O(2^L * N) for the output list
  *
- * Edge Cases Handled: all-digit input (returns the input itself as a single-element list), all-letter input (maximum
- * branching), empty string (returns empty list), mixed digits and letters, single character input
+ * Edge Cases Handled: all-digit input (returns the input itself as a
+ * single-element list), all-letter input (maximum branching), empty string
+ * (returns empty list), mixed digits and letters, single character input
  */
 class LetterCasePermutation {
     public List<String> letterCasePermutation(String s) {

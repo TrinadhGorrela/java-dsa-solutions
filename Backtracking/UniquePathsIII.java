@@ -1,19 +1,26 @@
 /**
  * 980. Unique Paths III
- * Difficulty: Hard | Tags: Array, Backtracking, Bit Manipulation, Matrix, Hamiltonian Path
+ * Difficulty: Hard | Tags: Array, Backtracking, Bit Manipulation, Matrix,
+ * Hamiltonian Path
  * https://leetcode.com/problems/unique-paths-iii/
  *
  * Pattern: Backtracking (DFS Hamiltonian Path)
- * Key insight: Every non-obstacle cell must be visited exactly once before reaching the end cell (value 2).
- *   The algorithm explores all four directions from the current cell, marks/unmarks visited cells, and at the
- *   end cell verifies that every non-obstacle cell was used — enforcing the Hamiltonian path constraint.
  *
- * Time Complexity: O(4^(M×N)) worst-case — each cell branches up to 4 directions before pruning via visited/obstacle checks
- * Space Complexity: O(M×N) — boolean visited grid plus recursion depth up to M×N
+ * Key insight: Every non-obstacle cell must be visited exactly once before
+ * reaching the end cell (value 2). The algorithm explores all four directions
+ * from the current cell, marks/unmarks visited cells, and at the end cell
+ * verifies that every non-obstacle cell was used — enforcing the Hamiltonian
+ * path constraint.
  *
- * Edge Cases Handled: out-of-bounds moves rejected, obstacles (value -1) blocked,
- *   already-visited cells skipped, end cell reached with unvisited non-obstacle cells (returns 0),
- *   no valid path exists from start to end
+ * Time Complexity: O(4^(M×N)) worst-case — each cell branches up to 4
+ * directions before pruning via visited/obstacle checks
+ *
+ * Space Complexity: O(M×N) — boolean visited grid plus recursion depth up to
+ * M×N
+ *
+ * Edge Cases Handled: out-of-bounds moves rejected, obstacles (value -1)
+ * blocked, already-visited cells skipped, end cell reached with unvisited
+ * non-obstacle cells (returns 0), no valid path exists from start to end
  */
 class UniquePathsIII {
     public int uniquePathsIII(int[][] grid) {

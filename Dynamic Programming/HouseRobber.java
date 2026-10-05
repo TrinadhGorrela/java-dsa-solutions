@@ -4,13 +4,17 @@
  * https://leetcode.com/problems/house-robber/
  *
  * Pattern: 1D DP, maximum-weight independent set on a path graph
- * Key insight: dp[i] = max(dp[i-1], dp[i-2]+nums[i]) captures the choice at each house: either skip it (inherit
- * previous best) or rob it (add to best from two houses back), enforcing the no-adjacent constraint.
+ *
+ * Key insight: dp[i] = max(dp[i-1], dp[i-2]+nums[i]) captures the choice at
+ * each house: either skip it (inherit previous best) or rob it (add to best
+ * from two houses back), enforcing the no-adjacent constraint.
  *
  * Time Complexity: O(n) - Single pass through the houses
+ *
  * Space Complexity: O(n) - DP array of length n
  *
- * Edge Cases Handled: empty array returns 0; single house returns its value; two houses returns the max
+ * Edge Cases Handled: empty array returns 0; single house returns its value;
+ * two houses returns the max
  */
 class HouseRobber {
     public int rob(int[] nums) {

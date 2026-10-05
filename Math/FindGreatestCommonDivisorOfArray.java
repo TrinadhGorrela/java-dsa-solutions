@@ -1,17 +1,23 @@
 /**
  * 1979. Find Greatest Common Divisor of Array
- * Difficulty: Easy | Tags: Array, Math, Number Theory, Euclidean Algorithm, Greatest Common Divisor
+ * Difficulty: Easy | Tags: Array, Math, Number Theory, Euclidean Algorithm,
+ * Greatest Common Divisor
  * https://leetcode.com/problems/find-greatest-common-divisor-of-array/
  *
  * Pattern: Min/Max Scan + Euclidean GCD
- * Key insight: gcd(all elements) = gcd(min, max) because the GCD of any set divides both the minimum and maximum. A
- * single pass finds min and max; then the Euclidean algorithm (repeated modulo) computes their GCD in O(log min) time.
  *
- * Time Complexity: O(N + log M) - Linear scan for min/max, then Euclidean algorithm where M = min value
+ * Key insight: gcd(all elements) = gcd(min, max) because the GCD of any set
+ * divides both the minimum and maximum. A single pass finds min and max; then
+ * the Euclidean algorithm (repeated modulo) computes their GCD in O(log min)
+ * time.
+ *
+ * Time Complexity: O(N + log M) - Linear scan for min/max, then Euclidean
+ * algorithm where M = min value
+ *
  * Space Complexity: O(1) - Only min, max, and temporary swap variables
  *
- * Edge Cases Handled: single element (gcd with itself), all elements equal, min and max coprime (GCD = 1), values at
- * integer extremes
+ * Edge Cases Handled: single element (gcd with itself), all elements equal, min
+ * and max coprime (GCD = 1), values at integer extremes
  */
 class FindGreatestCommonDivisorOfArray {
     public int findGCD(int[] nums) {

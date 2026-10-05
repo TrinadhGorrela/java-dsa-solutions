@@ -4,16 +4,22 @@
  * https://leetcode.com/problems/n-queens/
  *
  * Pattern: Row-by-Row Backtracking with Board State Recording
- * Key insight: Attempt to place a queen in each column of the current row; validate against all previously placed
- * queens by checking shared column, main diagonal (row-col), and anti-diagonal (row+col); upon completing all n rows,
+ *
+ * Key insight: Attempt to place a queen in each column of the current row;
+ * validate against all previously placed queens by checking shared column, main
+ * diagonal (row-col), and anti-diagonal (row+col); upon completing all n rows,
  * snapshot the board as a List<String> solution.
  *
- * Time Complexity: O(n!) - each row narrows the safe-column candidates; diagonal/column checks prune early
- * Space Complexity: O(n^2) per board snapshot * number of solutions - stores every valid configuration
+ * Time Complexity: O(n!) - each row narrows the safe-column candidates;
+ * diagonal/column checks prune early
  *
- * Edge Cases Handled: n = 1 (single queen, one solution), n = 2 or n = 3 (no solutions exist), queens placed on board
- * edges where diagonals extend beyond bounds (guarded), full board snapshot conversion to dot/Q string format at each
- * solution
+ * Space Complexity: O(n^2) per board snapshot * number of solutions - stores
+ * every valid configuration
+ *
+ * Edge Cases Handled: n = 1 (single queen, one solution), n = 2 or n = 3 (no
+ * solutions exist), queens placed on board edges where diagonals extend beyond
+ * bounds (guarded), full board snapshot conversion to dot/Q string format at
+ * each solution
  */
 class NQueens {
     public List<List<String>> solveNQueens(int n) {

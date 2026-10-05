@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/isomorphic-strings/
  *
  * Pattern: HashMap Bijection Check
- * Key insight: Map each s-character to a t-character; on conflict (same s maps to different t) return false. Also
- * reject if a t-character is already claimed by a different s-character, checked via containsValue, enforcing a true
+ *
+ * Key insight: Map each s-character to a t-character; on conflict (same s maps
+ * to different t) return false. Also reject if a t-character is already claimed
+ * by a different s-character, checked via containsValue, enforcing a true
  * one-to-one bijection.
  *
- * Time Complexity: O(n²) - Single pass is O(n), but containsValue per new mapping is O(n).
+ * Time Complexity: O(n²) - Single pass is O(n), but containsValue per new
+ * mapping is O(n).
+ *
  * Space Complexity: O(n) - HashMap stores up to min(|Σ_s|, |Σ_t|) entries.
  *
- * Edge Cases Handled: different-length strings (returns false), empty strings, two s-chars mapping to same t-char
- * (one-to-many blocked by containsValue), single-character strings
+ * Edge Cases Handled: different-length strings (returns false), empty strings,
+ * two s-chars mapping to same t-char (one-to-many blocked by containsValue),
+ * single-character strings
  */
 class IsomorphicStrings {
     public boolean isIsomorphic(String s, String t) {

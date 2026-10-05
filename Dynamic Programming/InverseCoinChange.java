@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/inverse-coin-change/
  *
  * Pattern: Reverse unbounded knapsack reconstruction
- * Key insight: Maintain a running DP of reachable amounts; at each step the "missing" way count (numWays[i] - dp[i+1])
- * must be exactly 1 to justify adding coin (i+1), after which the coin's contribution is folded into dp via forward
- * accumulation.
  *
- * Time Complexity: O(coins * amount) - Each discovered coin triggers a forward sweep of the DP array
+ * Key insight: Maintain a running DP of reachable amounts; at each step the
+ * "missing" way count (numWays[i] - dp[i+1]) must be exactly 1 to justify
+ * adding coin (i+1), after which the coin's contribution is folded into dp via
+ * forward accumulation.
+ *
+ * Time Complexity: O(coins * amount) - Each discovered coin triggers a forward
+ * sweep of the DP array
+ *
  * Space Complexity: O(amount) - Single 1D DP array
  *
- * Edge Cases Handled: missing ways <0 or >1 at any step means impossible, returning empty list; first element
- * numWays[0] is implicitly 1; single-coin input
+ * Edge Cases Handled: missing ways <0 or >1 at any step means impossible,
+ * returning empty list; first element numWays[0] is implicitly 1; single-coin
+ * input
  */
 class InverseCoinChange {
     public List<Integer> findCoins(int[] numWays) {

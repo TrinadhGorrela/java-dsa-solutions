@@ -4,10 +4,14 @@
  * https://leetcode.com/problems/rotate-image/
  *
  * Pattern: Transpose + Row Reverse
- * Key insight: A 90° clockwise rotation decomposes into two in-place operations: (1) transpose the matrix by swapping
- * matrix[i][j] with matrix[j][i] for i < j, then (2) reverse each row with two pointers.
  *
- * Time Complexity: O(n²) - Transpose touches n²/2 cells, row reversal touches n²/2 cells.
+ * Key insight: A 90° clockwise rotation decomposes into two in-place
+ * operations: (1) transpose the matrix by swapping matrix[i][j] with
+ * matrix[j][i] for i < j, then (2) reverse each row with two pointers.
+ *
+ * Time Complexity: O(n²) - Transpose touches n²/2 cells, row reversal touches
+ * n²/2 cells.
+ *
  * Space Complexity: O(1) - In-place swaps only.
  *
  * Edge Cases Handled: 1×1 matrix (no swaps needed), 2×2 matrix, any square size

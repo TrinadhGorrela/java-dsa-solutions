@@ -4,15 +4,21 @@
  * https://leetcode.com/problems/3sum/
  *
  * Pattern: Sort + Fix-One + Two-Pointer Pair Search
- * Key insight: Sorting lets us binary-reason about the remaining pair: for a fixed nums[i], if the pair sum is too
- * negative we advance left, too positive we retreat right—O(N) per i. A HashSet of Lists handles duplicate triplets
+ *
+ * Key insight: Sorting lets us binary-reason about the remaining pair: for a
+ * fixed nums[i], if the pair sum is too negative we advance left, too positive
+ * we retreat right—O(N) per i. A HashSet of Lists handles duplicate triplets
  * without skipping logic.
  *
- * Time Complexity: O(N^2) - O(N log N) sort dominated by N iterations × O(N) two-pointer scan each
- * Space Complexity: O(N^2) - Worst case all triplets are unique; HashSet stores each triplet list
+ * Time Complexity: O(N^2) - O(N log N) sort dominated by N iterations × O(N)
+ * two-pointer scan each
  *
- * Edge Cases Handled: Input shorter than 3 elements, all zeros, target reachable only by duplicate values, array with
- * positive and negative mix requiring both pointer directions
+ * Space Complexity: O(N^2) - Worst case all triplets are unique; HashSet stores
+ * each triplet list
+ *
+ * Edge Cases Handled: Input shorter than 3 elements, all zeros, target
+ * reachable only by duplicate values, array with positive and negative mix
+ * requiring both pointer directions
  */
 class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {

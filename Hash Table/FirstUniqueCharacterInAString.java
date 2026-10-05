@@ -4,14 +4,18 @@
  * https://leetcode.com/problems/first-unique-character-in-a-string/
  *
  * Pattern: Two-Pass Frequency Count
- * Key insight: First pass builds a frequency map for every character; second pass scans left to right and returns the
- * first index whose character has count exactly 1.
  *
- * Time Complexity: O(n) - Two linear passes; map operations are O(1) for lowercase letters.
+ * Key insight: First pass builds a frequency map for every character; second
+ * pass scans left to right and returns the first index whose character has
+ * count exactly 1.
+ *
+ * Time Complexity: O(n) - Two linear passes; map operations are O(1) for
+ * lowercase letters.
+ *
  * Space Complexity: O(1) - Map holds at most 26 entries.
  *
- * Edge Cases Handled: no unique character (returns -1), all characters identical, single character (returns 0), unique
- * character at the end
+ * Edge Cases Handled: no unique character (returns -1), all characters
+ * identical, single character (returns 0), unique character at the end
  */
 class FirstUniqueCharacterInAString {
     public int firstUniqChar(String s) {

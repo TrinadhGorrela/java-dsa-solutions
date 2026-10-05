@@ -4,12 +4,23 @@
  * https://leetcode.com/problems/next-greater-node-in-linked-list/
  *
  * Pattern: Monotonic Stack (Right-to-Left Decreasing Pass)
- * Key insight: Scanning right-to-left with a strictly decreasing monotonic stack means each element pops all smaller-or-equal stack entries then reports the remaining top as its next greater — every value is pushed and popped at most once.
  *
- * Time Complexity: O(N) - One pass to flatten the list + one right-to-left pass where each element is pushed/popped from the stack at most once
- * Space Complexity: O(N) - ArrayList copy of list values + stack + result array, all proportional to N
+ * Key insight: Scanning right-to-left with a strictly decreasing monotonic
+ * stack means each element pops all smaller-or-equal stack entries then reports
+ * the remaining top as its next greater — every value is pushed and popped at
+ * most once.
  *
- * Edge Cases Handled: null/empty list (returns empty array), single node (no greater element → 0), strictly increasing list (every element gets 0), strictly decreasing list (every element sees the previous element's value), duplicate values (<= comparison pops equal values so only strictly greater is kept)
+ * Time Complexity: O(N) - One pass to flatten the list + one right-to-left pass
+ * where each element is pushed/popped from the stack at most once
+ *
+ * Space Complexity: O(N) - ArrayList copy of list values + stack + result
+ * array, all proportional to N
+ *
+ * Edge Cases Handled: null/empty list (returns empty array), single node (no
+ * greater element → 0), strictly increasing list (every element gets 0),
+ * strictly decreasing list (every element sees the previous element's value),
+ * duplicate values (<= comparison pops equal values so only strictly greater is
+ * kept)
  */
 /**
  * Definition for singly-linked list.

@@ -1,15 +1,26 @@
 /**
  * 297. Serialize and Deserialize Binary Tree
- * Difficulty: Hard | Tags: String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree
+ * Difficulty: Hard | Tags: String, Tree, Depth-First Search, Breadth-First
+ * Search, Design, Binary Tree
  * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
  *
  * Pattern: BFS Level-Order Serialization
- * Key insight: Traverse the tree level by level using a queue, recording each node's value (or "null" for absent children). During deserialization, consume the token list in the same BFS order and reconstruct the tree by assigning left and right children from the queue. This mirrors the exact traversal order, making round-trip faithful.
  *
- * Time Complexity: O(N) - Each node and edge is visited exactly once in both serialize and deserialize
- * Space Complexity: O(N) - Queue and level lists hold at most one full level (worst case ~N/2 nodes); output string scales with N
+ * Key insight: Traverse the tree level by level using a queue, recording each
+ * node's value (or "null" for absent children). During deserialization, consume
+ * the token list in the same BFS order and reconstruct the tree by assigning
+ * left and right children from the queue. This mirrors the exact traversal
+ * order, making round-trip faithful.
  *
- * * Edge Cases Handled: null tree (serialize returns empty string, deserialize on empty string returns null); single node tree; skewed/degenerate trees; trees with all null children at a level
+ * Time Complexity: O(N) - Each node and edge is visited exactly once in both
+ * serialize and deserialize
+ *
+ * Space Complexity: O(N) - Queue and level lists hold at most one full level
+ * (worst case ~N/2 nodes); output string scales with N
+ *
+ * Edge Cases Handled: null tree (serialize returns empty string, deserialize on
+ * empty string returns null); single node tree; skewed/degenerate trees; trees
+ * with all null children at a level
  */
 /**
  * Definition for a binary tree node.

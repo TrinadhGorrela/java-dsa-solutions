@@ -4,14 +4,20 @@
  * https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
  *
  * Pattern: BFS Level-Order with Direction Flip
- * Key insight: Standard BFS collects each level left-to-right; on even-numbered levels (2nd, 4th, ...), reverse the
- * collected list before adding it. Uses a level counter modulo 2 rather than a deque-based insertion trick.
  *
- * Time Complexity: O(n) - Each node visited once; reversal is O(w) per level, summing to O(n).
- * Space Complexity: O(w) - Queue holds at most one level's worth of nodes (w = max width).
+ * Key insight: Standard BFS collects each level left-to-right; on even-numbered
+ * levels (2nd, 4th, ...), reverse the collected list before adding it. Uses a
+ * level counter modulo 2 rather than a deque-based insertion trick.
  *
- * Edge Cases Handled: null root returns empty list, single node (no reversal), single-level tree, skewed tree (every
- * level has one node, reversal is a no-op), perfect binary tree (full reversal on even levels)
+ * Time Complexity: O(n) - Each node visited once; reversal is O(w) per level,
+ * summing to O(n).
+ *
+ * Space Complexity: O(w) - Queue holds at most one level's worth of nodes (w =
+ * max width).
+ *
+ * Edge Cases Handled: null root returns empty list, single node (no reversal),
+ * single-level tree, skewed tree (every level has one node, reversal is a
+ * no-op), perfect binary tree (full reversal on even levels)
  */
 /**
  * Definition for a binary tree node.

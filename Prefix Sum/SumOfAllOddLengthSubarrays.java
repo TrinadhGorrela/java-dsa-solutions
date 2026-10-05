@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
  *
  * Pattern: Odd-Length Fixed Window Enumeration
- * Key insight: For each odd window length L, build the first window sum in O(L), then slide across the array using the
- * additive/subtractive update curr = curr - nums[k - L] + nums[k], accumulating each window's sum into the total.
  *
- * Time Complexity: O(N^2) - Outer loop iterates over O(N) odd lengths, inner loop slides each window across up to N
- * positions
- * Space Complexity: O(1) - Only scalar accumulators (sum, curr) with no auxiliary data structures
+ * Key insight: For each odd window length L, build the first window sum in
+ * O(L), then slide across the array using the additive/subtractive update curr
+ * = curr - nums[k - L] + nums[k], accumulating each window's sum into the
+ * total.
  *
- * Edge Cases Handled: single-element array (only window of length 1), even-length array (no window of length N), all
- * elements identical
+ * Time Complexity: O(N^2) - Outer loop iterates over O(N) odd lengths, inner
+ * loop slides each window across up to N positions
+ *
+ * Space Complexity: O(1) - Only scalar accumulators (sum, curr) with no
+ * auxiliary data structures
+ *
+ * Edge Cases Handled: single-element array (only window of length 1),
+ * even-length array (no window of length N), all elements identical
  */
 class SumOfAllOddLengthSubarrays {
     public int sumOddLengthSubarrays(int[] nums) {

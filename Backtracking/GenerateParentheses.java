@@ -5,15 +5,21 @@
  * https://leetcode.com/problems/generate-parentheses/
  *
  * Pattern: Backtracking with Open/Close Count Invariants
- * Key insight: Track remaining open and close counts; always allow '(' when open > 0, but only allow ')' when close >
- * open, which guarantees no prefix has more closing than opening brackets -- the fundamental invariant of well-formed
- * parentheses.
  *
- * Time Complexity: O(Catalan(n)) = O(4^n / n^(3/2)) - exactly the number of valid parenthesis sequences of length 2n
- * Space Complexity: O(2n) recursion depth + O(Catalan(n) * 2n) for output storage
+ * Key insight: Track remaining open and close counts; always allow '(' when
+ * open > 0, but only allow ')' when close > open, which guarantees no prefix
+ * has more closing than opening brackets -- the fundamental invariant of
+ * well-formed parentheses.
  *
- * Edge Cases Handled: n = 1 (single "()" result), open count reaches zero (only ')' allowed from that point), close
- * count equals open count (only '(' allowed to avoid premature closing), all 2n characters placed (base case)
+ * Time Complexity: O(Catalan(n)) = O(4^n / n^(3/2)) - exactly the number of
+ * valid parenthesis sequences of length 2n
+ *
+ * Space Complexity: O(2n) recursion depth + O(Catalan(n) * 2n) for output
+ * storage
+ *
+ * Edge Cases Handled: n = 1 (single "()" result), open count reaches zero (only
+ * ')' allowed from that point), close count equals open count (only '(' allowed
+ * to avoid premature closing), all 2n characters placed (base case)
  */
 class GenerateParentheses {
     public List<String> generateParenthesis(int n) {

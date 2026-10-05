@@ -4,12 +4,21 @@
  * https://leetcode.com/problems/reorder-list/
  *
  * Pattern: Two Pointers (Slow/Fast) + In-Place Reversal + Merge
- * Key insight: Find the midpoint with slow/fast pointers, reverse the second half in-place, then interleave-merge the two halves. Because the second half is detached at the midpoint, no extra nodes are needed.
  *
- * Time Complexity: O(N) - Three linear passes: find midpoint, reverse second half, merge.
- * Space Complexity: O(1) - All operations are in-place; only a handful of pointers used.
+ * Key insight: Find the midpoint with slow/fast pointers, reverse the second
+ * half in-place, then interleave-merge the two halves. Because the second half
+ * is detached at the midpoint, no extra nodes are needed.
  *
- * Edge Cases Handled: single node (loop bodies never execute, head returned as-is), two nodes (midpoint split produces one reversed node, merge interleaves correctly), odd-length list (slow lands on true middle, right half has one fewer node).
+ * Time Complexity: O(N) - Three linear passes: find midpoint, reverse second
+ * half, merge.
+ *
+ * Space Complexity: O(1) - All operations are in-place; only a handful of
+ * pointers used.
+ *
+ * Edge Cases Handled: single node (loop bodies never execute, head returned
+ * as-is), two nodes (midpoint split produces one reversed node, merge
+ * interleaves correctly), odd-length list (slow lands on true middle, right
+ * half has one fewer node).
  */
 /**
  * Definition for singly-linked list.

@@ -1,18 +1,24 @@
 /**
  * 1029. Two City Scheduling
- * Difficulty: Medium | Tags: Array, Greedy, Sorting, Hungarian Algorithm, Successive Shortest Path Algorithm
+ * Difficulty: Medium | Tags: Array, Greedy, Sorting, Hungarian Algorithm,
+ * Successive Shortest Path Algorithm
  * https://leetcode.com/problems/two-city-scheduling/
  *
  * Pattern: Cost-Difference Sorting Greedy
- * Key insight: The difference (costA - costB) captures how much cheaper city A is relative to B; sorting by this
- * difference and sending the first half to A (biggest A advantage) and second half to B minimizes total cost under the
- * N/2 split constraint.
+ *
+ * Key insight: The difference (costA - costB) captures how much cheaper city A
+ * is relative to B; sorting by this difference and sending the first half to A
+ * (biggest A advantage) and second half to B minimizes total cost under the N/2
+ * split constraint.
  *
  * Time Complexity: O(N log N) - Sorting N people by cost difference dominates
- * Space Complexity: O(N) - Auxiliary sortedCosts array storing the difference as a third column
  *
- * Edge Cases Handled: exactly 2 people (one sent to each), all differences equal (arbitrary but valid split), costA ==
- * costB for all (difference 0, any assignment yields the same total)
+ * Space Complexity: O(N) - Auxiliary sortedCosts array storing the difference
+ * as a third column
+ *
+ * Edge Cases Handled: exactly 2 people (one sent to each), all differences
+ * equal (arbitrary but valid split), costA == costB for all (difference 0, any
+ * assignment yields the same total)
  */
 class TwoCityScheduling {
     public int twoCitySchedCost(int[][] costs) {

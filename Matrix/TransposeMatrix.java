@@ -4,13 +4,16 @@
  * https://leetcode.com/problems/transpose-matrix/
  *
  * Pattern: Index Swap Transposition
- * Key insight: Create a result array with swapped dimensions (n×m) and write matrix[i][j] into res[j][i] in a single
- * nested loop.
+ *
+ * Key insight: Create a result array with swapped dimensions (n×m) and write
+ * matrix[i][j] into res[j][i] in a single nested loop.
  *
  * Time Complexity: O(m·n) - Every cell visited once.
+ *
  * Space Complexity: O(m·n) - New n×m result matrix.
  *
- * Edge Cases Handled: non-square matrices (dimensions swap), single row, single column, 1×1 matrix
+ * Edge Cases Handled: non-square matrices (dimensions swap), single row, single
+ * column, 1×1 matrix
  */
 class TransposeMatrix {
     public int[][] transpose(int[][] matrix) {

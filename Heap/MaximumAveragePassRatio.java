@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/maximum-average-pass-ratio/
  *
  * Pattern: Greedy Max-Heap on Marginal Gain
- * Key insight: Each extra student should go to the class where adding them yields the largest delta in pass ratio:
- * `(pass+1)/(total+1) - pass/total`. A max-heap on this gain ensures each assignment is locally optimal; reinsert with
- * updated gain after each allocation.
  *
- * Time Complexity: O((N + E) log N) - Build heap O(N), then E heap operations of O(log N) each
+ * Key insight: Each extra student should go to the class where adding them
+ * yields the largest delta in pass ratio: `(pass+1)/(total+1) - pass/total`. A
+ * max-heap on this gain ensures each assignment is locally optimal; reinsert
+ * with updated gain after each allocation.
+ *
+ * Time Complexity: O((N + E) log N) - Build heap O(N), then E heap operations
+ * of O(log N) each
+ *
  * Space Complexity: O(N) - Heap stores one entry per class
  *
- * Edge Cases Handled: extraStudents = 0 (no heap pops), class with 100% pass rate (gain approaches 0, naturally
- * deprioritized), single class (all students go there), large E with small N (heap churn but correct)
+ * Edge Cases Handled: extraStudents = 0 (no heap pops), class with 100% pass
+ * rate (gain approaches 0, naturally deprioritized), single class (all students
+ * go there), large E with small N (heap churn but correct)
  */
 class MaximumAveragePassRatio {
     public double maxAverageRatio(int[][] classes, int extraStudents) {

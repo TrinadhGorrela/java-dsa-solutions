@@ -1,18 +1,24 @@
 /**
  * 733. Flood Fill
- * Difficulty: Easy | Tags: Array, Depth-First Search, Breadth-First Search, Matrix
+ * Difficulty: Easy | Tags: Array, Depth-First Search, Breadth-First Search,
+ * Matrix
  * https://leetcode.com/problems/flood-fill/
  *
  * Pattern: BFS Flood Fill on Pixel Grid
- * Key insight: BFS from the starting pixel, replacing every 4-connected neighbor that matches the original color with
- * the new color. The early exit when `originalColor == color` prevents infinite re-enqueueing of the same connected
- * component.
+ *
+ * Key insight: BFS from the starting pixel, replacing every 4-connected
+ * neighbor that matches the original color with the new color. The early exit
+ * when `originalColor == color` prevents infinite re-enqueueing of the same
+ * connected component.
  *
  * Time Complexity: O(M * N) - Worst case visits every pixel in the image once
- * Space Complexity: O(M * N) - BFS queue worst-case holds the entire connected component (e.g., uniform-color image)
  *
- * Edge Cases Handled: start pixel already equals target color (early return, image unchanged), single-pixel image,
- * entire image is one color (all pixels recolored), start pixel on border or corner (fewer neighbors)
+ * Space Complexity: O(M * N) - BFS queue worst-case holds the entire connected
+ * component (e.g., uniform-color image)
+ *
+ * Edge Cases Handled: start pixel already equals target color (early return,
+ * image unchanged), single-pixel image, entire image is one color (all pixels
+ * recolored), start pixel on border or corner (fewer neighbors)
  */
 class FloodFill {
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {

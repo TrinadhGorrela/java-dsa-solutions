@@ -4,13 +4,18 @@
  * https://leetcode.com/problems/rotate-array/
  *
  * Pattern: In-Place Triple Reversal
- * Key insight: Reversing the entire array then reversing the two halves (first k, then the rest) is equivalent to a
- * right rotation by k — three O(N) in-place reversals avoid any extra array.
  *
- * Time Complexity: O(N) - Three in-place reversals each touching every element once
+ * Key insight: Reversing the entire array then reversing the two halves (first
+ * k, then the rest) is equivalent to a right rotation by k — three O(N)
+ * in-place reversals avoid any extra array.
+ *
+ * Time Complexity: O(N) - Three in-place reversals each touching every element
+ * once
+ *
  * Space Complexity: O(1) - Two-pointer swap with a temp variable; no allocation
  *
- * Edge Cases Handled: k > n (reduced via k % n), k == 0 or k == n (no-op after modulo), single-element array
+ * Edge Cases Handled: k > n (reduced via k % n), k == 0 or k == n (no-op after
+ * modulo), single-element array
  */
 class RotateArray {
     public static void rotate(int[] nums, int k) {

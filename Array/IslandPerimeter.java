@@ -1,18 +1,26 @@
 /**
  * 463. Island Perimeter
- * Difficulty: Easy | Tags: Array, Depth-First Search, Breadth-First Search, Matrix
+ * Difficulty: Easy | Tags: Array, Depth-First Search, Breadth-First Search,
+ * Matrix
  * https://leetcode.com/problems/island-perimeter/
  *
  * Pattern: Per-Cell Neighbor Counting
- * Key insight: Each land cell contributes 4 edges to the perimeter, minus 1 for each adjacent land neighbor (shared
- * edge is subtracted from both sides). By counting all adjacent land pairs and subtracting from 4*(total land cells),
- * shared edges cancel correctly. Border cells naturally have fewer neighbors so their contribution is higher.
  *
- * Time Complexity: O(M * N) - Single pass over the grid with up to 4 neighbor checks per land cell
- * Space Complexity: O(M * N) - Boolean land matrix mirrors the input grid (could be eliminated for O(1) extra space)
+ * Key insight: Each land cell contributes 4 edges to the perimeter, minus 1 for
+ * each adjacent land neighbor (shared edge is subtracted from both sides). By
+ * counting all adjacent land pairs and subtracting from 4*(total land cells),
+ * shared edges cancel correctly. Border cells naturally have fewer neighbors so
+ * their contribution is higher.
  *
- * Edge Cases Handled: all-water grid (perimeter 0), single land cell (perimeter 4), land on grid border/corners
- * (out-of-bounds neighbors simply not counted), large connected land mass (internal shared edges subtracted correctly)
+ * Time Complexity: O(M * N) - Single pass over the grid with up to 4 neighbor
+ * checks per land cell
+ *
+ * Space Complexity: O(M * N) - Boolean land matrix mirrors the input grid
+ * (could be eliminated for O(1) extra space)
+ *
+ * Edge Cases Handled: all-water grid (perimeter 0), single land cell (perimeter
+ * 4), land on grid border/corners (out-of-bounds neighbors simply not counted),
+ * large connected land mass (internal shared edges subtracted correctly)
  */
 class IslandPerimeter {
     public int islandPerimeter(int[][] grid) {

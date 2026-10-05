@@ -4,21 +4,26 @@
  * https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/
  *
  * Pattern: Dynamic Programming (Top-Down Memoization) + Binary Search
- * Key insight: Once intervals are sorted by start, the earliest interval that begins after the
- * current one ends can be located with binary search, so each DP state (index, count) greedily
- * explores only take-or-skip and reuses memoized subproblems. Because intervals are processed in
- * sorted order, every path is non-overlapping by construction and at most 4 picks are allowed.
  *
- * Time Complexity: O(N log N) - Dominated by sorting plus one binary search per memoized state;
- * there are O(4N) states, so the total is O(N log N + 4N log N) = O(N log N).
- * Space Complexity: O(N) - The memo table holds O(4N) states and each stores a list of at most
- * four indices, so the memory scales linearly with the input.
+ * Key insight: Once intervals are sorted by start, the earliest interval that
+ * begins after the current one ends can be located with binary search, so each
+ * DP state (index, count) greedily explores only take-or-skip and reuses
+ * memoized subproblems. Because intervals are processed in sorted order, every
+ * path is non-overlapping by construction and at most 4 picks are allowed.
  *
- * Edge Cases Handled: empty intervals list (returns an empty result), fewer than
- * four eligible intervals (the count >= 4 guard stops recursion), a single interval, intervals
- * with equal start points (tie-broken by original index during the sort), equal total weights
- * (tie-broken by lexicographically smallest index list), and large weights (summed as long to
- * avoid integer overflow when adding up to four values).
+ * Time Complexity: O(N log N) - Dominated by sorting plus one binary search per
+ * memoized state; there are O(4N) states, so the total is O(N log N + 4N log N)
+ * = O(N log N).
+ *
+ * Space Complexity: O(N) - The memo table holds O(4N) states and each stores a
+ * list of at most four indices, so the memory scales linearly with the input.
+ *
+ * Edge Cases Handled: empty intervals list (returns an empty result), fewer
+ * than four eligible intervals (the count >= 4 guard stops recursion), a single
+ * interval, intervals with equal start points (tie-broken by original index
+ * during the sort), equal total weights (tie-broken by lexicographically
+ * smallest index list), and large weights (summed as long to avoid integer
+ * overflow when adding up to four values).
  */
 class MaximumScoreOfNonOverlappingIntervals {
     class State {

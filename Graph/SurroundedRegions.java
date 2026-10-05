@@ -1,18 +1,25 @@
 /**
  * 130. Surrounded Regions
- * Difficulty: Medium | Tags: Array, Depth-First Search, Breadth-First Search, Union-Find, Matrix
+ * Difficulty: Medium | Tags: Array, Depth-First Search, Breadth-First Search,
+ * Union-Find, Matrix
  * https://leetcode.com/problems/surrounded-regions/
  *
  * Pattern: Border-Seeded BFS Flood Fill
- * Key insight: Instead of searching for surrounded regions, invert the problem: BFS from every border 'O' cell inward,
- * marking all reachable 'O's as safe. After the flood, any unvisited 'O' must be interior and gets flipped to 'X'. This
- * avoids tracking enclosure per region.
  *
- * Time Complexity: O(M * N) - Each cell is enqueued at most once; border scan is O(M + N)
- * Space Complexity: O(M * N) - Visited matrix and BFS queue both scale with grid dimensions
+ * Key insight: Instead of searching for surrounded regions, invert the problem:
+ * BFS from every border 'O' cell inward, marking all reachable 'O's as safe.
+ * After the flood, any unvisited 'O' must be interior and gets flipped to 'X'.
+ * This avoids tracking enclosure per region.
  *
- * Edge Cases Handled: single-row or single-column boards (all cells are border, nothing flipped), all 'X' grid (no BFS
- * needed), all 'O' grid (all preserved), interior 'O' region fully enclosed and flipped to 'X'
+ * Time Complexity: O(M * N) - Each cell is enqueued at most once; border scan
+ * is O(M + N)
+ *
+ * Space Complexity: O(M * N) - Visited matrix and BFS queue both scale with
+ * grid dimensions
+ *
+ * Edge Cases Handled: single-row or single-column boards (all cells are border,
+ * nothing flipped), all 'X' grid (no BFS needed), all 'O' grid (all preserved),
+ * interior 'O' region fully enclosed and flipped to 'X'
  */
 class SurroundedRegions {
     public void solve(char[][] board) {

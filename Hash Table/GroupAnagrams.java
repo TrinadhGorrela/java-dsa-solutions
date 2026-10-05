@@ -4,14 +4,20 @@
  * https://leetcode.com/problems/group-anagrams/
  *
  * Pattern: Sorted-String Key Hashing
- * Key insight: Sorting each string's characters produces a canonical form — all anagrams map to the same key, so a
- * single HashMap pass groups them without pairwise comparison.
  *
- * Time Complexity: O(N * L log L) - N strings each sorted in O(L log L) where L is max string length
- * Space Complexity: O(N * L) - HashMap holds all N strings plus their sorted keys of length up to L
+ * Key insight: Sorting each string's characters produces a canonical form — all
+ * anagrams map to the same key, so a single HashMap pass groups them without
+ * pairwise comparison.
  *
- * Edge Cases Handled: empty strings (grouped together as valid anagrams), single-character strings, all strings
- * identical (single group), all strings unique (N groups of size 1)
+ * Time Complexity: O(N * L log L) - N strings each sorted in O(L log L) where L
+ * is max string length
+ *
+ * Space Complexity: O(N * L) - HashMap holds all N strings plus their sorted
+ * keys of length up to L
+ *
+ * Edge Cases Handled: empty strings (grouped together as valid anagrams),
+ * single-character strings, all strings identical (single group), all strings
+ * unique (N groups of size 1)
  */
 class GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {

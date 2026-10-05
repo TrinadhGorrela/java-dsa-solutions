@@ -4,14 +4,18 @@
  * https://leetcode.com/problems/roman-to-integer/
  *
  * Pattern: Right-to-Left Scan with Subtract Notation
- * Key insight: Scan right to left through the Roman numeral string; when a numeral is smaller than the one immediately
- * to its right, subtract it (e.g., IV = 5−1), otherwise add it. This handles all subtractive pairs in a single pass.
+ *
+ * Key insight: Scan right to left through the Roman numeral string; when a
+ * numeral is smaller than the one immediately to its right, subtract it (e.g.,
+ * IV = 5−1), otherwise add it. This handles all subtractive pairs in a single
+ * pass.
  *
  * Time Complexity: O(n) - Single right-to-left pass.
+ *
  * Space Complexity: O(1) - HashMap of 7 entries, fixed.
  *
- * Edge Cases Handled: single-character numeral (e.g., "V"), all additive (e.g., "VIII"), all subtractive (e.g., "IV",
- * "XC"), maximum value "MMMCMXCIX" (3999)
+ * Edge Cases Handled: single-character numeral (e.g., "V"), all additive (e.g.,
+ * "VIII"), all subtractive (e.g., "IV", "XC"), maximum value "MMMCMXCIX" (3999)
  */
 class RomanToInteger {
     public int romanToInt(String s) {

@@ -4,16 +4,21 @@
  * https://leetcode.com/problems/swap-nodes-in-pairs/
  *
  * Pattern: Iterative Linked List Pairwise Rewiring (Three-Pointer)
- * Key insight: Maintain a trailing 'prev' pointer and advance a 'slow'/'fast' pair through adjacent nodes.
- *   At each step, relink the four relevant .next pointers to swap the current pair, then shift all
- *   three pointers forward by two positions. Because each link is updated before the pointers advance,
- *   no stack or temporary list is needed.
+ *
+ * Key insight: Maintain a trailing 'prev' pointer and advance a 'slow'/'fast'
+ * pair through adjacent nodes. At each step, relink the four relevant .next
+ * pointers to swap the current pair, then shift all three pointers forward by
+ * two positions. Because each link is updated before the pointers advance, no
+ * stack or temporary list is needed.
  *
  * Time Complexity: O(N) - Single linear pass; each node is visited exactly once
- * Space Complexity: O(1) - Only a fixed number of pointer variables regardless of list length
  *
- * Edge Cases Handled: null head (empty list); single node (odd-length tail left untouched);
- *   two-node list (single swap, no loop iteration); even-length list (all pairs swapped)
+ * Space Complexity: O(1) - Only a fixed number of pointer variables regardless
+ * of list length
+ *
+ * Edge Cases Handled: null head (empty list); single node (odd-length tail left
+ * untouched); two-node list (single swap, no loop iteration); even-length list
+ * (all pairs swapped)
  */
 /**
  * Definition for singly-linked list.

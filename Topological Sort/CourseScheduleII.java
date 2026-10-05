@@ -1,19 +1,26 @@
 /**
  * 210. Course Schedule II
- * Difficulty: Medium | Tags: Depth-First Search, Breadth-First Search, Graph Theory, Topological Sort
+ * Difficulty: Medium | Tags: Depth-First Search, Breadth-First Search, Graph
+ * Theory, Topological Sort
  * https://leetcode.com/problems/course-schedule-ii/
  *
  * Pattern: DFS Topological Sort with Cycle Detection
- * Key insight: DFS pushes each node onto a stack after all its descendants are fully explored (post-order). If a back
- * edge (node on current recursion path) is detected, a cycle exists and an empty array is returned. Popping the stack
- * reverses the post-order into a valid topological sequence where every prerequisite appears before its dependent
- * course.
  *
- * Time Complexity: O(V + E) - DFS visits each course and prerequisite edge once; stack pop is O(V)
- * Space Complexity: O(V + E) - Adjacency list stores E edges; stack and recursion stack each hold up to V entries
+ * Key insight: DFS pushes each node onto a stack after all its descendants are
+ * fully explored (post-order). If a back edge (node on current recursion path)
+ * is detected, a cycle exists and an empty array is returned. Popping the stack
+ * reverses the post-order into a valid topological sequence where every
+ * prerequisite appears before its dependent course.
  *
- * Edge Cases Handled: cycle in prerequisites (DFS detects back edge, returns empty array), no prerequisites (all
- * courses pushed to stack in arbitrary order), disconnected components (outer loop initiates DFS from each unvisited
+ * Time Complexity: O(V + E) - DFS visits each course and prerequisite edge
+ * once; stack pop is O(V)
+ *
+ * Space Complexity: O(V + E) - Adjacency list stores E edges; stack and
+ * recursion stack each hold up to V entries
+ *
+ * Edge Cases Handled: cycle in prerequisites (DFS detects back edge, returns
+ * empty array), no prerequisites (all courses pushed to stack in arbitrary
+ * order), disconnected components (outer loop initiates DFS from each unvisited
  * course)
  */
 class CourseScheduleII {

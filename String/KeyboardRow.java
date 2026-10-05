@@ -4,14 +4,20 @@
  * https://leetcode.com/problems/keyboard-row/
  *
  * Pattern: Row-Flag Intersection
- * Key insight: For each word, mark which of the three rows are touched using a 3-element flags array; if exactly one
- * flag is set, all characters come from a single row.
  *
- * Time Complexity: O(N * L) - N words, each scanned character-by-character with indexOf on a 10-char row string
- * Space Complexity: O(N) - LinkedList accumulates qualifying words; 3-element flags array per word is constant
+ * Key insight: For each word, mark which of the three rows are touched using a
+ * 3-element flags array; if exactly one flag is set, all characters come from a
+ * single row.
  *
- * Edge Cases Handled: uppercase letters (lowercased before lookup), single-letter words (always qualify), words
- * crossing row boundaries (flags sum > 1, rejected)
+ * Time Complexity: O(N * L) - N words, each scanned character-by-character with
+ * indexOf on a 10-char row string
+ *
+ * Space Complexity: O(N) - LinkedList accumulates qualifying words; 3-element
+ * flags array per word is constant
+ *
+ * Edge Cases Handled: uppercase letters (lowercased before lookup),
+ * single-letter words (always qualify), words crossing row boundaries (flags
+ * sum > 1, rejected)
  */
 class KeyboardRow {
     public String[] findWords(String[] words) {

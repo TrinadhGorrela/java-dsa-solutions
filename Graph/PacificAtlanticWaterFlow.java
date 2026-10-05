@@ -1,18 +1,25 @@
 /**
  * 417. Pacific Atlantic Water Flow
- * Difficulty: Medium | Tags: Array, Depth-First Search, Breadth-First Search, Matrix
+ * Difficulty: Medium | Tags: Array, Depth-First Search, Breadth-First Search,
+ * Matrix
  * https://leetcode.com/problems/pacific-atlantic-water-flow/
  *
  * Pattern: Dual Reverse BFS (Ocean Inward Flow)
- * Key insight: Instead of simulating water flowing downhill from each cell (O(M^2*N^2)), reverse the direction: BFS
- * inward from Pacific border cells and Atlantic border cells separately, moving only to equal-or-higher neighbors.
- * Cells reachable in both BFS passes form the intersection and can drain to both oceans.
  *
- * Time Complexity: O(M * N) - Two independent BFS passes each visit every cell at most once
+ * Key insight: Instead of simulating water flowing downhill from each cell
+ * (O(M^2*N^2)), reverse the direction: BFS inward from Pacific border cells and
+ * Atlantic border cells separately, moving only to equal-or-higher neighbors.
+ * Cells reachable in both BFS passes form the intersection and can drain to
+ * both oceans.
+ *
+ * Time Complexity: O(M * N) - Two independent BFS passes each visit every cell
+ * at most once
+ *
  * Space Complexity: O(M * N) - Two boolean reachability matrices plus BFS queue
  *
- * Edge Cases Handled: null or empty grid (returns empty list), single-cell grid touching both oceans, monotonic height
- * plateaus (equal heights allow flow), shared-border cells (top-right corner touches both oceans directly)
+ * Edge Cases Handled: null or empty grid (returns empty list), single-cell grid
+ * touching both oceans, monotonic height plateaus (equal heights allow flow),
+ * shared-border cells (top-right corner touches both oceans directly)
  */
 class PacificAtlanticWaterFlow {
     public List<List<Integer>> pacificAtlantic(int[][] heights) {

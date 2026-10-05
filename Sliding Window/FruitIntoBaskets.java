@@ -4,15 +4,22 @@
  * https://leetcode.com/problems/fruit-into-baskets/
  *
  * Pattern: Variable Sliding Window with At Most 2 Distinct Keys
- * Key insight: Expand right, adding each fruit type to a frequency map. When the map has more than 2 distinct types,
- * shrink from the left, decrementing counts and removing keys that drop to 0. The map never exceeds 3 entries
- * temporarily (the third triggers the shrink), so all operations are effectively O(1).
  *
- * Time Complexity: O(N) - Right advances once per step; left advances at most N times total; map operations are O(1)
- * Space Complexity: O(1) - HashMap holds at most 3 entries (two valid + one triggering removal)
+ * Key insight: Expand right, adding each fruit type to a frequency map. When
+ * the map has more than 2 distinct types, shrink from the left, decrementing
+ * counts and removing keys that drop to 0. The map never exceeds 3 entries
+ * temporarily (the third triggers the shrink), so all operations are
+ * effectively O(1).
  *
- * Edge Cases Handled: single element (result 1), all same type (entire array), exactly two types (entire array),
- * alternating types with a third type inserted mid-sequence
+ * Time Complexity: O(N) - Right advances once per step; left advances at most N
+ * times total; map operations are O(1)
+ *
+ * Space Complexity: O(1) - HashMap holds at most 3 entries (two valid + one
+ * triggering removal)
+ *
+ * Edge Cases Handled: single element (result 1), all same type (entire array),
+ * exactly two types (entire array), alternating types with a third type
+ * inserted mid-sequence
  */
 class FruitIntoBaskets {
     public int totalFruit(int[] fruits) {

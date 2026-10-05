@@ -1,15 +1,24 @@
 /**
  * 23. Merge k Sorted Lists
- * Difficulty: Hard | Tags: Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort, Tournament Sort
+ * Difficulty: Hard | Tags: Linked List, Divide and Conquer, Heap (Priority
+ * Queue), Merge Sort, Tournament Sort
  * https://leetcode.com/problems/merge-k-sorted-lists/
  *
  * Pattern: Flatten + Sort (Collect-and-Rebuild)
- * Key insight: Rather than managing a heap of K list pointers, flatten every node's value into a single list, sort it once, and rebuild the linked list — trading optimality of O(N log K) for implementation simplicity.
  *
- * Time Complexity: O(N log N) - Dominated by sorting the flattened list of all N node values across K lists
- * Space Complexity: O(N) - Auxiliary ArrayList stores all node values before rebuilding
+ * Key insight: Rather than managing a heap of K list pointers, flatten every
+ * node's value into a single list, sort it once, and rebuild the linked list —
+ * trading optimality of O(N log K) for implementation simplicity.
  *
- * Edge Cases Handled: null/empty input (lists array empty or all null heads → returns null), single list (trivially sorted), K=0, all identical values, lists of varying lengths
+ * Time Complexity: O(N log N) - Dominated by sorting the flattened list of all
+ * N node values across K lists
+ *
+ * Space Complexity: O(N) - Auxiliary ArrayList stores all node values before
+ * rebuilding
+ *
+ * Edge Cases Handled: null/empty input (lists array empty or all null heads →
+ * returns null), single list (trivially sorted), K=0, all identical values,
+ * lists of varying lengths
  */
 /**
  * Definition for singly-linked list.

@@ -4,12 +4,21 @@
  * https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/
  *
  * Pattern: Hash Set + Sentinel Dummy Walk
- * Key insight: Converting nums into a HashSet makes each node check O(1), and the sentinel head turns even deleting the original head into an ordinary splice; a prev pointer trailing the current node links around any node whose value is in the set while traversal continues untouched.
  *
- * Time Complexity: O(N + M) - Building the set costs O(M) for the nums array, then a single O(N) pass over the list
+ * Key insight: Converting nums into a HashSet makes each node check O(1), and
+ * the sentinel head turns even deleting the original head into an ordinary
+ * splice; a prev pointer trailing the current node links around any node whose
+ * value is in the set while traversal continues untouched.
+ *
+ * Time Complexity: O(N + M) - Building the set costs O(M) for the nums array,
+ * then a single O(N) pass over the list
+ *
  * Space Complexity: O(M) - Hash set holding the values from nums
  *
- * Edge Cases Handled: deletion of the head node (the sentinel makes it identical to any other splice); every node deleted (returns a null tail, per the single-node case); no deletion (empty nums leaves the list unchanged); duplicate values in nums (a set dedupes them harmlessly)
+ * Edge Cases Handled: deletion of the head node (the sentinel makes it
+ * identical to any other splice); every node deleted (returns a null tail, per
+ * the single-node case); no deletion (empty nums leaves the list unchanged);
+ * duplicate values in nums (a set dedupes them harmlessly)
  */
 /**
  * Definition for singly-linked list.

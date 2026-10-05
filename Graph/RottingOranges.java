@@ -4,15 +4,22 @@
  * https://leetcode.com/problems/rotting-oranges/
  *
  * Pattern: Multi-Source BFS (Simultaneous Expansion)
- * Key insight: All initially rotten oranges start at distance 0 and expand in parallel; each BFS level represents one
- * minute. An `isRot` flag per level tracks whether any new orange rotted, so the minute counter only increments when
- * propagation actually occurs.
  *
- * Time Complexity: O(M * N) - Each cell enqueued at most once; initial scan plus BFS each visit every cell once
- * Space Complexity: O(M * N) - BFS queue worst-case holds all cells (e.g., checkerboard pattern)
+ * Key insight: All initially rotten oranges start at distance 0 and expand in
+ * parallel; each BFS level represents one minute. An `isRot` flag per level
+ * tracks whether any new orange rotted, so the minute counter only increments
+ * when propagation actually occurs.
  *
- * Edge Cases Handled: no fresh oranges (returns 0), fresh oranges isolated from all rotten sources (returns -1 after
- * post-BFS scan), no initially rotten oranges with fresh present (returns -1), all oranges already rotten (returns 0)
+ * Time Complexity: O(M * N) - Each cell enqueued at most once; initial scan
+ * plus BFS each visit every cell once
+ *
+ * Space Complexity: O(M * N) - BFS queue worst-case holds all cells (e.g.,
+ * checkerboard pattern)
+ *
+ * Edge Cases Handled: no fresh oranges (returns 0), fresh oranges isolated from
+ * all rotten sources (returns -1 after post-BFS scan), no initially rotten
+ * oranges with fresh present (returns -1), all oranges already rotten (returns
+ * 0)
  */
 class RottingOranges {
     public int orangesRotting(int[][] grid) {

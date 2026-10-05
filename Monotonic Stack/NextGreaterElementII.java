@@ -4,15 +4,20 @@
  * https://leetcode.com/problems/next-greater-element-ii/
  *
  * Pattern: Monotonic Decreasing Stack (Circular Array)
- * Key insight: Iterate right-to-left over a conceptual doubled array (indices 0..2n−1 mod n); maintain a decreasing
- * stack of values. For each position, pop everything ≤ nums[i%n]; the stack top is the next greater element. Writing
+ *
+ * Key insight: Iterate right-to-left over a conceptual doubled array (indices
+ * 0..2n−1 mod n); maintain a decreasing stack of values. For each position, pop
+ * everything ≤ nums[i%n]; the stack top is the next greater element. Writing
  * i%n handles the circular wrap naturally.
  *
- * Time Complexity: O(n) - Each element pushed and popped at most once across the 2n scan.
+ * Time Complexity: O(n) - Each element pushed and popped at most once across
+ * the 2n scan.
+ *
  * Space Complexity: O(n) - Stack and result array each hold up to n entries.
  *
- * Edge Cases Handled: single element (result −1), all equal values (all −1), maximum value at every position (all −1),
- * wrap-around where next greater is at an earlier index
+ * Edge Cases Handled: single element (result −1), all equal values (all −1),
+ * maximum value at every position (all −1), wrap-around where next greater is
+ * at an earlier index
  */
 class NextGreaterElementII {
     public int[] nextGreaterElements(int[] nums) {

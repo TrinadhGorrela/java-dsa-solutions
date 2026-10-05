@@ -4,15 +4,22 @@
  * https://leetcode.com/problems/sum-game/
  *
  * Pattern: Game Theory — Parity + Sum-Balance Analysis
- * Key insight: If the total number of '?' is odd, Alice moves last and wins trivially. With even '?', Bob can mirror
- * Alice's moves on the opposite half. Alice wins only when the half-sums differ by a non-multiple of 9 times the
- * per-half '?' count difference, because each '?' pair swings the sum by exactly 9.
  *
- * Time Complexity: O(n) - Single linear scan computing left/right sums and '?' counts.
- * Space Complexity: O(1) - Four integer counters (leftSum, rightSum, leftCount, rightCount).
+ * Key insight: If the total number of '?' is odd, Alice moves last and wins
+ * trivially. With even '?', Bob can mirror Alice's moves on the opposite half.
+ * Alice wins only when the half-sums differ by a non-multiple of 9 times the
+ * per-half '?' count difference, because each '?' pair swings the sum by
+ * exactly 9.
  *
- * Edge Cases Handled: odd '?' count (Alice wins immediately), balanced sums and '?' counts (Bob wins), zero '?' in the
- * string, difference not divisible by 9 (Alice wins)
+ * Time Complexity: O(n) - Single linear scan computing left/right sums and '?'
+ * counts.
+ *
+ * Space Complexity: O(1) - Four integer counters (leftSum, rightSum, leftCount,
+ * rightCount).
+ *
+ * Edge Cases Handled: odd '?' count (Alice wins immediately), balanced sums and
+ * '?' counts (Bob wins), zero '?' in the string, difference not divisible by 9
+ * (Alice wins)
  */
 class SumGame {
     public boolean sumGame(String num) {

@@ -4,14 +4,19 @@
  * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
  *
  * Pattern: Binary Search on Answer
- * Key insight: The search space for capacity is [max(weights), sum(weights)]; for each candidate capacity, a greedy
- * left-to-right scan packs as many packages as possible per day and counts whether days suffice.
  *
- * Time Complexity: O(n log W) - n = number of packages, W = sum of weights; each feasibility check is O(n).
+ * Key insight: The search space for capacity is [max(weights), sum(weights)];
+ * for each candidate capacity, a greedy left-to-right scan packs as many
+ * packages as possible per day and counts whether days suffice.
+ *
+ * Time Complexity: O(n log W) - n = number of packages, W = sum of weights;
+ * each feasibility check is O(n).
+ *
  * Space Complexity: O(1) - Only load accumulator and day counter.
  *
- * Edge Cases Handled: single package (capacity = its weight), all packages fit in one day, capacity must equal heaviest
- * single package minimum, days exactly equal to number of packages
+ * Edge Cases Handled: single package (capacity = its weight), all packages fit
+ * in one day, capacity must equal heaviest single package minimum, days exactly
+ * equal to number of packages
  */
 class CapacityToShipPackagesWithinDDays {
 

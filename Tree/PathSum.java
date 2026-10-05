@@ -1,17 +1,22 @@
 /**
  * 112. Path Sum
- * Difficulty: Easy | Tags: Tree, Depth-First Search, Breadth-First Search, Binary Tree
+ * Difficulty: Easy | Tags: Tree, Depth-First Search, Breadth-First Search,
+ * Binary Tree
  * https://leetcode.com/problems/path-sum/
  *
  * Pattern: DFS with Running Subtraction
- * Key insight: Decrement targetSum by each node's value on the way down; a valid path exists only when the remaining
- * sum reaches zero at a leaf (both children null), not at an internal node.
+ *
+ * Key insight: Decrement targetSum by each node's value on the way down; a
+ * valid path exists only when the remaining sum reaches zero at a leaf (both
+ * children null), not at an internal node.
  *
  * Time Complexity: O(n) - Worst case visits every node if no valid path exists.
+ *
  * Space Complexity: O(h) - Recursion stack height equals tree height.
  *
- * Edge Cases Handled: null root returns false, single node equal to target, path ending at non-leaf (intermediate zero
- * rejected), negative values on path, skewed tree requiring traversal to deepest leaf
+ * Edge Cases Handled: null root returns false, single node equal to target,
+ * path ending at non-leaf (intermediate zero rejected), negative values on
+ * path, skewed tree requiring traversal to deepest leaf
  */
 /**
  * Definition for a binary tree node.

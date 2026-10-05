@@ -4,15 +4,19 @@
  * https://leetcode.com/problems/remove-covered-intervals/
  *
  * Pattern: Sort-then-Scan Cover Detection
- * Key insight: Sorting by ascending start (and descending end for ties) ensures the widest interval for a given start
- * is encountered first; a subsequent interval is covered if it falls within the last kept interval's bounds (start ≥
- * kept.start && end ≤ kept.end).
+ *
+ * Key insight: Sorting by ascending start (and descending end for ties) ensures
+ * the widest interval for a given start is encountered first; a subsequent
+ * interval is covered if it falls within the last kept interval's bounds (start
+ * ≥ kept.start && end ≤ kept.end).
  *
  * Time Complexity: O(N log N) - Custom sort dominates; linear scan is O(N)
+ *
  * Space Complexity: O(1) - Index pointer and count; sort modifies in place
  *
- * Edge Cases Handled: identical intervals (second is covered), same start different end (longer one kept first),
- * partial overlaps (not covered, new kept interval set), fully nested intervals (inner removed)
+ * Edge Cases Handled: identical intervals (second is covered), same start
+ * different end (longer one kept first), partial overlaps (not covered, new
+ * kept interval set), fully nested intervals (inner removed)
  */
 class RemoveCoveredIntervals {
     public int removeCoveredIntervals(int[][] intervals) {

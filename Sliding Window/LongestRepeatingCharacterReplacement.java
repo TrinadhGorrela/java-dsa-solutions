@@ -4,12 +4,20 @@
  * https://leetcode.com/problems/longest-repeating-character-replacement/
  *
  * Pattern: Sliding Window (Variable Length) + Hash Map
- * Key insight: Maintain a window where (window length - most-frequent character count) <= k. Because maxFreq is never decreased (only overwritten when a new maximum appears), the window only grows, ensuring correctness without backtracking.
  *
- * Time Complexity: O(N) - Each character is visited once by the right pointer; left pointer advances at most N times total.
+ * Key insight: Maintain a window where (window length - most-frequent character
+ * count) <= k. Because maxFreq is never decreased (only overwritten when a new
+ * maximum appears), the window only grows, ensuring correctness without
+ * backtracking.
+ *
+ * Time Complexity: O(N) - Each character is visited once by the right pointer;
+ * left pointer advances at most N times total.
+ *
  * Space Complexity: O(1) - Hash map holds at most 26 uppercase-letter entries.
  *
- * Edge Cases Handled: single character string (returns 1), k = 0 (window must already be uniform), all distinct characters (window shrinks to 1 when k < 1), k >= string length (entire string is the answer).
+ * Edge Cases Handled: single character string (returns 1), k = 0 (window must
+ * already be uniform), all distinct characters (window shrinks to 1 when k <
+ * 1), k >= string length (entire string is the answer).
  */
 class LongestRepeatingCharacterReplacement {
     public int characterReplacement(String s, int k) {

@@ -4,25 +4,29 @@
  * https://leetcode.com/problems/find-x-value-of-array-ii/
  *
  * Pattern: Segment Tree (Modular Product + Residue Count Counting)
- * Key insight: Each node stores its range's product mod K plus cnt[r] = the number of
- * subarrays that start at the range's left edge whose product ≡ r (mod K). Because every
- * such subarray is either fully inside the left child or spans the whole left child and
- * continues into the right child, merging is just cnt[left] plus right residues shifted by
- * left.prod (mod K) — so point updates and "subarrays starting at index start" queries
- * both resolve in O(K) per segment-tree level.
  *
- * Time Complexity: O((N + Q) * K * log N) - Build touches O(N) nodes with O(K) work each;
- * every query performs one O(K log N) point update and one O(K log N) range query
+ * Key insight: Each node stores its range's product mod K plus cnt[r] = the
+ * number of subarrays that start at the range's left edge whose product ≡ r
+ * (mod K). Because every such subarray is either fully inside the left child or
+ * spans the whole left child and continues into the right child, merging is
+ * just cnt[left] plus right residues shifted by left.prod (mod K) — so point
+ * updates and "subarrays starting at index start" queries both resolve in O(K)
+ * per segment-tree level.
  *
- * Space Complexity: O(N * K) - The segment tree allocates 4 * N nodes, each holding a
- * length-K residue count array
+ * Time Complexity: O((N + Q) * K * log N) - Build touches O(N) nodes with O(K)
+ * work each; every query performs one O(K log N) point update and one O(K log
+ * N) range query
  *
- * Edge Cases Handled: single-element array (leaf build/update base case); update index at
- * exact segment boundaries (mid split uses <= / > correctly); query range fully inside one
- * node vs. split across children (both merge paths); residue arithmetic stays non-negative
- * via % K on non-negative inputs; assumes k >= 1 (K = 0 would divide by zero), nums is
- * non-empty, start and update indices are in bounds, x < k, and values are non-negative
- * (negative vals would yield negative Java % results)
+ * Space Complexity: O(N * K) - The segment tree allocates 4 * N nodes, each
+ * holding a length-K residue count array
+ *
+ * Edge Cases Handled: single-element array (leaf build/update base case);
+ * update index at exact segment boundaries (mid split uses <= / > correctly);
+ * query range fully inside one node vs. split across children (both merge
+ * paths); residue arithmetic stays non-negative via % K on non-negative inputs;
+ * assumes k >= 1 (K = 0 would divide by zero), nums is non-empty, start and
+ * update indices are in bounds, x < k, and values are non-negative (negative
+ * vals would yield negative Java % results)
  */
 class FindXValueOfArrayII {
     int[] tree_prod;

@@ -1,17 +1,24 @@
 /**
  * 101. Symmetric Tree
- * Difficulty: Easy | Tags: Tree, Depth-First Search, Breadth-First Search, Binary Tree
+ * Difficulty: Easy | Tags: Tree, Depth-First Search, Breadth-First Search,
+ * Binary Tree
  * https://leetcode.com/problems/symmetric-tree/
  *
  * Pattern: Recursive Mirror Check
- * Key insight: Treat symmetry as a simultaneous two-pointer walk: compare left.left with right.right and left.right
- * with right.left at every step, effectively folding the tree along its root.
  *
- * Time Complexity: O(n) - Each of the n nodes is visited exactly once in the paired recursion.
- * Space Complexity: O(h) - Recursion stack depth equals tree height h (log n balanced, n worst-case).
+ * Key insight: Treat symmetry as a simultaneous two-pointer walk: compare
+ * left.left with right.right and left.right with right.left at every step,
+ * effectively folding the tree along its root.
  *
- * Edge Cases Handled: null root (trivially symmetric), single node, perfectly balanced tree, left-only or right-only
- * skewed chain (asymmetric), mismatched values at mirror positions
+ * Time Complexity: O(n) - Each of the n nodes is visited exactly once in the
+ * paired recursion.
+ *
+ * Space Complexity: O(h) - Recursion stack depth equals tree height h (log n
+ * balanced, n worst-case).
+ *
+ * Edge Cases Handled: null root (trivially symmetric), single node, perfectly
+ * balanced tree, left-only or right-only skewed chain (asymmetric), mismatched
+ * values at mirror positions
  */
 /**
  * Definition for a binary tree node.

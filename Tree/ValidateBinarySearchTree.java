@@ -1,19 +1,27 @@
 /**
  * 98. Validate Binary Search Tree
- * Difficulty: Medium | Tags: Tree, Depth-First Search, Binary Search Tree, Binary Tree
+ * Difficulty: Medium | Tags: Tree, Depth-First Search, Binary Search Tree,
+ * Binary Tree
  * https://leetcode.com/problems/validate-binary-search-tree/
  *
  * Pattern: Depth-First Search with Range Constraints
- * Key insight: Each node must lie strictly within a valid (min, max) interval that tightens as you descend;
- *  the left child's upper bound becomes the parent's value and the right child's lower bound becomes the
- *  parent's value, enforcing the global BST ordering invariant — not just a local parent-child check.
  *
- * Time Complexity: O(N) - Each node is visited exactly once in a single DFS pass.
- * Space Complexity: O(H) - Recursion stack depth equals tree height; O(log N) balanced, O(N) worst case (skewed).
+ * Key insight: Each node must lie strictly within a valid (min, max) interval
+ * that tightens as you descend; the left child's upper bound becomes the
+ * parent's value and the right child's lower bound becomes the parent's value,
+ * enforcing the global BST ordering invariant — not just a local parent-child
+ * check.
  *
- * Edge Cases Handled: null/empty tree (returns true); single-node tree; duplicate values in subtree (strict
- *  >= and <= comparisons reject equal values); deeply nested invalid nodes deep in left or right subtree;
- *  all-same-value input (rejected immediately at first non-root duplicate).
+ * Time Complexity: O(N) - Each node is visited exactly once in a single DFS
+ * pass.
+ *
+ * Space Complexity: O(H) - Recursion stack depth equals tree height; O(log N)
+ * balanced, O(N) worst case (skewed).
+ *
+ * Edge Cases Handled: null/empty tree (returns true); single-node tree;
+ * duplicate values in subtree (strict >= and <= comparisons reject equal
+ * values); deeply nested invalid nodes deep in left or right subtree;
+ * all-same-value input (rejected immediately at first non-root duplicate).
  */
 /**
  * Definition for a binary tree node.
