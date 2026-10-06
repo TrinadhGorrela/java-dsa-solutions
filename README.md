@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-407%20%7C%20403%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-408%20%7C%20404%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Easy-170-44B77B?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Easy-171-44B77B?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Medium-213-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-24-EB5C5C?style=for-the-badge"/>
 </p>
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **407** (403 Java + 4 SQL) |
-| Difficulty | 🟢 170 Easy · 🟡 213 Medium · 🔴 24 Hard |
+| **Total solutions** | **408** (404 Java + 4 SQL) |
+| Difficulty | 🟢 171 Easy · 🟡 213 Medium · 🔴 24 Hard |
 | Patterns covered | **25** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -73,8 +73,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Binary Search | 19 | 6 | 12 | 1 |
 | Graph | 19 | 3 | 14 | 2 |
 | Backtracking | 18 | 0 | 14 | 4 |
+| String | 17 | 14 | 3 | 0 |
 | Sliding Window | 16 | 3 | 11 | 2 |
-| String | 16 | 13 | 3 | 0 |
 | Matrix | 15 | 4 | 10 | 1 |
 | Prefix Sum | 14 | 8 | 6 | 0 |
 | Stack | 12 | 3 | 7 | 2 |
@@ -87,9 +87,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Union Find | 2 | 0 | 2 | 0 |
 | Segment Tree | 1 | 0 | 0 | 1 |
 | Topological Sort | 1 | 0 | 1 | 0 |
-| **Total (Java)** | **403** | **167** | **212** | **24** |
+| **Total (Java)** | **404** | **168** | **212** | **24** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **407** | **170** | **213** | **24** |
+| **Grand total** | **408** | **171** | **213** | **24** |
 
 ## Conventions used throughout
 
@@ -124,7 +124,7 @@ leetcode-solutions/
 ├── Segment Tree/        ── 1
 ├── Sliding Window/      ── 16
 ├── Stack/               ── 12
-├── String/              ── 16
+├── String/              ── 17
 ├── Topological Sort/    ── 1
 ├── Tree/                ── 25
 ├── Two Pointers/        ── 21
