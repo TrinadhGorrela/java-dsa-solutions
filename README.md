@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-411%20%7C%20407%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-412%20%7C%20408%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Easy-172-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-214-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-215-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-25-EB5C5C?style=for-the-badge"/>
 </p>
 
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **411** (407 Java + 4 SQL) |
-| Difficulty | 🟢 172 Easy · 🟡 214 Medium · 🔴 25 Hard |
+| **Total solutions** | **412** (408 Java + 4 SQL) |
+| Difficulty | 🟢 172 Easy · 🟡 215 Medium · 🔴 25 Hard |
 | Patterns covered | **25** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -66,8 +66,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Array | 42 | 29 | 13 | 0 |
 | Dynamic Programming | 33 | 3 | 27 | 3 |
 | Linked List | 27 | 8 | 18 | 1 |
+| Greedy | 26 | 6 | 17 | 3 |
 | Hash Table | 26 | 19 | 6 | 1 |
-| Greedy | 25 | 6 | 16 | 3 |
 | Tree | 25 | 11 | 13 | 1 |
 | Two Pointers | 21 | 11 | 9 | 1 |
 | Binary Search | 19 | 6 | 12 | 1 |
@@ -87,9 +87,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Union Find | 2 | 0 | 2 | 0 |
 | Segment Tree | 1 | 0 | 0 | 1 |
 | Topological Sort | 1 | 0 | 1 | 0 |
-| **Total (Java)** | **407** | **169** | **213** | **25** |
+| **Total (Java)** | **408** | **169** | **214** | **25** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **411** | **172** | **214** | **25** |
+| **Grand total** | **412** | **172** | **215** | **25** |
 
 ## Conventions used throughout
 
@@ -113,7 +113,7 @@ java-dsa-solutions/
 ├── Dynamic Programming/ ── 33
 ├── Game Theory/         ── 2
 ├── Graph/               ── 19
-├── Greedy/              ── 25
+├── Greedy/              ── 26
 ├── Hash Table/          ── 26
 ├── Heap/                ── 4
 ├── Intervals/           ── 3
