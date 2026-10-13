@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-420%20%7C%20416%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-427%20%7C%20423%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Easy-173-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-220-FCB833?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Hard-27-EB5C5C?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Easy-176-44B77B?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-223-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Hard-28-EB5C5C?style=for-the-badge"/>
 </p>
 
 <h1 align="center">Java DSA Solutions</h1>
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **420** (416 Java + 4 SQL) |
-| Difficulty | 🟢 173 Easy · 🟡 220 Medium · 🔴 27 Hard |
+| **Total solutions** | **427** (423 Java + 4 SQL) |
+| Difficulty | 🟢 176 Easy · 🟡 223 Medium · 🔴 28 Hard |
 | Patterns covered | **25** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -63,18 +63,18 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Pattern | Solved | Easy | Medium | Hard |
 | ------- | ------ | :---: | :----: | :---: |
 | Math | 48 | 34 | 14 | 0 |
-| Array | 43 | 30 | 13 | 0 |
-| Dynamic Programming | 36 | 3 | 30 | 3 |
-| Greedy | 27 | 6 | 17 | 4 |
+| Array | 46 | 33 | 13 | 0 |
+| Dynamic Programming | 37 | 3 | 31 | 3 |
+| Greedy | 28 | 6 | 18 | 4 |
 | Linked List | 27 | 8 | 18 | 1 |
 | Tree | 27 | 11 | 15 | 1 |
 | Hash Table | 26 | 19 | 6 | 1 |
-| Two Pointers | 21 | 11 | 9 | 1 |
+| Two Pointers | 22 | 11 | 9 | 2 |
 | Binary Search | 19 | 6 | 12 | 1 |
 | Graph | 19 | 3 | 14 | 2 |
 | Backtracking | 18 | 0 | 14 | 4 |
+| Sliding Window | 17 | 3 | 12 | 2 |
 | String | 17 | 14 | 3 | 0 |
-| Sliding Window | 16 | 3 | 11 | 2 |
 | Matrix | 15 | 4 | 10 | 1 |
 | Prefix Sum | 14 | 8 | 6 | 0 |
 | Stack | 14 | 4 | 7 | 3 |
@@ -87,9 +87,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Topological Sort | 2 | 0 | 1 | 1 |
 | Union Find | 2 | 0 | 2 | 0 |
 | Segment Tree | 1 | 0 | 0 | 1 |
-| **Total (Java)** | **416** | **170** | **219** | **27** |
+| **Total (Java)** | **423** | **173** | **222** | **28** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **420** | **173** | **220** | **27** |
+| **Grand total** | **427** | **176** | **223** | **28** |
 
 ## Conventions used throughout
 
@@ -104,16 +104,16 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 ```
 java-dsa-solutions/
-├── Array/               ── 43
+├── Array/               ── 46
 ├── Backtracking/        ── 18
 ├── Binary Search/       ── 19
 ├── Bit Manipulation/    ── 8
 ├── Database/            ── 4 (SQL)
 ├── Divide and Conquer/  ── 2
-├── Dynamic Programming/ ── 36
+├── Dynamic Programming/ ── 37
 ├── Game Theory/         ── 2
 ├── Graph/               ── 19
-├── Greedy/              ── 27
+├── Greedy/              ── 28
 ├── Hash Table/          ── 26
 ├── Heap/                ── 4
 ├── Intervals/           ── 3
@@ -123,12 +123,12 @@ java-dsa-solutions/
 ├── Monotonic Stack/     ── 5
 ├── Prefix Sum/          ── 14
 ├── Segment Tree/        ── 1
-├── Sliding Window/      ── 16
+├── Sliding Window/      ── 17
 ├── Stack/               ── 14
 ├── String/              ── 17
 ├── Topological Sort/    ── 2
 ├── Tree/                ── 27
-├── Two Pointers/        ── 21
+├── Two Pointers/        ── 22
 └── Union Find/          ── 2
 ```
 
