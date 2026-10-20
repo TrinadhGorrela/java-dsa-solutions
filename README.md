@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-452%20%7C%20448%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-453%20%7C%20449%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Easy-182-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-237-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-238-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-33-EB5C5C?style=for-the-badge"/>
 </p>
 
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **452** (448 Java + 4 SQL) |
-| Difficulty | 🟢 182 Easy · 🟡 237 Medium · 🔴 33 Hard |
+| **Total solutions** | **453** (449 Java + 4 SQL) |
+| Difficulty | 🟢 182 Easy · 🟡 238 Medium · 🔴 33 Hard |
 | Patterns covered | **25** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -73,7 +73,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Binary Search | 21 | 7 | 13 | 1 |
 | Backtracking | 19 | 0 | 15 | 4 |
 | Graph | 19 | 3 | 14 | 2 |
-| Sliding Window | 17 | 3 | 12 | 2 |
+| Sliding Window | 18 | 3 | 13 | 2 |
 | String | 17 | 14 | 3 | 0 |
 | Matrix | 16 | 4 | 11 | 1 |
 | Stack | 15 | 4 | 8 | 3 |
@@ -87,9 +87,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Divide and Conquer | 2 | 0 | 1 | 1 |
 | Game Theory | 2 | 0 | 2 | 0 |
 | Topological Sort | 2 | 0 | 1 | 1 |
-| **Total (Java)** | **448** | **179** | **236** | **33** |
+| **Total (Java)** | **449** | **179** | **237** | **33** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **452** | **182** | **237** | **33** |
+| **Grand total** | **453** | **182** | **238** | **33** |
 
 ## Conventions used throughout
 
@@ -123,7 +123,7 @@ java-dsa-solutions/
 ├── Monotonic Stack/     ── 5
 ├── Prefix Sum/          ── 14
 ├── Segment Tree/        ── 3
-├── Sliding Window/      ── 17
+├── Sliding Window/      ── 18
 ├── Stack/               ── 15
 ├── String/              ── 17
 ├── Topological Sort/    ── 2
