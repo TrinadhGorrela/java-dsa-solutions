@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-470%20%7C%20466%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-468%20%7C%20464%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Easy-185-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-252-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Easy-184-44B77B?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-251-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-33-EB5C5C?style=for-the-badge"/>
 </p>
 
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **470** (466 Java + 4 SQL) |
-| Difficulty | 🟢 185 Easy · 🟡 252 Medium · 🔴 33 Hard |
+| **Total solutions** | **468** (464 Java + 4 SQL) |
+| Difficulty | 🟢 184 Easy · 🟡 251 Medium · 🔴 33 Hard |
 | Patterns covered | **25** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -63,8 +63,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Pattern | Solved | Easy | Medium | Hard |
 | ------- | ------ | :---: | :----: | :---: |
 | Dynamic Programming | 52 | 4 | 43 | 5 |
-| Array | 49 | 34 | 15 | 0 |
 | Math | 49 | 35 | 14 | 0 |
+| Array | 47 | 33 | 14 | 0 |
 | Greedy | 31 | 6 | 20 | 5 |
 | Tree | 30 | 13 | 15 | 2 |
 | Hash Table | 27 | 19 | 7 | 1 |
@@ -87,9 +87,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Divide and Conquer | 2 | 0 | 1 | 1 |
 | Game Theory | 2 | 0 | 2 | 0 |
 | Topological Sort | 2 | 0 | 1 | 1 |
-| **Total (Java)** | **466** | **182** | **251** | **33** |
+| **Total (Java)** | **464** | **181** | **250** | **33** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **470** | **185** | **252** | **33** |
+| **Grand total** | **468** | **184** | **251** | **33** |
 
 ## Conventions used throughout
 
@@ -104,7 +104,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 ```
 java-dsa-solutions/
-├── Array/               ── 49
+├── Array/               ── 47
 ├── Backtracking/        ── 19
 ├── Binary Search/       ── 21
 ├── Bit Manipulation/    ── 11
