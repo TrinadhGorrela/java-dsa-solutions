@@ -1,6 +1,6 @@
 /**
  * 4088. Difference Between Peaks and Valleys
- * Difficulty: Easy | Tags: None
+ * Difficulty: Easy | Tags: Array
  * https://leetcode.com/problems/difference-between-peaks-and-valleys/
  *
  * Pattern: Linear Scan (Local Extrema Detection)

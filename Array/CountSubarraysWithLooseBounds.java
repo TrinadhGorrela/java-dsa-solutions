@@ -1,6 +1,6 @@
 /**
  * 4089. Count Subarrays With Loose Bounds
- * Difficulty: Medium | Tags: None
+ * Difficulty: Medium | Tags: Array
  * https://leetcode.com/problems/count-subarrays-with-loose-bounds/
  *
  * Pattern: Linear Scan (Run-Length Counting of Valid Subarrays)

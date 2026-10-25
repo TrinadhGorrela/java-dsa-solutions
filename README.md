@@ -54,7 +54,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 | ------ | ----- |
 | **Total solutions** | **470** (466 Java + 4 SQL) |
 | Difficulty | 🟢 185 Easy · 🟡 252 Medium · 🔴 33 Hard |
-| Patterns covered | **26** |
+| Patterns covered | **25** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
 
@@ -63,8 +63,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Pattern | Solved | Easy | Medium | Hard |
 | ------- | ------ | :---: | :----: | :---: |
 | Dynamic Programming | 52 | 4 | 43 | 5 |
+| Array | 49 | 34 | 15 | 0 |
 | Math | 49 | 35 | 14 | 0 |
-| Array | 47 | 33 | 14 | 0 |
 | Greedy | 31 | 6 | 20 | 5 |
 | Tree | 30 | 13 | 15 | 2 |
 | Hash Table | 27 | 19 | 7 | 1 |
@@ -86,7 +86,6 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Union Find | 3 | 0 | 3 | 0 |
 | Divide and Conquer | 2 | 0 | 1 | 1 |
 | Game Theory | 2 | 0 | 2 | 0 |
-| Misc | 2 | 1 | 1 | 0 |
 | Topological Sort | 2 | 0 | 1 | 1 |
 | **Total (Java)** | **466** | **182** | **251** | **33** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
@@ -105,7 +104,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 ```
 java-dsa-solutions/
-├── Array/               ── 47
+├── Array/               ── 49
 ├── Backtracking/        ── 19
 ├── Binary Search/       ── 21
 ├── Bit Manipulation/    ── 11
@@ -121,7 +120,6 @@ java-dsa-solutions/
 ├── Linked List/         ── 27
 ├── Math/                ── 49
 ├── Matrix/              ── 18
-├── misc/                ── 2
 ├── Monotonic Stack/     ── 5
 ├── Prefix Sum/          ── 15
 ├── Segment Tree/        ── 3
