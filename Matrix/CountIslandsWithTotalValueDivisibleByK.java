@@ -4,15 +4,24 @@
  * Union-Find, Matrix
  * https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/
  *
- * Pattern: Grid Traversal (BFS / Flood Fill)
- * 
- * Key insight: To count islands whose total value is divisible by `K`, we iterate through the grid. Upon finding an unvisited, non-zero cell, we initiate a Breadth-First Search (BFS) to traverse the entire connected island, accumulating the sum of its cell values. Cells are marked visited during traversal to ensure each island is processed once, and the accumulated sum is then checked for divisibility by `K`.
- * 
- * Time Complexity: O(M * N) - Each cell in the M x N grid is visited and processed at most once by the nested loops and the BFS traversal.
- * 
- * Space Complexity: O(M * N) - The `visited` boolean array requires O(M * N) space. In the worst case, the BFS `queue` can hold up to O(M * N) elements (e.g., a grid entirely filled with a single island).
- * 
- * Edge Cases Handled: Single element grid (correctly identifies and sums); grid with all zero values (returns 0 islands); multiple distinct islands; large integer sums (long used); K=1 and K>1 divisibility checks.
+ * Pattern: Island Traversal (BFS) with Component Sum (4-Connectivity)
+ *
+ * Key insight: Treat connected components of cells with value != 0 (4
+ * directions) as islands; traverse each unvisited island via BFS, sum all grid
+ * values in that component (accumulated in long), and count it if (sum % k ==
+ * 0). Each cell is visited exactly once via the visited matrix.
+ *
+ * Time Complexity: O(MN) - Every cell of the MxN grid is enqueued/dequeued and
+ * checked at most once, with O(1) work per cell.
+ *
+ * Space Complexity: O(MN) - Uses a boolean visited matrix of size M*N and an
+ * ArrayDeque that can hold up to M*N cells in the worst case (a single large
+ * island).
+ *
+ * Edge Cases Handled: single-cell islands; islands of various sizes; grid
+ * entirely of zeros (returns 0); large cell values (summed in long). No
+ * explicit null/empty grid checks or k==0 handling (relies on problem
+ * constraints).
  */
 class CountIslandsWithTotalValueDivisibleByK {
     public int countIslands(int[][] grid, int k) {
