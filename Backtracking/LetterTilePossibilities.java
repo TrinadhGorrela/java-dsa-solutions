@@ -26,7 +26,9 @@ class LetterTilePossibilities {
     public int numTilePossibilities(String tiles) {
         Set<List<String>> res = new HashSet<>();
         boolean[] used = new boolean[tiles.length()];
+        
         solve(res, new ArrayList<>(), used, tiles);
+
         return res.size();
     }
 

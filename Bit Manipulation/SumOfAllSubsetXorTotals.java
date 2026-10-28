@@ -35,11 +35,13 @@ class SumOfAllSubsetXorTotals {
             }
             ans += subsetXor;
         }
+
         return ans;
     }
 
     public static void backtrack(int[] nums, List<List<Integer>> res, List<Integer> temp, int startIndex) {
         res.add(new ArrayList<>(temp));
+        
         if (startIndex == nums.length) {
             return;
         }

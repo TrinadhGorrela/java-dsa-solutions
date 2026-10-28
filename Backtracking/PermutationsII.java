@@ -24,7 +24,9 @@ class PermutationsII {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
         boolean[] used = new boolean[nums.length];
+        
         backtrack(new ArrayList<>(), nums, res, used);
+
         return res;
     }
 
@@ -33,14 +35,18 @@ class PermutationsII {
             res.add(new ArrayList<>(current));
             return;
         }
+
         for (int i = 0; i < nums.length; i++) {
             if (used[i])
                 continue;
+            
             if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])
                 continue;
+
             used[i] = true;
             current.add(nums[i]);
             backtrack(current, nums, res, used);
+            
             used[i] = false;
             current.remove(current.size() - 1);
         }

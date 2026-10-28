@@ -25,6 +25,7 @@
 class SudokuSolver {
     public void solveSudoku(char[][] board) {
         int[][] intBoard = new int[9][9];
+
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == '.') {
@@ -49,6 +50,7 @@ class SudokuSolver {
         int row = -1;
         int col = -1;
         boolean hasEmpty = true;
+        
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == 0) {
@@ -58,11 +60,12 @@ class SudokuSolver {
                     break;
                 }
             }
+
             if (!hasEmpty) {
                 break;
             }
-
         }
+
         if (hasEmpty)
             return true;
 
@@ -74,6 +77,7 @@ class SudokuSolver {
                 board[row][col] = 0;
             }
         }
+
         return false;
     }
 
@@ -86,13 +90,14 @@ class SudokuSolver {
         
         int startRow = row - row % 3;
         int startCol = col - col % 3;
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (board[startRow + i][startCol + j] == num)
                     return false;
             }
-
         }
+
         return true;
     }
 }

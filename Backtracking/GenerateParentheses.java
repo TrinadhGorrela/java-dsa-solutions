@@ -25,6 +25,7 @@ class GenerateParentheses {
     public List<String> generateParenthesis(int n) {
         List<String> res = new ArrayList<>();
         backtrack(n, n, new String(), res);
+        
         return res;
     }
 

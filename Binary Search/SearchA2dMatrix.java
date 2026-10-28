@@ -35,6 +35,7 @@ class SearchA2dMatrix {
                 right = mid - 1;
             }
         }
+        
         return false;
     }
 }

@@ -32,6 +32,7 @@ class SortAnArray {
 
         divide(nums, st, mid);
         divide(nums, mid + 1, end);
+        
         return merge(nums, st, mid, end);
     }
 

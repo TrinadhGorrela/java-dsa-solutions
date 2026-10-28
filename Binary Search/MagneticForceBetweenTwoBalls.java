@@ -40,18 +40,21 @@ class MagneticForceBetweenTwoBalls {
                 right = mid - 1;
             }
         }
+
         return res;
     }
 
     private static int countBalls(int[] position, int k) {
         int placed = 1;
         int lastPlaced = position[0];
+        
         for (int i = 1; i < position.length; i++) {
             if (position[i] - lastPlaced >= k) {
                 placed++;
                 lastPlaced = position[i];
             }
         }
+
         return placed;
     }
 }

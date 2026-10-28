@@ -36,6 +36,7 @@ class Sqrtx {
                 end = mid - 1;
             }
         }
+        
         return result;
     }
 }

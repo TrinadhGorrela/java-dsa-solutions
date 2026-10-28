@@ -28,6 +28,7 @@ class KokoEatingBananas {
                 right = i;
             }
         }
+
         int res = 0;
 
         while (left <= right) {
@@ -40,11 +41,13 @@ class KokoEatingBananas {
                 left = mid + 1;
             }
         }
+
         return res;
     }
 
     public static long computeHours(int[] piles, int speed) {
         long totalHours = 0;
+        
         for (int i = 0; i < piles.length; i++) {
             int fullHours = piles[i] / speed;
             if (piles[i] % speed == 0) {
@@ -53,6 +56,7 @@ class KokoEatingBananas {
                 totalHours += fullHours + 1;
             }
         }
+
         return totalHours;
     }
 }

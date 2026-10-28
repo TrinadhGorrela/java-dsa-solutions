@@ -44,6 +44,7 @@ class FindFirstAndLastPositionOfElementInSortedArray {
                 right = mid - 1;
             }
         }
+        
         return foundIndex;
     }
 }

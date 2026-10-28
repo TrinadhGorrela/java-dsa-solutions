@@ -36,6 +36,7 @@ class DeleteOperationForTwoStrings {
         }
 
         int min = word1.length() + word2.length() - (2 * dp[word1.length()][word2.length()]);
+        
         return min;
     }
 }

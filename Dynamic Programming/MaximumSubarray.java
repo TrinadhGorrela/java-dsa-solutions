@@ -26,6 +26,7 @@ class MaximumSubarray {
             curSum = Math.max(nums[i], curSum + nums[i]);
             max = Math.max(curSum, max);
         }
+        
         return max;
     }
 }

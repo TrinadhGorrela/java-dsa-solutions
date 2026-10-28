@@ -31,6 +31,7 @@ class LongestCommonSubsequence {
                 }
             }
         }
+        
         return dp[text1.length()][text2.length()];
     }
 }

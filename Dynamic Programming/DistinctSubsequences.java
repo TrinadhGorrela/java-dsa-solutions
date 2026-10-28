@@ -60,7 +60,6 @@ class DistinctSubsequences {
         }
 
         int skip = helper(dp, s, t, sIndex + 1, tIndex);
-
         dp[sIndex][tIndex] = skip;
 
         return dp[sIndex][tIndex];

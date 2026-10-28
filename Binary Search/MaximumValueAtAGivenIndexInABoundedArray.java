@@ -41,6 +41,7 @@ class MaximumValueAtAGivenIndexInABoundedArray {
                 right = mid - 1;
             }
         }
+
         return res;
     }
 
@@ -50,6 +51,7 @@ class MaximumValueAtAGivenIndexInABoundedArray {
         }
 
         long decreasingCells = Math.min(count, peakValue - 1);
+        
         if (decreasingCells > 0) {
             long first = peakValue - 1;
             long last = peakValue - 1 * decreasingCells;
@@ -57,6 +59,7 @@ class MaximumValueAtAGivenIndexInABoundedArray {
             long ones = count - decreasingCells;
             return decSum + ones;
         }
+
         return count;
     }
 }

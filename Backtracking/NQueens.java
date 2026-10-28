@@ -31,6 +31,7 @@ class NQueens {
         }
 
         placeQueens(board, res, n, 0);
+
         return res;
     }
 
@@ -41,8 +42,10 @@ class NQueens {
                 solution.add(new String(line));
             }
             res.add(solution);
+
             return;
         }
+        
         for (int col = 0; col < n; col++) {
             if (isSafe(board, row, col, n)) {
                 board[row][col] = 'Q';
@@ -65,6 +68,7 @@ class NQueens {
                 }
             }
         }
+
         return true;
     }
 }

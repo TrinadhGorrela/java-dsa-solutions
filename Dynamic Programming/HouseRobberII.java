@@ -50,6 +50,7 @@ class HouseRobberII {
         for (int i = 2; i < houses.length; i++) {
             loot[i] = Math.max(loot[i - 2] + houses[i], loot[i - 1]);
         }
+        
         return loot[houses.length - 1];
     }
 }

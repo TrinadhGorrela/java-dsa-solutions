@@ -24,10 +24,13 @@ class CombinationSumIII {
     public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> res = new ArrayList<>();
         int[] nums = new int[9];
+
         for (int i = 0; i < 9; i++) {
             nums[i] = i + 1;
         }
+
         backtrack(nums, res, new ArrayList<>(), 0, n, k);
+        
         return res;
     }
 
@@ -36,6 +39,7 @@ class CombinationSumIII {
             if (temp.size() == k) {
                 res.add(new ArrayList<>(temp));
             }
+            
             return;
         }
 

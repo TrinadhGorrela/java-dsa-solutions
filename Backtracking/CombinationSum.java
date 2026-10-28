@@ -25,7 +25,9 @@ class CombinationSum {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> combi = new ArrayList<>();
+
         backtrack(candidates, res, 0, combi, target);
+
         return res;
     }
 
@@ -33,12 +35,15 @@ class CombinationSum {
         if (startIndex == candidates.length || target < 0) {
             return;
         }
+
         if (target == 0) {
             res.add(new ArrayList<>(combi));
             return;
         }
+
         combi.add(candidates[startIndex]);
         backtrack(candidates, res, startIndex, combi, target - candidates[startIndex]);
+        
         combi.remove(combi.size() - 1);
         backtrack(candidates, res, startIndex + 1, combi, target);
     }

@@ -32,6 +32,7 @@ class PalindromePartitioning {
         }
 
         helper(res, new ArrayList<>(), s, 0);
+
         return res;
     }
 
@@ -58,6 +59,7 @@ class PalindromePartitioning {
             left++;
             right--;
         }
+        
         return true;
     }
 }

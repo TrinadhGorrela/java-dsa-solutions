@@ -23,6 +23,7 @@ class LetterCasePermutation {
     public List<String> letterCasePermutation(String s) {
         List<String> res = new ArrayList<>();
         backtrack(s, res, new String(), 0);
+        
         return res;
     }
 

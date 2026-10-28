@@ -23,6 +23,7 @@ class LongestSubsequenceWithNonZeroBitwiseXor {
     public int longestSubsequence(int[] nums) {
         int xorSum = 0;
         int zeros = 0;
+
         for (int i : nums) {
             xorSum ^= i;
             if (i == 0) {
@@ -37,6 +38,7 @@ class LongestSubsequenceWithNonZeroBitwiseXor {
         if (xorSum == 0) {
             return nums.length - 1;
         }
+        
         return nums.length;
     }
 }

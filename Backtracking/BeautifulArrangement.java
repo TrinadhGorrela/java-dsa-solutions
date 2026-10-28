@@ -54,6 +54,7 @@ class BeautifulArrangement {
             count += backtrack(nums, temp);
             temp.remove(temp.size() - 1);
         }
+        
         return count;
     }
 }

@@ -27,6 +27,7 @@ class MazeSolver {
 
         String path = "";
         explorePaths(maze, n, 0, 0, path, res);
+        
         return res;
     }
 

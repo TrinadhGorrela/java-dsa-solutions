@@ -22,7 +22,9 @@
 class Permutations {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
+
         backtrack(new ArrayList<>(), nums, res);
+
         return res;
     }
 
@@ -31,9 +33,11 @@ class Permutations {
             res.add(new ArrayList<>(current));
             return;
         }
+
         for (int i : nums) {
             if (current.contains(i))
                 continue;
+            
             current.add(i);
             backtrack(current, nums, res);
             current.remove(current.size() - 1);

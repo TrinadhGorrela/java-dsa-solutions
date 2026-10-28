@@ -24,15 +24,18 @@ class SubsetsII {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
         backtrack(0, nums, new ArrayList<>(), res);
+
         return res;
     }
 
     public void backtrack(int st, int[] nums, List<Integer> subset, List<List<Integer>> res) {
 
         res.add(new ArrayList<>(subset));
+
         for (int i = st; i < nums.length; i++) {
             if (i > st && nums[i] == nums[i - 1])
                 continue;
+            
             subset.add(nums[i]);
             backtrack(i + 1, nums, subset, res);
             subset.remove(subset.size() - 1);

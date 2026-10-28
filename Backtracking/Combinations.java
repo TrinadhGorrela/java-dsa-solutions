@@ -23,12 +23,14 @@
 class Combinations {
     public List<List<Integer>> combine(int n, int k) {
         int[] nums = new int[n];
+        
         for (int i = 0; i < n; i++) {
             nums[i] = i + 1;
         }
 
         List<List<Integer>> res = new ArrayList<>();
         backtrack(res, new ArrayList<>(), 0, nums, k);
+
         return res;
     }
 

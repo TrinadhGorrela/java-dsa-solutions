@@ -39,6 +39,7 @@ class GeekSTraining {
         }
 
         int max = Math.max(dp[dp.length - 1][0], Math.max(dp[dp.length - 1][1], dp[dp.length - 1][2]));
+        
         return max;
     }
 }

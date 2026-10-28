@@ -23,6 +23,7 @@
 class LastStoneWeightII {
     public int lastStoneWeightII(int[] stones) {
         int sum = 0;
+        
         for (int i : stones) {
             sum += i;
         }
