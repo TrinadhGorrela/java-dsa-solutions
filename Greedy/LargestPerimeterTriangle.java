@@ -28,6 +28,7 @@ class LargestPerimeterTriangle {
                 return nums[i - 2] + nums[i - 1] + nums[i];
             }
         }
+        
         return 0;
     }
 }

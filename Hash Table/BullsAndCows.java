@@ -44,7 +44,6 @@ class BullsAndCows {
                 if (freq.get(c) == 0) {
                     freq.remove(c);
                 }
-
             }
         }
 
@@ -53,7 +52,6 @@ class BullsAndCows {
 
             if (freq.containsKey(c) && secret.charAt(i) != c) {
                 cows++;
-
                 freq.put(c, freq.get(c) - 1);
 
                 if (freq.get(c) == 0) {
@@ -63,7 +61,6 @@ class BullsAndCows {
         }
 
         StringBuilder s = new StringBuilder();
-
         s.append(bulls).append('A').append(cows).append('B');
 
         return s.toString();

@@ -68,6 +68,7 @@ class MinimumSwapsToSortByDigitSum {
 
     private int getDigitSum(int num) {
         int sum = 0;
+        
         while (num != 0) {
             int last = num % 10;
             sum += last;

@@ -31,6 +31,7 @@ class JumpGameII {
                 currentEnd = farthestReach;
             }
         }
+        
         return jumps;
     }
 }

@@ -22,15 +22,18 @@ class CountElementsWithMaximumFrequency {
     public int maxFrequencyElements(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         int maxFreq = 0, count = 0;
+
         for (int i : nums) {
             map.put(i, map.getOrDefault(i, 0) + 1);
             if (map.get(i) > maxFreq)
                 maxFreq = map.get(i);
         }
+        
         for (int i : nums) {
             if (map.get(i) == maxFreq)
                 count = count + 1;
         }
+
         return count;
     }
 }

@@ -22,21 +22,26 @@ class IntersectionOfTwoArraysII {
     public int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer, Integer> frequencyMap = new HashMap<>();
         List<Integer> resultList = new ArrayList<>();
+
         for (int i : nums1) {
             frequencyMap.put(i, frequencyMap.getOrDefault(i, 0) + 1);
         }
+
         for (int i : nums2) {
             if (frequencyMap.containsKey(i) && frequencyMap.get(i) > 0) {
                 resultList.add(i);
                 frequencyMap.put(i, frequencyMap.get(i) - 1);
             }
         }
+
         int[] result = new int[resultList.size()];
         int index = 0;
+
         for (int val : resultList) {
             result[index] = val;
             index++;
         }
+        
         return result;
     }
 }

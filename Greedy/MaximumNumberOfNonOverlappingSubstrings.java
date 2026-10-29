@@ -80,6 +80,7 @@ class MaximumNumberOfNonOverlappingSubstrings {
             }
             right = Math.max(right, last[in]);
         }
+        
         return right;
     }
 }

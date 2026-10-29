@@ -20,6 +20,7 @@
 class MaximumNumberOfBalloons {
     public int maxNumberOfBalloons(String text) {
         Map<Character, Integer> freq = new HashMap<>();
+        
         for (int i = 0; i < text.length(); i++) {
             freq.put(text.charAt(i), freq.getOrDefault(text.charAt(i), 0) + 1);
         }

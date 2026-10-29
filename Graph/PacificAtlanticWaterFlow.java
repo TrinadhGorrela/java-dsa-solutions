@@ -34,7 +34,6 @@ class PacificAtlanticWaterFlow {
 
         boolean[][] pacificReachable = new boolean[rows][cols];
         boolean[][] atlanticReachable = new boolean[rows][cols];
-
         Queue<int[]> queue = new ArrayDeque<>();
 
         for (int i = 0; i < cols; i++) {
@@ -46,6 +45,7 @@ class PacificAtlanticWaterFlow {
             queue.offer(new int[] { i, 0 });
             pacificReachable[i][0] = true;
         }
+
         solve(pacificReachable, heights, queue);
 
         for (int i = 0; i < cols; i++) {
@@ -57,6 +57,7 @@ class PacificAtlanticWaterFlow {
             queue.offer(new int[] { i, cols - 1 });
             atlanticReachable[i][cols - 1] = true;
         }
+
         solve(atlanticReachable, heights, queue);
 
         for (int i = 0; i < rows; i++) {
@@ -66,6 +67,7 @@ class PacificAtlanticWaterFlow {
                 }
             }
         }
+
         return result;
     }
 
@@ -76,6 +78,7 @@ class PacificAtlanticWaterFlow {
                 int[] temp = queue.poll();
                 int i = temp[0];
                 int j = temp[1];
+                
                 if (i - 1 >= 0 && heights[i][j] <= heights[i - 1][j] && !reachable[i - 1][j]) {
                     reachable[i - 1][j] = true;
                     queue.offer(new int[] { i - 1, j });

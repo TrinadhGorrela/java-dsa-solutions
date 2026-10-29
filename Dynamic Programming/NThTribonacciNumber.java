@@ -33,6 +33,7 @@ class NThTribonacciNumber {
             prev2 = prev3;
             prev3 = res;
         }
+        
         return res;
     }
 }

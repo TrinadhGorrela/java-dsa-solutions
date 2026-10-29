@@ -57,7 +57,6 @@ class NumberOfSetsOfKNonOverlappingLineSegments {
             return dp[i][j][isDrawing];
         } else {
             int extend = helper(dp, i + 1, j, 1, n);
-
             int finish = helper(dp, i, j - 1, 0, n);
 
             dp[i][j][isDrawing] = (extend + finish) % Mod;

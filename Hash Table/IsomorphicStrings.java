@@ -22,6 +22,7 @@
 class IsomorphicStrings {
     public boolean isIsomorphic(String s, String t) {
         Map<Character, Character> iso = new HashMap<>();
+        
         if (s.length() != t.length()) {
             return false;
         }
@@ -41,6 +42,7 @@ class IsomorphicStrings {
                 iso.put(c1, c2);
             }
         }
+
         return true;
     }
 }

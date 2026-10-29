@@ -23,21 +23,26 @@ class IntersectionOfTwoArrays {
     public int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> nums2Set = new HashSet<>();
         Set<Integer> result = new HashSet<>();
+
         for (int i : nums2) {
             nums2Set.add(i);
         }
+
         int length = nums1.length;
         for (int i = 0; i < length; i++) {
             if (nums2Set.contains(nums1[i])) {
                 result.add(nums1[i]);
             }
         }
+
         int[] resultArray = new int[result.size()];
         int index = 0;
+
         for (Integer key : result) {
             resultArray[index] = key;
             index++;
         }
+        
         return resultArray;
     }
 }

@@ -28,7 +28,6 @@ class WordLadder {
 
         Set<String> visited = new HashSet<>();
         visited.add(beginWord);
-
         int level = 1;
 
         if (!words.contains(endWord)) {
@@ -39,6 +38,7 @@ class WordLadder {
             int size = queue.size();
             while (size != 0) {
                 String word = queue.poll();
+
                 if (word.equals(endWord)) {
                     return level;
                 }
@@ -48,6 +48,7 @@ class WordLadder {
                     for (char c = 'a'; c <= 'z'; c++) {
                         chars[i] = c;
                         String nxt = new String(chars);
+                        
                         if (words.contains(nxt) && !visited.contains(nxt)) {
                             visited.add(nxt);
                             queue.offer(nxt);
@@ -58,6 +59,7 @@ class WordLadder {
             }
             level++;
         }
+
         return 0;
     }
 }

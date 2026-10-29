@@ -30,6 +30,7 @@ class DestroyingAsteroids {
             }
             currMass += i;
         }
+        
         return true;
     }
 }

@@ -44,6 +44,7 @@ class CourseSchedule {
                 }
             }
         }
+        
         return true;
     }
 

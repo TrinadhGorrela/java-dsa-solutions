@@ -23,16 +23,19 @@ class SetMismatch {
         Set<Integer> set = new HashSet<>();
         int[] result = new int[2];
         int actualSum = 0;
+
         for (int i : nums) {
             if (set.contains(i))
                 result[0] = i;
             set.add(i);
             actualSum = actualSum + i;
         }
+        
         int n = nums.length;
         int expectedSum = n * (n + 1) / 2;
 
         result[1] = expectedSum - actualSum + result[0];
+
         return result;
     }
 }

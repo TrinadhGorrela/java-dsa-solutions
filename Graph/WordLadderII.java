@@ -30,6 +30,7 @@ class WordLadderII {
         Set<String> words = new HashSet<>(wordList);
         Set<String> visited = new HashSet<>();
         Queue<String> queue = new ArrayDeque<>();
+        
         queue.offer(beginWord);
         visited.add(beginWord);
 

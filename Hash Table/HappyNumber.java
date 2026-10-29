@@ -38,11 +38,13 @@ class HappyNumber {
     public int square(int n) {
         int sum = 0;
         int rem = 0;
+        
         while (n != 0) {
             rem = n % 10;
             sum = sum + (rem * rem);
             n = n / 10;
         }
+
         return sum;
     }
 }

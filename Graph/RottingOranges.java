@@ -32,6 +32,7 @@ class RottingOranges {
                 }
             }
         }
+
         int res = solve(queue, grid);
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
@@ -46,6 +47,7 @@ class RottingOranges {
 
     public static int solve(Queue<int[]> queue, int[][] grid) {
         int minutes = 0;
+        
         while (!queue.isEmpty()) {
             int size = queue.size();
             boolean isRot = false;
@@ -80,10 +82,12 @@ class RottingOranges {
 
                 size--;
             }
+
             if (isRot) {
                 minutes++;
             }
         }
+
         return minutes;
     }
 }

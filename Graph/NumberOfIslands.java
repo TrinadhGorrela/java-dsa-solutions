@@ -26,6 +26,7 @@ class NumberOfIslands {
         Queue<int[]> queue = new ArrayDeque<>();
         boolean[][] visited = new boolean[grid.length][grid[0].length];
         int res = 0;
+        
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 if (grid[i][j] == '1' && !visited[i][j]) {
@@ -36,6 +37,7 @@ class NumberOfIslands {
                 }
             }
         }
+
         return res;
     }
 
@@ -43,6 +45,7 @@ class NumberOfIslands {
         int[][] dirs = {
                 { 0, -1 }, { -1, 0 }, { 0, 1 }, { 1, 0 }
         };
+
         while (!queue.isEmpty()) {
             int size = queue.size();
             while (size != 0) {

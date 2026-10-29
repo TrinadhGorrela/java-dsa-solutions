@@ -41,6 +41,7 @@ class FindEventualSafeStates {
                 res.add(i);
             }
         }
+        
         return res;
     }
 
@@ -57,8 +58,10 @@ class FindEventualSafeStates {
                 return true;
             }
         }
+
         recPath[curr] = false;
         safe[curr] = true;
+
         return false;
     }
 }

@@ -49,6 +49,7 @@ class IsGraphBipartite {
                 return false;
             }
         }
+        
         return true;
     }
 }

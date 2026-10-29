@@ -22,6 +22,7 @@ class LemonadeChange {
     public boolean lemonadeChange(int[] bills) {
         int fiveCount = 0;
         int tenCount = 0;
+
         for (int bill : bills) {
             if (bill == 5) {
                 fiveCount++;
@@ -42,6 +43,7 @@ class LemonadeChange {
                 }
             }
         }
+        
         return true;
     }
 }

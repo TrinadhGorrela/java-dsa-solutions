@@ -31,6 +31,7 @@ class SmallestMissingMultipleOfK {
         while (set.contains(res)) {
             res += k;
         }
+        
         return res;
     }
 }

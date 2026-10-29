@@ -25,9 +25,11 @@ class MaxAreaOfIsland {
     public int maxAreaOfIsland(int[][] grid) {
         int rows = grid.length;
         int cols = grid[0].length;
+
         Queue<int[]> queue = new ArrayDeque<>();
         boolean[][] visited = new boolean[rows][cols];
         int res = 0;
+        
         for (int i = 0; i < visited.length; i++) {
             for (int j = 0; j < visited[i].length; j++) {
                 if (grid[i][j] == 1 && !visited[i][j]) {
@@ -37,6 +39,7 @@ class MaxAreaOfIsland {
                 }
             }
         }
+
         return res;
     }
 

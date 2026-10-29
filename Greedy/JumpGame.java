@@ -28,6 +28,7 @@ class JumpGame {
             if (farthestReach >= nums.length - 1)
                 return true;
         }
+        
         return false;
     }
 }
