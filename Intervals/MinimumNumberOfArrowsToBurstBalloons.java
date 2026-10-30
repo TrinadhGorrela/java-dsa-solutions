@@ -31,6 +31,7 @@ class MinimumNumberOfArrowsToBurstBalloons {
                 last = points[i][1];
             }
         }
+        
         return arrows;
     }
 }

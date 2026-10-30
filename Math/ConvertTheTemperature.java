@@ -24,6 +24,7 @@ class ConvertTheTemperature {
         double[] result = new double[2];
         result[0] = kelvin;
         result[1] = fahrenheit;
+        
         return result;
     }
 }

@@ -25,13 +25,16 @@ class ConcatenateNonZeroDigitsAndMultiplyBySumI {
         int sum = 0;
         long num = n;
         long reversedNum = 0;
+
         while (num != 0) {
             long digit = num % 10;
             reversedNum = reversedNum * 10 + digit;
             sum += digit;
             num /= 10;
         }
+
         num = 0;
+
         while (reversedNum != 0) {
             long digit = reversedNum % 10;
             if (digit != 0) {
@@ -39,6 +42,7 @@ class ConcatenateNonZeroDigitsAndMultiplyBySumI {
             }
             reversedNum /= 10;
         }
+        
         return num * sum;
     }
 }

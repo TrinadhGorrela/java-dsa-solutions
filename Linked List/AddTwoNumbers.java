@@ -76,6 +76,7 @@ class AddTwoNumbers {
         if (carry != 0) {
             res.next = new ListNode(carry);
         }
+        
         return curr.next;
     }
 }

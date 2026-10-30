@@ -37,11 +37,14 @@ class MaximumAveragePassRatio {
             double gain = (pass + 1.0) / (total + 1) - (double) pass / total;
             maxGainQueue.offer(new double[] { gain, pass, total });
         }
+
         double res = 0.0;
+
         while (!maxGainQueue.isEmpty()) {
             double[] top = maxGainQueue.poll();
             res = res + top[1] / top[2];
         }
+        
         return res / classes.length;
     }
 }

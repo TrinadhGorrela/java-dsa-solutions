@@ -22,6 +22,7 @@ class AngleBetweenHandsOfAClock {
         hour = hour * 30;
         double minuteAngle = (double) minutes * 11 / 2;
         double angle = Math.abs(hour - minuteAngle);
+        
         return angle < 360 - angle ? angle : 360 - angle;
     }
 }

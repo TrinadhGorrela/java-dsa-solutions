@@ -23,6 +23,7 @@ class FindGreatestCommonDivisorOfArray {
     public int findGCD(int[] nums) {
         int small = Integer.MAX_VALUE;
         int large = Integer.MIN_VALUE;
+
         for (int i = 0; i < nums.length; i++) {
             if (small > nums[i]) {
                 small = nums[i];
@@ -31,6 +32,7 @@ class FindGreatestCommonDivisorOfArray {
                 large = nums[i];
             }
         }
+
         return gcd(large, small);
     }
 
@@ -40,6 +42,7 @@ class FindGreatestCommonDivisorOfArray {
             t = s % t;
             s = temp;
         }
+        
         return s;
     }
 }

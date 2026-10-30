@@ -29,6 +29,7 @@ class ExcelSheetColumnTitle {
             res.append((char) (remainder + 'A'));
             col = (col - 1) / 26;
         }
+        
         return res.reverse().toString();
     }
 }

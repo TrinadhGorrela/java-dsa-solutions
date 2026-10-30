@@ -24,13 +24,17 @@ class MaximumDifferenceByRemappingADigit {
         String maxStr = Integer.toString(num);
         String minStr = maxStr;
         int i = 0;
+
         while (i < maxStr.length() && maxStr.charAt(i) == '9') {
             i++;
         }
+
         if (i < maxStr.length()) {
             maxStr = maxStr.replace(maxStr.charAt(i), '9');
         }
+
         minStr = minStr.replace(minStr.charAt(0), '0');
+        
         return Integer.parseInt(maxStr) - Integer.parseInt(minStr);
     }
 }

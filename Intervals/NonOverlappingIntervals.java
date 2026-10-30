@@ -23,12 +23,14 @@ class NonOverlappingIntervals {
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[1], b[1]));
         int last = intervals[0][1];
         int keptCount = 1;
+
         for (int i = 0; i < intervals.length; i++) {
             if (intervals[i][0] >= last) {
                 keptCount++;
                 last = intervals[i][1];
             }
         }
+        
         return intervals.length - keptCount;
     }
 }

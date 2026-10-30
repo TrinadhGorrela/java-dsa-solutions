@@ -52,7 +52,6 @@ class PalindromeLinkedList {
         }
 
         slow.next = null;
-
         ListNode back = prev;
 
         while (head != null && back != null) {

@@ -28,11 +28,13 @@ class SelfDividingNumbers {
                 res.add(i);
             }
         }
+
         return res;
     }
 
     private static boolean isSelfDividing(int num) {
         int original = num;
+        
         while (num != 0) {
             int last = num % 10;
             if (last == 0) {
@@ -42,6 +44,7 @@ class SelfDividingNumbers {
             }
             num /= 10;
         }
+
         return true;
     }
 }

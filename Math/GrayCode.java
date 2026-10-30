@@ -24,6 +24,7 @@ class GrayCode {
         List<Integer> res = new ArrayList<>();
         int bit = 1;
         res.add(0);
+
         for (int i = 1; i <= n; i++) {
             int size = res.size();
             for (int j = size - 1; j >= 0; j--) {
@@ -31,6 +32,7 @@ class GrayCode {
             }
             bit <<= 1;
         }
+        
         return res;
     }
 }

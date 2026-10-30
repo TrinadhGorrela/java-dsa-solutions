@@ -46,6 +46,7 @@ class RemoveDuplicatesFromSortedList {
                 curr = next;
             }
         }
+        
         return head;
     }
 }

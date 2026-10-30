@@ -21,6 +21,7 @@ class ValidAnagram {
     public boolean isAnagram(String s, String t) {
         int m = s.length();
         int n = t.length();
+        
         if (m != n)
             return false;
 

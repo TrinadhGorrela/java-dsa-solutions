@@ -33,22 +33,25 @@ class ReverseLinkedListII {
         dummy.next = head;
         ListNode leftList = dummy;
         ListNode curr = dummy.next;
+
         for (int i = 0; i < left - 1; i++) {
             leftList = leftList.next;
             curr = curr.next;
         }
 
         ListNode subList = curr;
-
         ListNode prev = null;
+
         for (int i = 0; i < right - left + 1; i++) {
             ListNode next = curr.next;
             curr.next = prev;
             prev = curr;
             curr = next;
         }
+        
         leftList.next = prev;
         subList.next = curr;
+
         return dummy.next;
     }
 }

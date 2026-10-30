@@ -29,6 +29,7 @@
 class ConvertBinaryNumberInALinkedListToInteger {
     public int getDecimalValue(ListNode head) {
         StringBuilder res = new StringBuilder();
+        
         while (head != null) {
             res.append(head.val + "");
             head = head.next;

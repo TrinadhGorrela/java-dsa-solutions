@@ -20,11 +20,13 @@
 class ExcelSheetColumnNumber {
     public int titleToNumber(String columnTitle) {
         int sum = 0;
+
         for (int i = 0; i < columnTitle.length(); i++) {
             char c = columnTitle.charAt(i);
             int letterValue = c - 64;
             sum = (sum * 26) + letterValue;
         }
+        
         return sum;
     }
 }

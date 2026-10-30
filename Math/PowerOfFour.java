@@ -21,6 +21,7 @@ class PowerOfFour {
     public boolean isPowerOfFour(int n) {
         int power = 1;
         boolean isPower = false;
+
         for (int i = 0; i < power; i++) {
             if (power == n) {
                 isPower = true;
@@ -28,6 +29,7 @@ class PowerOfFour {
             }
             power = power * 4;
         }
+        
         return isPower;
     }
 }

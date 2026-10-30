@@ -32,6 +32,7 @@ class KthLargestElementInAnArray {
                 queue.poll();
             }
         }
+        
         return queue.peek();
     }
 }

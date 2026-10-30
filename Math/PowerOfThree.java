@@ -21,6 +21,7 @@ class PowerOfThree {
     public boolean isPowerOfThree(int n) {
         int power = 1;
         boolean isPower = false;
+
         for (int i = 0; i < power; i++) {
             if (power == n) {
                 isPower = true;
@@ -28,6 +29,7 @@ class PowerOfThree {
             }
             power = power * 3;
         }
+        
         return isPower;
     }
 }

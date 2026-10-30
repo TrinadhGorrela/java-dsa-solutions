@@ -23,6 +23,7 @@ class CountPrimes {
         if (n <= 1) {
             return 0;
         }
+        
         boolean[] isComposite = new boolean[n];
 
         for (int i = 2; i < isComposite.length; i++) {
@@ -32,12 +33,14 @@ class CountPrimes {
                 }
             }
         }
+
         int count = 0;
         for (int i = 2; i < isComposite.length; i++) {
             if (!isComposite[i]) {
                 count++;
             }
         }
+
         return count;
     }
 }

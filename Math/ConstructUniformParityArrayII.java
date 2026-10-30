@@ -56,6 +56,7 @@ class ConstructUniformParityArrayII {
                 }
             }
         }
+
         return true;
     }
 
@@ -71,6 +72,7 @@ class ConstructUniformParityArrayII {
                 }
             }
         }
+        
         return true;
     }
 }

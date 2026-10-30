@@ -34,6 +34,7 @@ class PowxN {
             x = x * x;
             N = N / 2;
         }
+        
         return res;
     }
 }

@@ -36,6 +36,7 @@ class PartitionList {
         ListNode res = small;
         ListNode large = new ListNode();
         ListNode dummy = large;
+
         while (head != null) {
             ListNode next = head.next;
             head.next = null;
@@ -48,7 +49,9 @@ class PartitionList {
             }
             head = next;
         }
+
         small.next = dummy.next;
+        
         return res.next;
     }
 }

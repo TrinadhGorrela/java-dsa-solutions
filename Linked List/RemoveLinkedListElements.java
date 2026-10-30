@@ -33,6 +33,7 @@ class RemoveLinkedListElements {
         dummy.next = head;
         ListNode curr = dummy;
         ListNode prev = dummy;
+
         while (curr != null) {
             ListNode next = curr.next;
             if (curr.val == val) {
@@ -44,6 +45,7 @@ class RemoveLinkedListElements {
             }
 
         }
+        
         return dummy.next;
     }
 }

@@ -22,20 +22,24 @@
 class FindNumbersWithEvenNumberOfDigits {
     public int findNumbers(int[] nums) {
         int count = 0;
+
         for (int i : nums) {
             if (countDigits(i) % 2 == 0) {
                 count++;
             }
         }
+
         return count;
     }
 
     public static int countDigits(int n) {
         int digitCount = 0;
+
         while (n != 0) {
             digitCount++;
             n /= 10;
         }
+        
         return digitCount;
     }
 }

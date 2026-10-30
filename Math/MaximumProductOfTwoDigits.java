@@ -22,6 +22,7 @@ class MaximumProductOfTwoDigits {
     public int maxProduct(int n) {
         int max = 0;
         int secondMax = 0;
+
         while (n != 0) {
             int digit = n % 10;
             if (max <= digit) {
@@ -32,6 +33,7 @@ class MaximumProductOfTwoDigits {
             }
             n /= 10;
         }
+        
         return max * secondMax;
     }
 }

@@ -23,6 +23,7 @@ class RotateFunction {
     public int maxRotateFunction(int[] nums) {
         long max = 0;
         long sum = 0;
+        
         for (int i = 0; i < nums.length; i++) {
             max += nums[i] * i;
             sum += nums[i];
@@ -30,11 +31,13 @@ class RotateFunction {
 
         long prev = max;
         int n = nums.length;
+
         for (int i = 1; i < n; i++) {
             prev = prev + sum - (long) n * nums[n - i];
             max = Math.max(max, prev);
 
         }
+
         return (int) max;
     }
 }
