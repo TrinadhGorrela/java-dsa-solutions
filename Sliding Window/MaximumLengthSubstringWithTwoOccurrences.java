@@ -34,6 +34,7 @@ class MaximumLengthSubstringWithTwoOccurrences {
             }
             max = Math.max(max, right - left + 1);
         }
+        
         return max;
     }
 }

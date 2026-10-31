@@ -32,6 +32,7 @@ class TwoKeysKeyboard {
             }
             divisor++;
         }
+        
         return steps;
     }
 }

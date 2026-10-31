@@ -50,6 +50,7 @@ class MinimumWindowSubstring {
             }
 
         }
+
         return res;
     }
 
@@ -59,6 +60,7 @@ class MinimumWindowSubstring {
                 return false;
             }
         }
+        
         return true;
     }
 }

@@ -24,12 +24,15 @@ class FindTheHighestAltitude {
         for (int i = 0; i < gain.length; i++) {
             presum[i + 1] = presum[i] + gain[i];
         }
+
         int max = 0;
+        
         for (int i = 0; i < gain.length + 1; i++) {
             if (max < presum[i]) {
                 max = presum[i];
             }
         }
+
         return max;
     }
 }

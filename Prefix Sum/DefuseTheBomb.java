@@ -42,6 +42,7 @@ class DefuseTheBomb {
 
             }
         }
+        
         return result;
     }
 }

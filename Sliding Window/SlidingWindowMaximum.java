@@ -34,7 +34,6 @@ class SlidingWindowMaximum {
             }
 
             monotonicDeque.add(i);
-
         }
 
         list.add(nums[monotonicDeque.getFirst()]);

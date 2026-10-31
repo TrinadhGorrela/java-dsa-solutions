@@ -46,6 +46,7 @@ class FindAllAnagramsInAString {
                 res.add(i - t.length() + 1);
             }
         }
+        
         return res;
     }
 }

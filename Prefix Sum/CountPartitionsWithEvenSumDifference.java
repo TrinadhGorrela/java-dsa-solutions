@@ -23,15 +23,18 @@ class CountPartitionsWithEvenSumDifference {
     public int countPartitions(int[] nums) {
         int leftSum = 0, rightSum = 0, partitionCount = 0;
         long total = 0;
+
         for (int i : nums) {
             total = total + i;
         }
+
         for (int i = 0; i < nums.length - 1; i++) {
             leftSum = leftSum + nums[i];
             rightSum = (int) (total - leftSum);
             if ((leftSum - rightSum) % 2 == 0)
                 partitionCount++;
         }
+        
         return partitionCount;
     }
 }

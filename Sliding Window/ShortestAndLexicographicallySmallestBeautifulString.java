@@ -29,6 +29,7 @@ class ShortestAndLexicographicallySmallestBeautifulString {
         int count = 0;
         int min = Integer.MAX_VALUE;
         String res = "";
+
         for (int right = 0; right < s.length(); right++) {
             if (s.charAt(right) == '1') {
                 count++;
@@ -44,6 +45,7 @@ class ShortestAndLexicographicallySmallestBeautifulString {
                         res = temp;
                     }
                 }
+                
                 if (s.charAt(left) == '1') {
                     count--;
                 }
@@ -54,6 +56,7 @@ class ShortestAndLexicographicallySmallestBeautifulString {
         if (min == Integer.MAX_VALUE) {
             return "";
         }
+
         return res;
     }
 }

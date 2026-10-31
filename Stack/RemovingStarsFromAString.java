@@ -32,6 +32,7 @@ class RemovingStarsFromAString {
                 stb.append(ch);
             }
         }
+        
         return stb.toString();
     }
 }

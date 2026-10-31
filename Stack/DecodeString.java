@@ -61,9 +61,11 @@ class DecodeString {
 
     private static String helper(StringBuilder s, int n) {
         StringBuilder res = new StringBuilder();
+        
         for (int i = 0; i < n; i++) {
             res.append(s);
         }
+
         return res.toString();
     }
 }

@@ -38,6 +38,7 @@ class MaximumNestingDepthOfTheParentheses {
                 curr--;
             }
         }
+        
         return max;
     }
 }

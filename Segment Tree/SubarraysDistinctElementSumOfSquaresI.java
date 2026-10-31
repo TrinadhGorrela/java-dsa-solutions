@@ -31,7 +31,6 @@ class SubarraysDistinctElementSumOfSquaresI {
                 set.add(nums.get(j));
                 sum += set.size() * set.size();
             }
-
         }
 
         return sum;

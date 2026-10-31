@@ -21,6 +21,7 @@
 class ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
         int[][] intBoard = new int[9][9];
+
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] == '.') {
@@ -31,6 +32,7 @@ class ValidSudoku {
 
             }
         }
+
         return isValid(intBoard);
     }
 
@@ -52,6 +54,7 @@ class ValidSudoku {
                 }
             }
         }
+
         return true;
     }
 
@@ -61,15 +64,17 @@ class ValidSudoku {
             if ((intBoard[row][i] == num) || (intBoard[i][col] == num))
                 return false;
         }
+
         int startRow = row - row % 3;
         int startCol = col - col % 3;
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (intBoard[startRow + i][startCol + j] == num)
                     return false;
             }
-
         }
+
         return true;
     }
 }

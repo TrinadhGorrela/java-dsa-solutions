@@ -25,14 +25,18 @@ class SubarraySumEqualsK {
         map.put(0, 1);
         int prefixSum = 0;
         int res = 0;
+
         for (int i = 0; i < nums.length; i++) {
             prefixSum += nums[i];
             int need = prefixSum - k;
+
             if (map.containsKey(need)) {
                 res += map.get(need);
             }
+            
             map.put(prefixSum, map.getOrDefault(prefixSum, 0) + 1);
         }
+
         return res;
     }
 }

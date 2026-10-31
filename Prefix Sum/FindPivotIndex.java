@@ -26,6 +26,7 @@ class FindPivotIndex {
 
         leftSum[0] = 0;
         rightSum[0] = 0;
+        
         for (int i = 0; i < nums.length; i++) {
             leftSum[i + 1] = leftSum[i] + nums[i];
         }
@@ -39,6 +40,7 @@ class FindPivotIndex {
                 return i;
             }
         }
+
         return -1;
     }
 }

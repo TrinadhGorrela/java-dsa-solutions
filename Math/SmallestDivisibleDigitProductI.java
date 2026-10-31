@@ -32,11 +32,13 @@ class SmallestDivisibleDigitProductI {
 
     public static int multiply(int n) {
         int res = 1;
+
         while (n != 0) {
             int last = n % 10;
             res *= last;
             n /= 10;
         }
+        
         return res;
     }
 }

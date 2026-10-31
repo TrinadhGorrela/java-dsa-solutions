@@ -23,6 +23,7 @@ class SumOfPrimesBetweenNumberAndItsReverse {
     public int sumOfPrimesInRange(int n) {
         int remaining = n;
         int rev = 0;
+
         while (remaining != 0) {
             int last = remaining % 10;
             rev = rev * 10 + last;
@@ -38,6 +39,7 @@ class SumOfPrimesBetweenNumberAndItsReverse {
                 res += i;
             }
         }
+
         return res;
     }
 
@@ -56,6 +58,7 @@ class SumOfPrimesBetweenNumberAndItsReverse {
                 return false;
             }
         }
+        
         return true;
     }
 }

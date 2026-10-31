@@ -21,8 +21,10 @@
 class WaterBottles {
     public static int numWaterBottles(int numBottles, int numExchange) {
         int res=numBottles;
+        
         while(numBottles>=numExchange){
         int bottlesFromExchange=numBottles/numExchange;
+        
            if(numBottles%numExchange==0){
             res=res+bottlesFromExchange;
             numBottles=bottlesFromExchange;
@@ -32,6 +34,7 @@ class WaterBottles {
             numBottles=bottlesFromExchange+(numBottles%numExchange);
            }
         }
+
         return res;
     }
 }

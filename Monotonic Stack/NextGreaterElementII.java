@@ -24,6 +24,7 @@ class NextGreaterElementII {
         Stack<Integer> stack = new Stack<>();
         int[] res = new int[nums.length];
         int n = nums.length;
+
         for (int i = 2 * n - 1; i > 0; i--) {
             while (!stack.isEmpty() && stack.peek() <= nums[i % n]) {
                 stack.pop();
@@ -36,6 +37,7 @@ class NextGreaterElementII {
             }
             stack.push(nums[i % n]);
         }
+        
         return res;
     }
 }

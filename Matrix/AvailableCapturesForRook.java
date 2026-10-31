@@ -21,6 +21,7 @@ class AvailableCapturesForRook {
     public int numRookCaptures(char[][] board) {
         int x = -1, y = -1;
         boolean found = false;
+
         for (int i = 0; i < 8 && !found; i++) {
             for (int j = 0; j < 8; j++) {
                 if (board[i][j] == 'R') {
@@ -29,14 +30,15 @@ class AvailableCapturesForRook {
                     found = true;
                     break;
                 }
-
             }
         }
+
         return captures(x, y, board);
     }
 
     public int captures(int r, int c, char[][] board) {
         int captureCount = 0;
+        
         for (int i = c - 1; i >= 0; i--) {
             if (board[r][i] == 'B')
                 break;

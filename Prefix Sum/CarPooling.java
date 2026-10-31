@@ -22,17 +22,21 @@
 class CarPooling {
     public boolean carPooling(int[][] trips, int capacity) {
         int[] passengerCount = new int[1001];
+        
         for (int i = 0; i < trips.length; i++) {
             passengerCount[trips[i][1]] = passengerCount[trips[i][1]] + trips[i][0];
             passengerCount[trips[i][2]] = passengerCount[trips[i][2]] - trips[i][0];
         }
+
         int sum = 0;
+
         for (int i = 0; i < passengerCount.length; i++) {
             sum += passengerCount[i];
             if (sum > capacity) {
                 return false;
             }
         }
+
         return true;
     }
 }

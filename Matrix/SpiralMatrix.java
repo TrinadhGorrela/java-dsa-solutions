@@ -47,6 +47,7 @@ class SpiralMatrix {
             }
             colBegin++;
         }
+        
         return res;
     }
 }

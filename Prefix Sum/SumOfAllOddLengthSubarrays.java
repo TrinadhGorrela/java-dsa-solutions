@@ -22,17 +22,22 @@
 class SumOfAllOddLengthSubarrays {
     public int sumOddLengthSubarrays(int[] nums) {
         int sum = 0;
+
         for (int i = 1; i <= nums.length; i += 2) {
             int curr = 0;
+            
             for (int j = 0; j < i; j++) {
                 curr += nums[j];
             }
+
             sum += curr;
+            
             for (int k = i; k < nums.length; k++) {
                 curr = curr - nums[k - i] + nums[k];
                 sum += curr;
             }
         }
+
         return sum;
     }
 }

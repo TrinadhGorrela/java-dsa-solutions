@@ -31,6 +31,7 @@ class RotateImage {
         for (int i = 0; i < r; i++) {
             int start = 0;
             int end = matrix[i].length - 1;
+
             while (start < end) {
                 int temp = matrix[i][start];
                 matrix[i][start] = matrix[i][end];
@@ -38,7 +39,6 @@ class RotateImage {
                 start++;
                 end--;
             }
-
         }
     }
 }

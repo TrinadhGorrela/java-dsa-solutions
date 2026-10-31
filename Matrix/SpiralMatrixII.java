@@ -25,6 +25,7 @@ class SpiralMatrixII {
         int colBegin = 0;
         int colEnd = n - 1;
         int counter = 1;
+
         while (rowBegin <= rowEnd && colBegin <= colEnd) {
 
             for (int i = colBegin; i <= colEnd; i++) {
@@ -51,6 +52,7 @@ class SpiralMatrixII {
                 colBegin++;
             }
         }
+        
         return res;
     }
 }

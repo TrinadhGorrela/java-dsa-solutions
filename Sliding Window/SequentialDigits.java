@@ -27,17 +27,21 @@ class SequentialDigits {
         String lowStr = String.valueOf(low);
         String highStr = String.valueOf(high);
         List<Integer> res = new ArrayList<>();
+
         for (int i = lowStr.length(); i <= highStr.length(); i++) {
             for (int j = 0; j < digits.length() - i + 1; j++) {
                 int temp = Integer.valueOf(digits.substring(j, j + i));
+                
                 if (temp >= low && temp <= high) {
                     res.add(temp);
                 }
+
                 if (temp > high) {
                     return res;
                 }
             }
         }
+
         return res;
     }
 }

@@ -55,9 +55,7 @@ class FindXValueOfArrayII {
             int start = queries[i][2];
             int x = queries[i][3];
 
-
             update(1, 0, n - 1, index, value);
-
 
             Node resNode = query(1, 0, n - 1, start, n - 1);
             result[i] = resNode.cnt[x];
@@ -72,6 +70,7 @@ class FindXValueOfArrayII {
             tree_cnt[node][nums[l] % K] = 1;
             return;
         }
+
         int mid = l + (r - l) / 2;
         build(2 * node, l, mid, nums);
         build(2 * node + 1, mid + 1, r, nums);
@@ -82,14 +81,11 @@ class FindXValueOfArrayII {
         int left = 2 * node;
         int right = 2 * node + 1;
 
-
         tree_prod[node] = (tree_prod[left] * tree_prod[right]) % K;
-
 
         for (int i = 0; i < K; i++) {
             tree_cnt[node][i] = tree_cnt[left][i];
         }
-
 
         for (int i = 0; i < K; i++) {
             if (tree_cnt[right][i] > 0) {
@@ -136,21 +132,23 @@ class FindXValueOfArrayII {
             return query(2 * node + 1, mid + 1, r, ql, qr);
         }
 
-
         Node leftNode = query(2 * node, l, mid, ql, qr);
         Node rightNode = query(2 * node + 1, mid + 1, r, ql, qr);
 
         Node res = new Node();
         res.prod = (leftNode.prod * rightNode.prod) % K;
+        
         for (int i = 0; i < K; i++) {
             res.cnt[i] = leftNode.cnt[i];
         }
+
         for (int i = 0; i < K; i++) {
             if (rightNode.cnt[i] > 0) {
                 int new_val = (leftNode.prod * i) % K;
                 res.cnt[new_val] += rightNode.cnt[i];
             }
         }
+
         return res;
     }
 }

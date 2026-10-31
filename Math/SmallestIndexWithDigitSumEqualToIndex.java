@@ -34,11 +34,13 @@ class SmallestIndexWithDigitSumEqualToIndex {
 
     private int getDigitSum(int num) {
         int res = 0;
+
         while (num != 0) {
             int last = num % 10;
             res += last;
             num /= 10;
         }
+        
         return res;
     }
 }

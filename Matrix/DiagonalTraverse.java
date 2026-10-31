@@ -21,6 +21,7 @@ class DiagonalTraverse {
         Map<Integer, List<Integer>> map = new HashMap<>();
         int m = mat.length;
         int n = mat[0].length;
+
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (!map.containsKey(i + j)) {
@@ -47,6 +48,7 @@ class DiagonalTraverse {
 
             flip = !flip;
         }
+        
         return res;
     }
 }
