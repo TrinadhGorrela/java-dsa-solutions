@@ -24,6 +24,7 @@ class BoatsToSavePeople {
         int right = people.length - 1;
         int res = 0;
         Arrays.sort(people);
+
         while (left <= right) {
             int sum = people[left] + people[right];
             if (sum > limit) {
@@ -35,6 +36,7 @@ class BoatsToSavePeople {
                 right--;
             } 
         }
+        
         return res;
     }
 }

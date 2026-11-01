@@ -50,6 +50,7 @@ class SumOfLeftLeaves {
     public int sumOfLeftLeaves(TreeNode root) {
         sum = 0;
         dfs(root);
+        
         return sum;
     }
 

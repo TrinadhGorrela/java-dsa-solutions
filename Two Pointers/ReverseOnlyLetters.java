@@ -22,6 +22,7 @@ class ReverseOnlyLetters {
     public static String reverseOnlyLetters(String s) {
         char[] arr = s.toCharArray();
         int left = 0, right = s.length() - 1;
+
         while (left < right) {
             if (Character.isLetter(arr[left]) && Character.isLetter(arr[right])) {
                 swap(arr, left, right);
@@ -35,6 +36,7 @@ class ReverseOnlyLetters {
                 right--;
             }
         }
+
         return new String(arr);
     }
 
@@ -43,5 +45,4 @@ class ReverseOnlyLetters {
         arr[left] = arr[right];
         arr[right] = temp;
     }
-
 }

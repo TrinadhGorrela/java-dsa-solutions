@@ -50,6 +50,7 @@ class MinimumDepthOfBinaryTree {
         if (right == 0) {
             return 1 + left;
         }
+        
         return 1 + Math.min(left, right);
     }
 }

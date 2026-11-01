@@ -71,6 +71,5 @@ class NumberOfWaysToReorderArrayToGetSameBst {
         long rightSide = calculateWays(right, table);
 
         return (((leftSide * rightSide) % MOD) * table[left.size() + right.size()][left.size()]) % MOD;
-
     }
 }

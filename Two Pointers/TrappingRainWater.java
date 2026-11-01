@@ -44,6 +44,7 @@ class TrappingRainWater {
                 right--;
             }
         }
+        
         return water;
     }
 }

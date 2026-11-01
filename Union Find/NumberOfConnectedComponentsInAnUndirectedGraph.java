@@ -28,6 +28,7 @@ class NumberOfConnectedComponentsInAnUndirectedGraph {
     public int countComponents(int n, int[][] edges) {
         List<List<Integer>> graph = new ArrayList<>();
         boolean[] visited = new boolean[n];
+        
         for (int i = 0; i < n; i++) {
             graph.add(new ArrayList<>());
         }

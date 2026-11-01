@@ -19,6 +19,7 @@ class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
         String[] words = s.trim("\\s+");
         String last = words[words.length - 1];
+        
         return last.length();
     }
 }

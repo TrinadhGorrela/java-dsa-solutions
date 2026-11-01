@@ -48,18 +48,16 @@ class MinimumWindowSubsequence {
                             if (res.isEmpty() || temp - p1 + 1 < res.length()) {
                                 res = s1.substring(p1, temp + 1);
                             }
+
                             p2 = 0;
                             break;
-
                         }
 
                         p1--;
                     }
-
                 }
-
             }
-
+            
             p1++;
         }
 

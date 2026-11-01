@@ -26,6 +26,7 @@ class FourSum {
 
 		Arrays.sort(nums);
 		Set<List<Integer>> res = new HashSet<>();
+		
 		for (int i = 0; i < nums.length; i++) {
 			for (int j = i+1; j < nums.length; j++) {
 				int left = j + 1;

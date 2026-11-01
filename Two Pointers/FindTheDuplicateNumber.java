@@ -24,6 +24,7 @@ class FindTheDuplicateNumber {
     public int findDuplicate(int[] nums) {
         int slow = 0;
         int fast = 0;
+
         do {
             slow = nums[slow];
             fast = nums[nums[fast]];
@@ -34,6 +35,7 @@ class FindTheDuplicateNumber {
             slow = nums[slow];
             fast = nums[fast];
         }
+        
         return slow;
     }
 }

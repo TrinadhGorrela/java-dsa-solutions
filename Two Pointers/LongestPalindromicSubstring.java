@@ -27,6 +27,7 @@ class LongestPalindromicSubstring {
             left--;
             right++;
         }
+
         return right - left - 1;
     }
 
@@ -43,6 +44,7 @@ class LongestPalindromicSubstring {
                 end = i + len / 2;
             }
         }
+        
         return s.substring(st, end + 1);
     }
 }

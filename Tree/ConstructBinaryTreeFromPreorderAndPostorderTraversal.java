@@ -45,6 +45,7 @@ class ConstructBinaryTreeFromPreorderAndPostorderTraversal {
         for (int i = 0; i < postorder.length; i++) {
             postorderMap.put(postorder[i], i);
         }
+
         return helper(postorderMap, preorder, postorder, 0, postorder.length - 1);
     }
 
@@ -65,6 +66,7 @@ class ConstructBinaryTreeFromPreorderAndPostorderTraversal {
 
         root.left = helper(postorderMap, preorder, postorder, st, mid);
         root.right = helper(postorderMap, preorder, postorder, mid + 1, end - 1);
+        
         return root;
     }
 }

@@ -65,6 +65,7 @@ public class Codec {
                     queue.offer(curr.right);
                 }
             }
+            
             inOrder.add(level);
         }
 

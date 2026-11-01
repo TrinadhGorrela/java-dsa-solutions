@@ -24,8 +24,10 @@ class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
         if (nums == null || nums.length < 3)
             return new ArrayList<>();
+
         Set<List<Integer>> res = new HashSet<>();
         Arrays.sort(nums);
+
         for (int i = 0; i < nums.length; i++) {
             int left = i + 1;
             int right = nums.length - 1;
@@ -44,6 +46,7 @@ class ThreeSum {
                 }
             }
         }
+        
         return new ArrayList<>(res);
     }
 }

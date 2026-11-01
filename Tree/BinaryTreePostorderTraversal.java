@@ -35,6 +35,7 @@ class BinaryTreePostorderTraversal {
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         traversal(root, list);
+        
         return list;
     }
 

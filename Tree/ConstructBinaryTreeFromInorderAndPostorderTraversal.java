@@ -47,6 +47,7 @@ class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         for (int i = 0; i < inorder.length; i++) {
             inorderMap.put(inorder[i], i);
         }
+
         return helper(inorderMap, postorder, 0, postorder.length - 1);
     }
 
@@ -59,6 +60,7 @@ class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         TreeNode root = new TreeNode(postorder[postIndex--]);
         root.right = helper(inorderMap, postorder, mid + 1, end);
         root.left = helper(inorderMap, postorder, st, mid - 1);
+        
         return root;
     }
 }

@@ -22,6 +22,7 @@ class FlippingAnImage {
         for (int i = 0; i < image.length; i++) {
             int start = 0;
             int end = image[i].length - 1;
+
             while (start < end) {
                 int temp = image[i][start];
                 image[i][start] = image[i][end];
@@ -36,6 +37,7 @@ class FlippingAnImage {
                 image[i][j] = 1 - image[i][j];
             }
         }
+        
         return image;
     }
 }

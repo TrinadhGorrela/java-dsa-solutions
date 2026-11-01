@@ -20,6 +20,7 @@
 class ReplaceAllDigitsWithCharacters {
     public String replaceDigits(String s) {
         StringBuilder res = new StringBuilder();
+
         for (int i = 0; i < s.length(); i += 2) {
             char letter = s.charAt(i);
             if (i + 1 < s.length()) {
@@ -31,6 +32,7 @@ class ReplaceAllDigitsWithCharacters {
                 res.append(letter);
             }
         }
+        
         return res.toString();
     }
 }

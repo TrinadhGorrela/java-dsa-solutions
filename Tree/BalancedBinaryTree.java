@@ -50,7 +50,6 @@ class BalancedBinaryTree {
         return Math.abs(checkHeight(root.left) - checkHeight(root.right)) <= 1
                 && isBalanced(root.left)
                 && isBalanced(root.right);
-
     }
 
     private int checkHeight(TreeNode node) {

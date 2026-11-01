@@ -44,6 +44,7 @@ class BinaryTreeLevelOrderTraversalII {
 
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
+
         while (!queue.isEmpty()) {
             int size = queue.size();
             List<Integer> temp = new ArrayList<>();
@@ -61,7 +62,9 @@ class BinaryTreeLevelOrderTraversalII {
             }
             result.add(temp);
         }
+
         Collections.reverse(result);
+        
         return result;
     }
 }

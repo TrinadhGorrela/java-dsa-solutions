@@ -98,6 +98,7 @@ class AlienDictionary {
             }
 
         }
+        
         stack.push(curr);
         recPath[curr] = false;
 

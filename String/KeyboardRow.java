@@ -25,6 +25,7 @@ class KeyboardRow {
         String secondRow = "asdfghjkl";
         String thirdRow = "zxcvbnm";
         List<String> list = new LinkedList<>();
+
         for (String word : words) {
             int[] rowFlags = new int[3];
             for (char ch : word.toLowerCase().toCharArray()) {
@@ -39,10 +40,13 @@ class KeyboardRow {
             if (rowCount == 1)
                 list.add(word);
         }
+
         String[] result = new String[list.size()];
         int i = 0;
+        
         for (String word : list)
             result[i++] = word;
+
         return result;
     }
 }

@@ -37,10 +37,13 @@ class BinaryTreeRightSideView {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Queue<TreeNode> queue = new ArrayDeque<>();
+
         if (root == null) {
             return result;
         }
+
         queue.offer(root);
+
         while (!queue.isEmpty()) {
             int size = queue.size();
             while (size != 0) {
@@ -59,6 +62,7 @@ class BinaryTreeRightSideView {
                 size--;
             }
         }
+        
         return result;
     }
 }

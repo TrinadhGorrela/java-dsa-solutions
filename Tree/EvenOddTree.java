@@ -72,7 +72,6 @@ class EvenOddTree {
                 }
 
                 prev = curr.val;
-
             }
 
             even = !even;

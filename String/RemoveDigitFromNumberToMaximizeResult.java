@@ -30,6 +30,7 @@ class RemoveDigitFromNumberToMaximizeResult {
                 }
             }
         }
+        
         return max;
     }
 }

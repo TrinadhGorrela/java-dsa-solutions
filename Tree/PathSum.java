@@ -47,6 +47,7 @@ class PathSum {
         if (target == 0 && root.left == null && root.right == null) {
             return true;
         }
+        
         return pathSum(root.left, target) || pathSum(root.right, target);
     }
 }

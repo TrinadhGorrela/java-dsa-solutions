@@ -23,6 +23,7 @@ class ValidPalindrome {
         String lowercase = s.toLowerCase();
         String cleaned = lowercase.replaceAll("[^a-z0-9]", "");
         String reversed = new StringBuilder(cleaned).reverse().toString();
+        
         return cleaned.equals(reversed);
     }
 }

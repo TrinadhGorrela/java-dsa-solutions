@@ -68,6 +68,7 @@ class BinaryTreeZigzagLevelOrderTraversal {
             level++;
             result.add(temp);
         }
+        
         return result;
     }
 }
