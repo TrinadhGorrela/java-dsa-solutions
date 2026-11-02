@@ -37,15 +37,18 @@
 class FindLargestValueInEachTreeRow {
     public List<Integer> largestValues(TreeNode root) {
         List<Integer> result = new ArrayList<>();
+
         if (root == null) {
             return result;
         }
+
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
+
         while (!queue.isEmpty()) {
             int size = queue.size();
             int max = Integer.MIN_VALUE;
-            while (size != 0) {
+            while (size-- != 0) {
                 TreeNode curr = queue.poll();
                 if (max < curr.val) {
                     max = curr.val;
@@ -57,10 +60,11 @@ class FindLargestValueInEachTreeRow {
                 if (curr.right != null) {
                     queue.offer(curr.right);
                 }
-                size--;
             }
+
             result.add(max);
         }
+
         return result;
     }
 }

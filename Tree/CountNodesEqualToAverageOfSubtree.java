@@ -36,7 +36,7 @@
  * }
  */
 class CountNodesEqualToAverageOfSubtree {
-    static int avg = 0;
+    int avg = 0;
 
     public int averageOfSubtree(TreeNode root) {
         avg = 0;

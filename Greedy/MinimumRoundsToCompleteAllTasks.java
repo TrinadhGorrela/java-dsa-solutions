@@ -21,8 +21,9 @@
  */
 class MinimumRoundsToCompleteAllTasks {
     public int minimumRounds(int[] tasks) {
-        int rounds = 0;
         Map<Integer, Integer> map = new HashMap<>();
+        int rounds = 0;
+
         for (int i : tasks) {
             map.put(i, map.getOrDefault(i, 0) + 1);
         }
@@ -40,6 +41,7 @@ class MinimumRoundsToCompleteAllTasks {
                 rounds += map.get(i) / 3 + 1;
             }
         }
+
         return rounds;
     }
 }

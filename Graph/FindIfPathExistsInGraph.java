@@ -29,8 +29,9 @@ class FindIfPathExistsInGraph {
             graph.add(new ArrayList<>());
         }
 
-        for (int[] i : edges) {
-            addEdge(graph, i[0], i[1]);
+        for (int[] edge : edges) {
+            graph.get(edge[0]).add(edge[1]);
+            graph.get(edge[1]).add(edge[0]);
         }
 
         Queue<Integer> queue = new ArrayDeque<>();
@@ -40,7 +41,7 @@ class FindIfPathExistsInGraph {
 
         while (!queue.isEmpty()) {
             int size = queue.size();
-            while (size != 0) {
+            while (size-- != 0) {
                 int curr = queue.poll();
 
                 if (curr == destination) {
@@ -53,16 +54,10 @@ class FindIfPathExistsInGraph {
                         visited.add(i);
                     }
                 }
-                size--;
+
             }
         }
-        return false;
-    }
 
-    static void addEdge(List<List<Integer>> graph, int u, int v) {
-        List<Integer> adjU = graph.get(u);
-        List<Integer> adjV = graph.get(v);
-        adjU.add(v);
-        adjV.add(u);
+        return false;
     }
 }

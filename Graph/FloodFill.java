@@ -24,6 +24,7 @@ class FloodFill {
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
         Queue<int[]> queue = new ArrayDeque<>();
         int originalColor = image[sr][sc];
+
         if (originalColor == color) {
             return image;
         }
@@ -31,17 +32,18 @@ class FloodFill {
         queue.offer(new int[] { sr, sc });
         bfsFill(queue, image, sr, sc, originalColor, color);
         image[sr][sc] = color;
+        
         return image;
-
     }
 
     public static void bfsFill(Queue<int[]> queue, int[][] image, int sr, int sc, int originalColor, int color) {
         int[][] dirs = {
                 { -1, 0 }, { 0, -1 }, { 1, 0 }, { 0, 1 }
         };
+
         while (!queue.isEmpty()) {
             int size = queue.size();
-            while (size != 0) {
+            while (size-- != 0) {
                 int[] curr = queue.poll();
                 int i = curr[0];
                 int j = curr[1];
@@ -49,13 +51,15 @@ class FloodFill {
                 for (int[] dir : dirs) {
                     int newI = i + dir[0];
                     int newJ = j + dir[1];
+
                     if (newI >= 0 && newI < image.length && newJ >= 0 && newJ < image[0].length
                             && originalColor == image[newI][newJ]) {
                         queue.offer(new int[] { newI, newJ });
                         image[newI][newJ] = color;
                     }
+
                 }
-                size--;
+
             }
         }
     }

@@ -22,13 +22,14 @@ class PalindromeNumber {
         int digit;
         int reversed = 0;
         int original = x;
-        if (x > -1) {
 
+        if (x > -1) {
             while (x != 0) {
                 digit = x % 10;
                 reversed = reversed * 10 + digit;
                 x = x / 10;
             }
+
             if (original == reversed) {
                 return true;
             } else {

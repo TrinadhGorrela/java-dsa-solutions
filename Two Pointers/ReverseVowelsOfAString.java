@@ -21,7 +21,6 @@
  */
 class ReverseVowelsOfAString {
     public String reverseVowels(String s) {
-
 		char[] chars = s.toCharArray();
 		int left = 0;
 		int right = chars.length - 1;
@@ -49,8 +48,8 @@ class ReverseVowelsOfAString {
 		if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c=='A' || c=='E' || c=='I' || c=='O' || c=='U') {
 			return true;
 		}
-		return false;
 
+		return false;
 	}
     
 }

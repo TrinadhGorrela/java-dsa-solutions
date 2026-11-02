@@ -54,14 +54,11 @@ class MinimumMovesToCleanTheClassroom {
         }
 
         int allLitter = (1 << totalLitter) - 1;
-
         Queue<int[]> queue = new ArrayDeque<>();
-
         boolean[][][][] visited = new boolean[rows][cols][energy + 1][(1 << totalLitter)];
+        
         queue.offer(new int[] { startRow, startCol, energy, 0 });
-
         visited[startRow][startCol][energy][0] = true;
-
         int[][] dirs = { { 0, -1 }, { -1, 0 }, { 0, 1 }, { 1, 0 } };
         int move = 0;
 
@@ -107,6 +104,7 @@ class MinimumMovesToCleanTheClassroom {
             }
             move++;
         }
+
         return -1;
     }
 }

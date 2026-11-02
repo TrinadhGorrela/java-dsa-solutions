@@ -20,7 +20,6 @@
  */
 class ReverseInteger {
     public int reverse(int x) {
-        int b;
         int rev = 0;
 
         while (x != 0) {
@@ -31,6 +30,7 @@ class ReverseInteger {
             rev = rev * 10 + lastDigit;
             x = x / 10;
         }
+        
         return rev;
     }
 }

@@ -23,8 +23,8 @@
 class WaterBottlesII {
     public int maxBottlesDrunk(int numBottles, int numExchange) {
         int fullBottles = numBottles, empty = 0, bottlesDrunk = 0;
-        while (fullBottles > 0) {
 
+        while (fullBottles > 0) {
             empty = empty + fullBottles;
             bottlesDrunk = bottlesDrunk + fullBottles;
             fullBottles = 0;
@@ -34,8 +34,8 @@ class WaterBottlesII {
                 fullBottles++;
                 numExchange++;
             }
-
         }
+        
         return bottlesDrunk;
     }
 }

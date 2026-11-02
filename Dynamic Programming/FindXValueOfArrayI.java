@@ -38,8 +38,8 @@ class FindXValueOfArrayI {
                 currCounts[(int) newRem] += prevCounts[j];
                 totalCounts[(int) newRem] += prevCounts[j];
             }
+            
             prevCounts = currCounts;
-
         }
 
         return totalCounts;
