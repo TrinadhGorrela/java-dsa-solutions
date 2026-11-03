@@ -76,11 +76,11 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Matrix | 19 | 4 | 14 | 1 |
 | Sliding Window | 18 | 3 | 13 | 2 |
 | String | 18 | 15 | 3 | 0 |
-| Prefix Sum | 15 | 8 | 7 | 0 |
 | Stack | 15 | 4 | 8 | 3 |
+| Prefix Sum | 14 | 8 | 6 | 0 |
 | Bit Manipulation | 11 | 6 | 5 | 0 |
+| Heap | 5 | 1 | 4 | 0 |
 | Monotonic Stack | 5 | 0 | 5 | 0 |
-| Heap | 4 | 1 | 3 | 0 |
 | Intervals | 3 | 0 | 3 | 0 |
 | Segment Tree | 3 | 1 | 0 | 2 |
 | Union Find | 3 | 0 | 3 | 0 |
@@ -115,13 +115,13 @@ java-dsa-solutions/
 ├── Graph/               ── 20
 ├── Greedy/              ── 31
 ├── Hash Table/          ── 27
-├── Heap/                ── 4
+├── Heap/                ── 5
 ├── Intervals/           ── 3
 ├── Linked List/         ── 27
 ├── Math/                ── 51
 ├── Matrix/              ── 19
 ├── Monotonic Stack/     ── 5
-├── Prefix Sum/          ── 15
+├── Prefix Sum/          ── 14
 ├── Segment Tree/        ── 3
 ├── Sliding Window/      ── 18
 ├── Stack/               ── 15
