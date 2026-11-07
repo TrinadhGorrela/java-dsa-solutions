@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-481%20%7C%20477%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-482%20%7C%20478%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Easy-186-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-259-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-260-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-36-EB5C5C?style=for-the-badge"/>
 </p>
 
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **481** (477 Java + 4 SQL) |
-| Difficulty | 🟢 186 Easy · 🟡 259 Medium · 🔴 36 Hard |
+| **Total solutions** | **482** (478 Java + 4 SQL) |
+| Difficulty | 🟢 186 Easy · 🟡 260 Medium · 🔴 36 Hard |
 | Patterns covered | **26** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -80,7 +80,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Prefix Sum | 14 | 8 | 6 | 0 |
 | Bit Manipulation | 11 | 6 | 5 | 0 |
 | Monotonic Stack | 7 | 0 | 6 | 1 |
-| Heap | 5 | 1 | 4 | 0 |
+| Heap | 6 | 1 | 5 | 0 |
 | Intervals | 3 | 0 | 3 | 0 |
 | Segment Tree | 3 | 1 | 0 | 2 |
 | Union Find | 3 | 0 | 3 | 0 |
@@ -88,9 +88,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Game Theory | 2 | 0 | 2 | 0 |
 | Topological Sort | 2 | 0 | 1 | 1 |
 | Binary Indexed Tree | 1 | 0 | 0 | 1 |
-| **Total (Java)** | **477** | **183** | **258** | **36** |
+| **Total (Java)** | **478** | **183** | **259** | **36** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **481** | **186** | **259** | **36** |
+| **Grand total** | **482** | **186** | **260** | **36** |
 
 ## Conventions used throughout
 
@@ -117,7 +117,7 @@ java-dsa-solutions/
 ├── Graph/               ── 20
 ├── Greedy/              ── 31
 ├── Hash Table/          ── 27
-├── Heap/                ── 5
+├── Heap/                ── 6
 ├── Intervals/           ── 3
 ├── Linked List/         ── 27
 ├── Math/                ── 51
