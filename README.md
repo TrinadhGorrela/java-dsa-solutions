@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-487%20%7C%20483%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-489%20%7C%20485%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Easy-186-44B77B?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Easy-187-44B77B?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Medium-265-FCB833?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Hard-36-EB5C5C?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Hard-37-EB5C5C?style=for-the-badge"/>
 </p>
 
 <h1 align="center">Java DSA Solutions</h1>
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **487** (483 Java + 4 SQL) |
-| Difficulty | 🟢 186 Easy · 🟡 265 Medium · 🔴 36 Hard |
+| **Total solutions** | **489** (485 Java + 4 SQL) |
+| Difficulty | 🟢 187 Easy · 🟡 265 Medium · 🔴 37 Hard |
 | Patterns covered | **26** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -77,10 +77,10 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Sliding Window | 19 | 3 | 14 | 2 |
 | String | 18 | 15 | 3 | 0 |
 | Stack | 17 | 4 | 10 | 3 |
-| Prefix Sum | 14 | 8 | 6 | 0 |
+| Prefix Sum | 15 | 9 | 6 | 0 |
 | Bit Manipulation | 11 | 6 | 5 | 0 |
+| Heap | 7 | 1 | 5 | 1 |
 | Monotonic Stack | 7 | 0 | 6 | 1 |
-| Heap | 6 | 1 | 5 | 0 |
 | Intervals | 3 | 0 | 3 | 0 |
 | Segment Tree | 3 | 1 | 0 | 2 |
 | Union Find | 3 | 0 | 3 | 0 |
@@ -88,9 +88,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Game Theory | 2 | 0 | 2 | 0 |
 | Topological Sort | 2 | 0 | 1 | 1 |
 | Binary Indexed Tree | 1 | 0 | 0 | 1 |
-| **Total (Java)** | **483** | **183** | **264** | **36** |
+| **Total (Java)** | **485** | **184** | **264** | **37** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **487** | **186** | **265** | **36** |
+| **Grand total** | **489** | **187** | **265** | **37** |
 
 ## Conventions used throughout
 
@@ -117,13 +117,13 @@ java-dsa-solutions/
 ├── Graph/               ── 20
 ├── Greedy/              ── 31
 ├── Hash Table/          ── 27
-├── Heap/                ── 6
+├── Heap/                ── 7
 ├── Intervals/           ── 3
 ├── Linked List/         ── 27
 ├── Math/                ── 51
 ├── Matrix/              ── 21
 ├── Monotonic Stack/     ── 7
-├── Prefix Sum/          ── 14
+├── Prefix Sum/          ── 15
 ├── Segment Tree/        ── 3
 ├── Sliding Window/      ── 19
 ├── Stack/               ── 17
