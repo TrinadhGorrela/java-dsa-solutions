@@ -28,6 +28,7 @@ class DestroyingAsteroids {
             if (currMass < i) {
                 return false;
             }
+            
             currMass += i;
         }
         

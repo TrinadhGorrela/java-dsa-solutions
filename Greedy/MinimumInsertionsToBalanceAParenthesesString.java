@@ -36,8 +36,8 @@ class MinimumInsertionsToBalanceAParenthesesString {
                     insertions++;
                     neededRight--;
                 }
+                
                 neededRight += 2;
-
             } else {
                 if (neededRight == 0) {
                     insertions++;

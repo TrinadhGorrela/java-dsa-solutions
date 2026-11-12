@@ -28,9 +28,11 @@ class LemonadeChange {
                 fiveCount++;
             } else if (bill == 10) {
                 tenCount++;
+
                 if (fiveCount == 0) {
                     return false;
                 }
+                
                 fiveCount--;
             } else {
                 if (tenCount != 0 && fiveCount != 0) {

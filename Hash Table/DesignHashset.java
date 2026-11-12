@@ -27,6 +27,7 @@ class MyHashSet {
 
     public MyHashSet() {
         bucketArray = new LinkedList[1000];
+
         for (int i = 0; i < 1000; i++) {
             bucketArray[i] = new LinkedList<Integer>();
         }
@@ -34,6 +35,7 @@ class MyHashSet {
 
     public void add(int key) {
         int index = key % 1000;
+
         if (!bucketArray[index].contains(key)) {
             bucketArray[index].add(key);
         }
@@ -41,6 +43,7 @@ class MyHashSet {
 
     public void remove(int key) {
         int index = key % 1000;
+        
         if (bucketArray[index].contains(key)) {
             bucketArray[index].remove((Integer) key);
         }

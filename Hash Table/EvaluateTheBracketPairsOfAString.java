@@ -50,11 +50,13 @@ class EvaluateTheBracketPairsOfAString {
             char c = s.charAt(i);
             if (c == ')') {
                 String temp = key.toString();
+
                 if (map.containsKey(temp)) {
                     res.append(map.get(temp));
                 } else {
                     res.append('?');
                 }
+                
                 key = new StringBuilder();
                 isKey = false;
             } else if (s.charAt(i) == '(') {

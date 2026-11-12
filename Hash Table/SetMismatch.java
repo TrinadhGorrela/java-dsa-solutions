@@ -27,6 +27,7 @@ class SetMismatch {
         for (int i : nums) {
             if (set.contains(i))
                 result[0] = i;
+            
             set.add(i);
             actualSum = actualSum + i;
         }

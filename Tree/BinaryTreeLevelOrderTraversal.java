@@ -59,6 +59,7 @@ class BinaryTreeLevelOrderTraversal {
                 }
                 size--;
             }
+            
             result.add(temp);
         }
         

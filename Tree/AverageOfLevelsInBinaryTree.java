@@ -49,9 +49,11 @@ class AverageOfLevelsInBinaryTree {
             int size = queue.size();
             int temp = size;
             long sum = 0;
-            while (size != 0) {
+
+            while (size-- != 0) {
                 TreeNode curr = queue.poll();
                 sum += curr.val;
+
                 if (curr.left != null) {
                     queue.offer(curr.left);
                 }
@@ -59,8 +61,8 @@ class AverageOfLevelsInBinaryTree {
                 if (curr.right != null) {
                     queue.offer(curr.right);
                 }
-                size--;
             }
+
             result.add((double) sum / temp);
         }
 

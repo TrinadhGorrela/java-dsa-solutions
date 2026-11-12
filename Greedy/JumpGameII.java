@@ -26,6 +26,7 @@ class JumpGameII {
 
         for (int i = 0; i < nums.length - 1; i++) {
             farthestReach = Math.max(farthestReach, i + nums[i]);
+            
             if (i >= currentEnd) {
                 jumps++;
                 currentEnd = farthestReach;

@@ -24,11 +24,13 @@ class TwoSum {
 
         for (int i = 0; i < nums.length; i++) {
             int comp = target - nums[i];
+
             if (map.containsKey(comp)) {
                 res[0] = map.get(comp);
                 res[1] = i;
                 break;
             }
+            
             map.put(nums[i], i);
         }
         

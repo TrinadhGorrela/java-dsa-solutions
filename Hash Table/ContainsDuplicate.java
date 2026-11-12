@@ -26,6 +26,7 @@ class ContainsDuplicate {
             if (seen.contains(num)) {
                 return true;
             }
+            
             seen.add(num);
         }
 

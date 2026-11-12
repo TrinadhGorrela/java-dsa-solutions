@@ -56,10 +56,9 @@ class MinimumSwapsToSortByDigitSum {
                     visited[curr] = true;
                     curr = arr[curr][0];
                 }
+
                 swaps += cycleSize - 1;
-
             }
-
             visited[i] = true;
         }
 

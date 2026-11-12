@@ -25,6 +25,7 @@ class HappyNumber {
         while (true) {
             int sum = square(n);
             n = sum;
+            
             if (n == 1)
                 return true;
 

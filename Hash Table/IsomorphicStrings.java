@@ -39,6 +39,7 @@ class IsomorphicStrings {
                 if (iso.containsValue(c2)) {
                     return false;
                 }
+                
                 iso.put(c1, c2);
             }
         }
