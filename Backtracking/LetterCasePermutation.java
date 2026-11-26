@@ -39,6 +39,5 @@ class LetterCasePermutation {
         } else {
             backtrack(s, res, temp + s.charAt(index), index + 1);
         }
-
     }
 }

@@ -24,29 +24,35 @@ class FindTheLargestAlmostMissingInteger {
     public int largestInteger(int[] nums, int k) {
         List<List<Integer>> list = new ArrayList<>();
         int res = -1;
+
         for (int i = 0; i <= nums.length - k; i++) {
             add(nums, list, i, k);
         }
 
         for (int i = 0; i < nums.length; i++) {
             int count = 0;
+
             for (List<Integer> window : list) {
                 if (window.contains(nums[i])) {
                     count++;
                 }
             }
+
             if (count == 1 && res < nums[i]) {
                 res = nums[i];
             }
         }
+
         return res;
     }
 
     public static void add(int[] nums, List<List<Integer>> list, int st, int k) {
         List<Integer> subarray = new ArrayList<>();
+
         for (int i = st; i < st + k; i++) {
             subarray.add(nums[i]);
         }
+        
         list.add(subarray);
     }
 }

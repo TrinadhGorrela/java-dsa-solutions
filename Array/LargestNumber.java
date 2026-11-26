@@ -21,18 +21,22 @@
 class LargestNumber {
     public String largestNumber(int[] nums) {
         String[] strNums = new String[nums.length];
+
         for (int i = 0; i < nums.length; i++) {
             strNums[i] = nums[i] + "";
         }
+
         Arrays.sort(strNums, (a, b) -> (b + a).compareTo(a + b));
         StringBuilder builder = new StringBuilder();
 
         if (strNums[0].equals("0")) {
             return "0";
         }
+
         for (int i = 0; i < strNums.length; i++) {
             builder.append(strNums[i] + "");
         }
+        
         return builder.toString();
     }
 }

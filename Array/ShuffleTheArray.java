@@ -21,11 +21,13 @@ class ShuffleTheArray {
     public int[] shuffle(int[] nums, int n) {
         int[] res = new int[2 * n];
         int j = 1;
+
         for (int i = 0; i < n; i++) {
             res[i + i] = nums[i];
             res[i + j] = nums[i + n];
             j++;
         }
+        
         return res;
     }
 }

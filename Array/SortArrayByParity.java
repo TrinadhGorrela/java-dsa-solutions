@@ -21,18 +21,22 @@
 class SortArrayByParity {
     public int[] sortArrayByParity(int[] nums) {
         int left = 0;
+
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
                 int right = i;
+                
                 while (right != left) {
                     int temp = nums[right];
                     nums[right] = nums[right - 1];
                     nums[right - 1] = temp;
                     right--;
                 }
+
                 left++;
             }
         }
+
         return nums;
     }
 }

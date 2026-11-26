@@ -30,6 +30,7 @@ class ThirdMaximumNumber {
                     || (third != null && third == nums[i])) {
                 continue;
             }
+
             if (first == null || nums[i] > first) {
                 third = second;
                 second = first;
@@ -41,6 +42,7 @@ class ThirdMaximumNumber {
                 third = nums[i];
             }
         }
+        
         return third == null ? first : third;
     }
 }

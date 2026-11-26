@@ -56,8 +56,10 @@ class NQueens {
     }
 
     public boolean isSafe(char[][] board, int row, int col, int n) {
+
         for (int r = 0; r < row; r++) {
             for (int c = 0; c < n; c++) {
+                
                 if (board[r][c] == 'Q') {
                     if (c == col) {
                         return false;

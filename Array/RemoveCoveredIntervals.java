@@ -24,19 +24,24 @@ class RemoveCoveredIntervals {
             if (a[0] == b[0]) {
                 return Integer.compare(b[1], a[1]);
             }
+            
             return Integer.compare(a[0], b[0]);
         });
+
         int count = intervals.length;
         int lastKeptIndex = 0;
+
         for (int i = 1; i < intervals.length; i++) {
             int[] last = intervals[lastKeptIndex];
             int[] curr = intervals[i];
+
             if (last[0] <= curr[0] && last[1] >= curr[1]) {
                 count--;
             } else {
                 lastKeptIndex = i;
             }
         }
+
         return count;
     }
 }

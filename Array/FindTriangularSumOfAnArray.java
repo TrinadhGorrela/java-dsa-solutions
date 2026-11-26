@@ -22,20 +22,25 @@
 class FindTriangularSumOfAnArray {
        public static int triangularSum(int[] nums) {
         int n = nums.length;
+
         for (int i = 0; i < n - 1; i++) {
             int[] reduced = sum(nums);
+
             for (int t = 0; t < reduced.length; t++) {
                 nums[t] = reduced[t];
             }
         }
+
         return nums[0];
     }
 
     public static int[] sum(int[] nums) {
         int[] pairSums = new int[nums.length - 1];
+
         for (int i = 0; i < nums.length - 1; i++) {
             pairSums[i] = (nums[i] + nums[i + 1]) % 10;
         }
+        
         return pairSums;
     }
 }

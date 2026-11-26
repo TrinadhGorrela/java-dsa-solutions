@@ -24,11 +24,13 @@
  */
 class IslandPerimeter {
     public int islandPerimeter(int[][] grid) {
-        int adjacentLandCount = 0;
-        int perimeter = 0;
         boolean[][] land = new boolean[grid.length][grid[0].length];
+        int count = 0;
+        int perimeter = 0;
+
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
+                
                 if (grid[i][j] == 1) {
                     land[i][j] = true;
                 } else {
@@ -36,23 +38,34 @@ class IslandPerimeter {
                 }
             }
         }
+
         for (int row = 0; row < land.length; row++) {
             for (int col = 0; col < land[0].length; col++) {
-                if (land[row][col]) {
-                    if (col > 0 && land[row][col - 1])
-                        adjacentLandCount++;
-                    if (col < land[row].length - 1 && land[row][col + 1])
-                        adjacentLandCount++;
-                    if (row > 0 && land[row - 1][col])
-                        adjacentLandCount++;
-                    if (row < land.length - 1 && land[row + 1][col])
-                        adjacentLandCount++;
 
-                    perimeter = perimeter + (4 - adjacentLandCount);
-                    adjacentLandCount = 0;
+                if (land[row][col]) {
+                    if (col > 0 && land[row][col - 1]) {
+                        count++;
+                    }
+
+                    if (col < land[row].length - 1 && land[row][col + 1]) {
+                        count++;
+                    }
+
+                    if (row > 0 && land[row - 1][col]) {
+                        count++;
+                    }
+
+                    if (row < land.length - 1 && land[row + 1][col]) {
+                        count++;
+                    }
+
+                    perimeter = perimeter + (4 - count);
+                    count = 0;
                 }
             }
         }
+
         return perimeter;
     }
 }
+

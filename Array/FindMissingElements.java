@@ -29,6 +29,7 @@ class FindMissingElements {
         int high = nums[nums.length - 1];
 
         while (index < nums.length) {
+            
             if (nums[index] == low) {
                 low++;
                 index++;
@@ -39,6 +40,7 @@ class FindMissingElements {
                 low++;
             }
         }
+
         return missingList;
     }
 }

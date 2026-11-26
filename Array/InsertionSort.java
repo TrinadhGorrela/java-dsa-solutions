@@ -26,6 +26,7 @@ class InsertionSort {
         for (int i = 1; i < arr.length; i++) {
             int curr = arr[i];
             int j;
+
             for (j = i - 1; j >= 0; j--) {
                 if (arr[j] > curr) {
                     arr[j + 1] = arr[j];
@@ -33,6 +34,7 @@ class InsertionSort {
                     break;
                 }
             }
+            
             arr[j + 1] = curr;
         }
     }

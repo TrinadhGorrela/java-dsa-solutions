@@ -24,8 +24,10 @@ class NumberOfLaserBeamsInABank {
         int prev = 0;
         int curr = 0;
         int totalBeams = 0;
+
         for (int i = 0; i < bank.length; i++) {
             String s = bank[i];
+            
             for (char t : s.toCharArray()) {
                 if (t == '1') {
                     curr++;

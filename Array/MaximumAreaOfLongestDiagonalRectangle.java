@@ -22,11 +22,13 @@ class MaximumAreaOfLongestDiagonalRectangle {
         int n = dimensions.length;
         int maxDiag = 0;
         int maxArea = 0;
+
         for (int i = 0; i < n; i++) {
             int l = dimensions[i][0];
             int w = dimensions[i][1];
             int dia = l * l + w * w;
             int area = l * w;
+            
             if (dia > maxDiag) {
                 maxDiag = dia;
                 maxArea = area;
@@ -34,6 +36,7 @@ class MaximumAreaOfLongestDiagonalRectangle {
                 maxArea = Math.max(area, maxArea);
             }
         }
+
         return maxArea;
     }
 }

@@ -22,6 +22,7 @@ class PascalsTriangleII {
     public List<Integer> getRow(int rowIndex) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> firstRow = new ArrayList<>();
+        
         firstRow.add(1);
         res.add(firstRow);
 
@@ -36,6 +37,7 @@ class PascalsTriangleII {
             row.add(1);
             res.add(row);
         }
+
         return res.get(rowIndex);
     }
 }

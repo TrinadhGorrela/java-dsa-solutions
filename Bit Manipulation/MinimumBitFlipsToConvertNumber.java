@@ -30,6 +30,7 @@ class MinimumBitFlipsToConvertNumber {
             if ((xor & mask) == 1) {
                 count++;
             }
+            
             xor >>= 1;
         }
 

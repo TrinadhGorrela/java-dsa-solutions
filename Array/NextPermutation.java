@@ -23,10 +23,12 @@
 class NextPermutation {
     public void nextPermutation(int[] nums) {
         int pivot = -1;
+
         for (int i = nums.length - 2; i >= 0; i--) {
             if (nums[i] < nums[i + 1]) {
                 pivot = i;
                 int swapWith = pivot + 1;
+
                 for (int j = nums.length - 1; j >= 0; j--) {
                     if (nums[pivot] < nums[j]) {
                         swapWith = j;
@@ -48,12 +50,15 @@ class NextPermutation {
                     left++;
                     right--;
                 }
+
                 break;
             }
         }
+
         if (pivot == -1) {
             int left = 0;
             int right = nums.length - 1;
+
             while (left < right) {
                 int temp3 = nums[left];
                 nums[left] = nums[right];
@@ -62,6 +67,5 @@ class NextPermutation {
                 right--;
             }
         }
-
     }
 }

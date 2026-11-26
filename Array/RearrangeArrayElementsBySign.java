@@ -58,6 +58,7 @@ class RearrangeArrayElementsBySign {
             nums[resultIndex++] = neg.get(negIndex++);
             negativePlaced++;
         }
+        
         return nums;
     }
 }

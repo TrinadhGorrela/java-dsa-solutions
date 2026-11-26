@@ -33,9 +33,10 @@ class SubsetsII {
         res.add(new ArrayList<>(subset));
 
         for (int i = st; i < nums.length; i++) {
-            if (i > st && nums[i] == nums[i - 1])
+            if (i > st && nums[i] == nums[i - 1]) {
                 continue;
-            
+            }
+
             subset.add(nums[i]);
             backtrack(i + 1, nums, subset, res);
             subset.remove(subset.size() - 1);

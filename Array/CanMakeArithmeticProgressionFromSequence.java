@@ -20,12 +20,16 @@
  */
 class CanMakeArithmeticProgressionFromSequence {
     public boolean canMakeArithmeticProgression(int[] arr) {
-        Arrays.sort(arr);
         int diff = arr[1] - arr[0];
+        Arrays.sort(arr);
+
         for (int i = 2; i < arr.length; i++) {
-            if (arr[i] - arr[i - 1] != diff)
+            if (arr[i] - arr[i - 1] != diff) {
                 return false;
+            }
+
         }
+
         return true;
     }
 }
