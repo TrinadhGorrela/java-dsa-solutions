@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Solutions-555%20%7C%20551%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
+  <img src="https://img.shields.io/badge/Solutions-556%20%7C%20552%20Java%20%2B%204%20SQL-4B8BBE?style=for-the-badge&logo=leetcode&logoColor=FFA116"/>
   <img src="https://img.shields.io/badge/Language-Java%2017-E76F00?style=for-the-badge&logo=java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Easy-196-44B77B?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Medium-311-FCB833?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Medium-312-FCB833?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Hard-48-EB5C5C?style=for-the-badge"/>
 </p>
 
@@ -52,8 +52,8 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Metric | Value |
 | ------ | ----- |
-| **Total solutions** | **555** (551 Java + 4 SQL) |
-| Difficulty | 🟢 196 Easy · 🟡 311 Medium · 🔴 48 Hard |
+| **Total solutions** | **556** (552 Java + 4 SQL) |
+| Difficulty | 🟢 196 Easy · 🟡 312 Medium · 🔴 48 Hard |
 | Patterns covered | **27** |
 | Language | Java 17 — standard library only, zero external deps |
 | Structure | Organized by **algorithmic pattern**, self-contained files |
@@ -62,7 +62,7 @@ I built this the way you actually study: practice first, notice the recurring sh
 
 | Pattern | Solved | Easy | Medium | Hard |
 | ------- | ------ | :---: | :----: | :---: |
-| Dynamic Programming | 73 | 4 | 56 | 13 |
+| Dynamic Programming | 74 | 4 | 57 | 13 |
 | Math | 52 | 37 | 15 | 0 |
 | Array | 47 | 33 | 14 | 0 |
 | Greedy | 42 | 7 | 29 | 6 |
@@ -89,9 +89,9 @@ I built this the way you actually study: practice first, notice the recurring sh
 | Game Theory | 2 | 0 | 2 | 0 |
 | Binary Indexed Tree | 1 | 0 | 0 | 1 |
 | Combinatorics | 1 | 0 | 1 | 0 |
-| **Total (Java)** | **551** | **193** | **310** | **48** |
+| **Total (Java)** | **552** | **193** | **311** | **48** |
 | Database (SQL) | 4 | 3 | 1 | 0 |
-| **Grand total** | **555** | **196** | **311** | **48** |
+| **Grand total** | **556** | **196** | **312** | **48** |
 
 ## Conventions used throughout
 
@@ -114,7 +114,7 @@ java-dsa-solutions/
 ├── Combinatorics/       ── 1
 ├── Database/            ── 4 (SQL)
 ├── Divide and Conquer/  ── 2
-├── Dynamic Programming/ ── 73
+├── Dynamic Programming/ ── 74
 ├── Game Theory/         ── 2
 ├── Graph/               ── 20
 ├── Greedy/              ── 42
